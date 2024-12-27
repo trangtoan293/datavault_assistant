@@ -10,3 +10,7 @@ Non-functional requirements :
 * lưu trữ metadata source 
 * lưu trữ kết quả 
 * API kết nối với dbt 
+---
+progress : 
+đang test đề xuất mô hình data vault 2.0 
+=> kết quả chưa đc consistency 

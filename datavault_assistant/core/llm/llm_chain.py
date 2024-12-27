@@ -1,7 +1,6 @@
 from langchain_ollama import ChatOllama
 from langchain_groq import ChatGroq
-from langchain_core.prompts import ChatPromptTemplate,MessagesPlaceholder
-from typing import Optional, Dict, Any
+from typing import Optional
 from configs.settings import settings
 
 class LLMFactory:
@@ -13,7 +12,7 @@ class LLMFactory:
         model: Optional[str] = None,
         temperature: Optional[float] = None,
         **kwargs
-    ) -> Any:
+    ) :
         """
         Khởi tạo LLM model dựa trên provider
         
@@ -47,7 +46,7 @@ class LLMFactory:
         else:
             raise ValueError(f"Provider {provider} không được hỗ trợ")
 
-def init_llm(provider: str = "ollama", **kwargs) -> Any:
+def init_llm(provider: str = "ollama", **kwargs) :
     """Helper function để lấy LLM instance"""
     return LLMFactory.init_llm(provider, **kwargs)
 

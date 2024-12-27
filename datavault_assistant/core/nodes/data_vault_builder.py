@@ -3,12 +3,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_ollama import ChatOllama
 
-llm = ChatOllama(
-    base_url='http://192.168.1.8:11434',
-    model='llama3.1:8b-instruct-q8_0',
-    temperature=0,
-    num_ctx=10000
-)
 
 class LLMDataVaultBuilder:
     def __init__(self, llm):
@@ -70,19 +64,3 @@ Analyze this table and provide a complete Data Vault 2.0 component recommendatio
             print(f"Error analyzing table: {str(e)}")
             return None
 
-if __name__ == "__main__":
-    analyzer = LLMDataVaultBuilder(llm)
-    table_metadata = [
-        {
-            "table_name": "customer",
-            "columns": ["customer_id", "customer_name", "customer_email"]
-        },
-        {
-            "table_name": "order",
-            "columns": ["order_id", "order_date", "customer_id"]
-        }
-    ]
-    analysis = analyzer.analyze_table(table_metadata)
-    analysis.pretty_print()
-
-    
