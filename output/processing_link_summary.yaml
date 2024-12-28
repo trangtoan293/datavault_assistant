@@ -1,0 +1,19 @@
+processed_at: '2024-12-28T19:36:53.486178'
+total_links: 3
+successful: 3
+warnings: 3
+errors: 0
+details:
+- link: LNK_CUSTOMER_ADDRESS
+  status: warnings
+  warnings:
+  - 'Link LNK_CUSTOMER_ADDRESS is missing business keys from hub HUB_CUSTOMER: [''UNIQUE_ID_VALUE'']'
+- link: LNK_CUSTOMER_CONTACT
+  status: warnings
+  warnings:
+  - 'Link LNK_CUSTOMER_CONTACT is missing business keys from hub HUB_CUSTOMER: [''UNIQUE_ID_VALUE'']'
+- link: LNK_CUSTOMER_RISK_PROFILE
+  status: warnings
+  warnings:
+  - 'Link LNK_CUSTOMER_RISK_PROFILE is missing business keys from hub HUB_CUSTOMER:
+    [''UNIQUE_ID_VALUE'']'

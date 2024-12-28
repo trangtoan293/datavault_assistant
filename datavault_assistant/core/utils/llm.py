@@ -51,5 +51,6 @@ def init_llm(provider: str = "ollama", **kwargs) :
     return LLMFactory.init_llm(provider, **kwargs)
 
 if __name__ == "__main__":
-    llm = init_llm(provider="ollama")
-    print(llm)
+    # llm = init_llm(provider="ollama")
+    # print(llm)
+    print(settings.GROQ_API_KEY)

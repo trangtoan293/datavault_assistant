@@ -1,5 +1,5 @@
 from typing import Optional
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings,SettingsConfigDict
 from functools import lru_cache
 
 class Settings(BaseSettings):
@@ -22,10 +22,9 @@ class Settings(BaseSettings):
     # Memory Settings
     MEMORY_TYPE: str = "buffer"  # buffer, file, redis
     MEMORY_KEY: str = "chat_history"
+    
+    model_config = SettingsConfigDict(env_file='.env', case_sensitive=True)
 
-    class Config:
-        env_file = ".env"
-        case_sensitive = True
 
 @lru_cache()
 def get_settings() -> Settings:

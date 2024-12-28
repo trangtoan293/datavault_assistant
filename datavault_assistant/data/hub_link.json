@@ -1,0 +1,56 @@
+{
+    "hubs": [
+        {
+            "name": "HUB_CUSTOMER",
+            "business_keys": ["CUSTOMER_NO", "UNIQUE_ID_VALUE"],         
+            "source_tables": ["STTM_CUSTOMER"],
+            "description": "Customer information, including personal details and identification numbers."
+   
+},
+        {
+            "name": "HUB_ADDRESS",
+            "business_keys": ["ADDRESS_LINE1", "ADDRESS_LINE2", "ADDRESS_LINE3", "COUNTRY"],
+               "source_tables": ["STTM_CUSTOMER"],
+               "description": "Address information associated with a customer."
+   
+},
+        {
+            "name": "HUB_CONTACT",
+            "business_keys": ["FAX_NUMBER", "EXT_REF_NO"],
+               "source_tables": ["STTM_CUSTOMER"],
+               "description": "Contact information associated with a customer."
+   
+},
+        {
+            "name": "HUB_RISK_PROFILE",
+            "business_keys": ["RISK_PROFILE", "RISK_CATEGORY"],
+               "source_tables": ["STTM_CUSTOMER"],
+               "description": "Risk profile information associated with a customer."
+   
+}],
+    "links": [
+        {
+            "name": "LNK_CUSTOMER_ADDRESS",
+            "related_hubs": ["HUB_CUSTOMER", "HUB_ADDRESS"],
+               "business_keys": ["CUSTOMER_NO", "ADDRESS_LINE1", "ADDRESS_LINE2", "ADDRESS_LINE3", "COUNTRY"],
+               "source_tables": ["STTM_CUSTOMER"],
+               "description": "Links a customer to their associated address."
+   
+},
+        {
+            "name": "LNK_CUSTOMER_CONTACT",
+            "related_hubs": ["HUB_CUSTOMER", "HUB_CONTACT"],
+               "business_keys": ["CUSTOMER_NO", "FAX_NUMBER", "EXT_REF_NO"],
+               "source_tables": ["STTM_CUSTOMER"],
+               "description": "Links a customer to their associated contact information."
+   
+},
+        {
+            "name": "LNK_CUSTOMER_RISK_PROFILE",
+   "related_hubs": ["HUB_CUSTOMER", "HUB_RISK_PROFILE"],
+   "business_keys": ["CUSTOMER_NO", "RISK_PROFILE", "RISK_CATEGORY"],
+   "source_tables": ["STTM_CUSTOMER"],
+   "description": "Links a customer to their associated risk profile."
+}
+]   
+}

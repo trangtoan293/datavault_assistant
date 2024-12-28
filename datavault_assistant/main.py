@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from api.routes import metadata
+from datavault_assistant.api.routes import metadata
 
 app = FastAPI(
     title="Metadata Parser API",
