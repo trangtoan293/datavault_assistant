@@ -178,7 +178,7 @@ class SatelliteAnalyzer:
 if __name__ == "__main__":
     llm = ChatGroq( 
                 model="llama-3.3-70b-versatile" ,
-                api_key="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",
+              
                 temperature=0,
             )
             
