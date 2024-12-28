@@ -1,0 +1,29 @@
+{"hubs": [
+    {
+        "name": "HUB_CUSTOMER",
+        "business_keys": ["CUSTOMER_NO", "UNIQUE_ID_VALUE"],         
+        "source_tables": ["STTM_CUSTOMER"],
+        "description": "Customer information, including personal details and identification numbers."
+
+},
+    {
+        "name": "HUB_ADDRESS",
+        "business_keys": ["ADDRESS_LINE1", "ADDRESS_LINE2", "ADDRESS_LINE3", "COUNTRY"],
+           "source_tables": ["STTM_CUSTOMER"],
+           "description": "Address information associated with a customer."
+
+},
+    {
+        "name": "HUB_CONTACT",
+        "business_keys": ["FAX_NUMBER", "EXT_REF_NO"],
+           "source_tables": ["STTM_CUSTOMER"],
+           "description": "Contact information associated with a customer."
+
+},
+    {
+        "name": "HUB_RISK_PROFILE",
+        "business_keys": ["RISK_PROFILE", "RISK_CATEGORY"],
+           "source_tables": ["STTM_CUSTOMER"],
+           "description": "Risk profile information associated with a customer."
+
+}]}

@@ -1,0 +1,202 @@
+'analysis':   "hub_link_analysis": "{
+    "hubs": [
+        {
+            "name": "HUB_CUSTOMER",
+            "business_keys": ["CUSTOMER_NO", "UNIQUE_ID_VALUE"],         
+            "source_tables": ["STTM_CUSTOMER"],
+            "description": "Customer information, including personal details and identification numbers."
+   
+},
+        {
+            "name": "HUB_ADDRESS",
+            "business_keys": ["ADDRESS_LINE1", "ADDRESS_LINE2", "ADDRESS_LINE3", "COUNTRY"],
+               "source_tables": ["STTM_CUSTOMER"],
+               "description": "Address information associated with a customer."
+   
+},
+        {
+            "name": "HUB_CONTACT",
+            "business_keys": ["FAX_NUMBER", "EXT_REF_NO"],
+               "source_tables": ["STTM_CUSTOMER"],
+               "description": "Contact information associated with a customer."
+   
+},
+        {
+            "name": "HUB_RISK_PROFILE",
+            "business_keys": ["RISK_PROFILE", "RISK_CATEGORY"],
+               "source_tables": ["STTM_CUSTOMER"],
+               "description": "Risk profile information associated with a customer."
+   
+}
+],
+    "links": [
+        {
+            "name": "LNK_CUSTOMER_ADDRESS",
+            "related_hubs": ["HUB_CUSTOMER", "HUB_ADDRESS"],
+               "business_keys": ["CUSTOMER_NO", "ADDRESS_LINE1", "ADDRESS_LINE2", "ADDRESS_LINE3", "COUNTRY"],
+               "source_tables": ["STTM_CUSTOMER"],
+               "description": "Links a customer to their associated address."
+   
+},
+        {
+            "name": "LNK_CUSTOMER_CONTACT",
+            "related_hubs": ["HUB_CUSTOMER", "HUB_CONTACT"],
+               "business_keys": ["CUSTOMER_NO", "FAX_NUMBER", "EXT_REF_NO"],
+               "source_tables": ["STTM_CUSTOMER"],
+               "description": "Links a customer to their associated contact information."
+   
+},
+        {
+            "name": "LNK_CUSTOMER_RISK_PROFILE",
+   "related_hubs": ["HUB_CUSTOMER", "HUB_RISK_PROFILE"],
+   "business_keys": ["CUSTOMER_NO", "RISK_PROFILE", "RISK_CATEGORY"],
+   "source_tables": ["STTM_CUSTOMER"],
+   "description": "Links a customer to their associated risk profile."
+   
+}
+   
+]
+
+}",\n  "satellite_analysis": "{
+    "satellites": [
+        {
+            "name": "SAT_CUSTOMER_DETAILS",
+            "hub": "HUB_CUSTOMER",
+            "business_keys": ["CUSTOMER_NO", "UNIQUE_ID_VALUE"],
+               "source_table": "STTM_CUSTOMER",
+               "descriptive_attrs": [
+                   "CUSTOMER_TYPE",
+                   "CUSTOMER_NAME1",
+                   "SHORT_NAME",
+                   "NATIONALITY",                   
+                  "LANGUAGE",
+                "LOCAL_BRANCH",
+                "LIABILITY_NO",
+                "FROZEN",
+                "DECEASED",
+          
+      "WHEREABOUTS_UNKNOWN",
+                      "CUSTOMER_CATEGORY",
+                      "NO_AC_NO",
+                      "RECORD_STAT",
+                      "AUTH_STAT",
+                      "MOD_NO",
+                      "MAKER_ID",
+                      "MAKER_DT_STAMP",
+                      "CHECKER_ID",
+                    
+  "CHECKER_DT_STAMP",
+                  "ONCE_AUTH",
+                  "CREDIT_RATING",
+                  "REVISION_DATE",
+                  "LIMIT_CCY",
+                  "CAS_CUST",
+                  "LIAB_NODE",
+                  "PAST_DUE_FLAG",
+                  "DEFAULT_MEDIA",
+                  "SSN",
+                  "SWIFT_CODE",
+                  "LOC_CODE",
+                  "SHORT_NAME2",
+                  "UTILITY_PROVIDER",
+           
+       "UTILITY_PROVIDER_ID",
+                       "TAX_GROUP",
+                       "CONSOL_TAX_CERT_REQD",
+                       "INDIVIDUAL_TAX_CERT_REQD",
+                       "CLS_CCY_ALLOWED",
+                       "CLS_PARTICIPANT",
+                       "FX_NETTING_CUSTOMER",
+                       "CRM_CUSTOMER",
+                       "ISSUER_CUSTOMER",
+                       "TREASURY_CUSTOMER",
+                       "CIF_CREATION_DATE",
+                       "WHT_PCT",
+                       "RP_CUSTOMER",
+                       "GENERATE_MT920"
+       
+   ]
+       
+},
+        {
+            "name": "SAT_ADDRESS_DETAILS",
+            "hub": "HUB_ADDRESS",
+            "business_keys": ["ADDRESS_LINE1", "ADDRESS_LINE2", "ADDRESS_LINE3", "COUNTRY"],
+               "source_table": "STTM_CUSTOMER",
+               "descriptive_attrs": []
+   
+},
+        {
+            "name": "SAT_CONTACT_DETAILS",
+            "hub": "HUB_CONTACT",
+            "business_keys": ["FAX_NUMBER", "EXT_REF_NO"],
+               "source_table": "STTM_CUSTOMER",
+               "descriptive_attrs": []
+   
+},
+        {
+            "name": "SAT_RISK_PROFILE_DETAILS",
+            "hub": "HUB_RISK_PROFILE",
+            "business_keys": ["RISK_PROFILE", "RISK_CATEGORY"],
+               "source_table": "STTM_CUSTOMER",
+               "descriptive_attrs": [
+                 
+  "EXPOSURE_COUNTRY",
+                  "EXPOSURE_CATEGORY",
+                  "CUST_CLASSIFICATION",
+                  "CIF_STATUS",
+                  "CIF_STATUS_SINCE",
+                  "CHARGE_GROUP",
+                  "INTRODUCER",
+                  "CUST_CLG_GROUP",
+                  "CHK_DIGIT_VALID_REQD",
+                  "ALG_ID",
+                  "FT_ACTTING_AS_OF",
+                  "UNADVISED",
+                  "GROUP_CODE",
+             
+     "AML_REQUIRED",
+                     "AML_CUSTOMER_GRP",
+                     "MAILERS_REQUIRED"
+     
+   ]
+     
+}
+],
+    "link_satellites": [
+        {
+            "name": "LSAT_CUSTOMER_ADDRESS_DETAILS",
+            "link": "LNK_CUSTOMER_ADDRESS",
+            "business_keys": ["CUSTOMER_NO", "ADDRESS_LINE1", "ADDRESS_LINE2", "ADDRESS_LINE3", "COUNTRY"],
+               "source_table": "STTM_CUSTOMER",
+               "descriptive_attrs": []
+   
+},
+        {
+            "name": "LSAT_CUSTOMER_CONTACT_DETAILS",
+            "link": "LNK_CUSTOMER_CONTACT",
+            "business_keys": ["CUSTOMER_NO", "FAX_NUMBER", "EXT_REF_NO"],
+               "source_table": "STTM_CUSTOMER",
+               "descriptive_attrs": []
+   
+},
+        {
+            "name": "LSAT_CUSTOMER_RISK_PROFILE_DETAILS",
+            "link": "LNK_CUSTOMER_RISK_PROFILE",
+            "business_keys": ["CUSTOMER_NO", "RISK_PROFILE", "RISK_CATEGORY"],
+               "source_table": "STTM_CUSTOMER",
+               "descriptive_attrs": [
+                   "FX_CUST_CLEAN_RISK_LIMIT",
+                   "OVERALL_LIMIT",
+                   "FX_CLEAN_RISK_LIMIT",
+               
+    "SEC_CUST_CLEAN_RISK_LIMIT",
+                    "SEC_CLEAN_RISK_LIMIT",
+                    "SEC_CUST_PSTL_RISK_LIMIT",
+                    "SEC_PSTL_RISK_LIMIT",
+                    "LIAB_BR"
+    
+   ]
+    
+}
+   

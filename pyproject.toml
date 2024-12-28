@@ -13,6 +13,11 @@ pandas = "^2.2.3"
 langchain-community = "^0.3.13"
 langchain-ollama = "^0.2.2"
 langchain-groq = "^0.2.2"
+fastapi = "^0.115.6"
+uvicorn = "^0.34.0"
+python-multipart = "^0.0.20"
+openpyxl = "^3.1.5"
+pyyaml = "^6.0.2"
 
 
 [build-system]

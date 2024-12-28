@@ -1,0 +1,87 @@
+
+Phương pháp triển khai
+* phương pháp luận datalake
+* Architecture 
+* best practice for architect
+* khả năng chịu tải của hệ thống ( số lượng job + dung lượng)
+
+Cách thức quản trị dự án 
+* nhà thầu đều xuất mo hình chi tiết về quản trị dự án
+
+Chuyển giao công nghệ
+* bàn giao chi tiết kế hoạch và vận hành hệ thống , đào tạo và bảo hành kỹ thuật
+* kế hoạch triển khai 24 tháng 
+* chuyển giao tài liệu Vie (eng nếu tài liệu gốc là eng), hard + soft copy, viết bằng bộ công cụ MS
+    * tài liệu dự án
+    * tài liệu kỹ thuật 
+Đào tạo:
+* có các khóa đào tạo bài bản về hệ thống, bao gồm các nhân sự : quản trị platform , DE, DS và PM 
+
+nhân sự 
+* onsite+offsite
+* đảm bảo đủ nguồn lực
+* có hãng support nếu cần
+
+phần cứng 
+phần mềm :
+*các vùng dữ liệu : landing zone, sandbox, standardized & curated zone
+*landing 1000TB , curated 380tb
+*công cụ truy vấn tối thiếu 500 users
+*ETL pipeline : monitoring, alerting, logging, scheduling, orchestration, metadata management.
+*metadata trên hệ thống : EDW và Data source
+*UI for metadata management
+*đảm bảo 75 data analyst sử dụng đồng thời 
+
+Triển khai vùng landing:
+*60 nguồn dữ liệu - 1100 bảng - 1000TB - dữ liệu 5 năm 
+*900gb dữ liệu mỗi ngày 
+*đảm bảo naming convention, logging, auditing và chạy song song ingest dữ liệu nguồn
+
+Chuyển đổi EDW sang datalake
+*Thiết kế và xây dựng Datalake
+*Chuyển dữ liệu từ EDW vào Datalake
+
+Chuyển đổi và nâng cấp Cust360 cho KHCN và Risk360
+* phương pháp triển khai theo data domain và data product
+* Quản trị dữ liệu : data catalog, metadata management, data quality, data quality, access control, data policy
+
+Giải pháp DC-DR và backup
+
+Bảo hành và bảo trì 
+* phần mềm 1 năm 
+* phần cứng 3 năm
+
+Yêu cầu chức năng
+    Vận hành hệ thống Datalake
+    Vân hành hệ thống ETL
+        * quản lý dữ liệu nguồn
+        * mã hóa dữ liệu trong lúc ETL
+        * hỗ trợ stream/batch
+        * hỗ trợ mô tả toàn bộ quá trình ETL (log, alert, monitoring)
+        * hỗ trợ chạy song song nhiều job
+    Vận hành Streaming :
+        * Quản trị luồng dữ liệu 
+    Vận hành lưu trữ :
+        * phân loại vùng dữ liệu hot warn và cold
+        * lưu trữ HDFS và Object storage giữa on premise hoặc hybrid
+        * Giải pháp lakehouse - đảm bảo ACID
+    Công cụ truy vấn :
+        * truy vấn qua nhiều loại dữ liệu : iceberg,parquet,orc
+        * truy vấn qua các kết nối phổ thông : API,JDBC, ODBC
+        * truy vấn dữ liệu trên hạ tầng on premise và hybrid
+        * phân quyền và masking dữ liệu
+        * cung cấp công cụ BI 
+        * chức năng phân bổ resource cho các user
+    Quản trị dữ liệu :
+        * data lineage , data catalog, data quality, data policy, data access control
+        * phần quyền dữ liệu theo hàng và theo cột cho user
+        * auditing và logging
+    Data quality control : 
+        * đề xuát và cảnh báo về chất lượng dữ liệu 
+    advanced analytics :
+        * cung cấp nền tảng để thực thi các tiền xử lý và thiết kế features
+        * triển khai data pieline và model pipeline
+        * Giám sát mô hình 
+        * có hỗ trợ nhiều ngôn ngữ : python, scala, ...
+    Quản lý source code:
+        * giải pháp tích hợp source control và private git

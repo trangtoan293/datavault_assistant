@@ -1,0 +1,31 @@
+2024-12-27 15:47:52,902 - __main__ - ERROR - Analysis failed: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2024-12-27 15:49:07,899 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-27 15:49:08,196 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-12-27 15:49:08,198 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2024-12-27 15:49:32,184 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-27 15:57:21,235 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-27 15:57:21,495 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-12-27 15:57:21,495 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2024-12-27 15:57:38,850 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-27 18:30:51,815 - core.nodes.metadata_handler - ERROR - processing failed local file: 'str' object has no attribute 'filename'
+2024-12-27 18:31:28,540 - core.nodes.metadata_handler - ERROR - processing failed local file: 'WindowsPath' object has no attribute 'filename'
+2024-12-27 18:35:30,524 - core.nodes.metadata_handler - ERROR - processing failed local file: analyze() got an unexpected keyword argument 'metadata_content'
+2024-12-27 18:37:20,265 - core.nodes.data_vault_builder - ERROR - Analysis failed: No metadata loaded. Call get_metadata first.
+2024-12-27 18:37:20,265 - core.nodes.metadata_handler - ERROR - processing failed local file: No metadata loaded. Call get_metadata first.
+2024-12-27 18:40:18,383 - core.nodes.metadata_handler - ERROR - processing failed local file: analyze() missing 1 required positional argument: 'metadata_content'
+2024-12-27 18:40:46,200 - core.nodes.data_vault_builder - ERROR - Analysis failed: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'NoneType'>
+2024-12-27 18:40:46,200 - core.nodes.metadata_handler - ERROR - processing failed local file: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'NoneType'>
+2024-12-27 18:45:00,832 - core.nodes.data_vault_builder - ERROR - Analysis failed: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'NoneType'>
+2024-12-27 18:45:00,832 - core.nodes.metadata_handler - ERROR - processing failed local file: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'NoneType'>
+2024-12-27 18:52:40,734 - core.nodes.data_vault_builder - ERROR - Analysis failed: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'NoneType'>
+2024-12-27 18:52:40,735 - core.nodes.metadata_handler - ERROR - processing failed local file: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'NoneType'>
+2024-12-27 18:54:59,488 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-27 18:54:59,832 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-12-27 18:54:59,832 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2024-12-27 18:55:23,994 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-27 18:55:38,998 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-12-27 18:55:38,998 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2024-12-27 18:56:01,341 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-12-27 18:56:01,605 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-12-27 18:56:01,606 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 38.000000 seconds
+2024-12-27 18:56:44,336 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
