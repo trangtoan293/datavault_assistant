@@ -1,4 +1,4 @@
-source_schema: source
+source_schema: FLEXLIVE
 source_table: sttm_customer
 target_schema: integration_demo
 target_table: hub_address
@@ -6,38 +6,42 @@ target_entity_type: hub
 collision_code: ADDRESS
 description: Address information associated with a customer.
 metadata:
-  created_at: '2024-12-28T18:48:02.014537'
+  created_at: '2024-12-30T17:07:17.319926'
   version: '1.0'
 columns:
 - target: dv_hkey_hub_address
-  dtype: string
+  dtype: raw
   key_type: hash_key_hub
   source:
-  - ADDRESS_LINE1
-  - ADDRESS_LINE2
-  - ADDRESS_LINE3
-  - COUNTRY
+  - name: ADDRESS_LINE1
+    dtype: VARCHAR2(105)
+  - name: ADDRESS_LINE2
+    dtype: VARCHAR2(105)
+  - name: ADDRESS_LINE3
+    dtype: VARCHAR2(105)
+  - name: COUNTRY
+    dtype: VARCHAR2(3)
 - target: CUS_ADDRESS_LINE1
-  dtype: int
+  dtype: VARCHAR2(105)
   key_type: biz_key
   source:
     name: ADDRESS_LINE1
-    dtype: int
+    dtype: VARCHAR2(105)
 - target: CUS_ADDRESS_LINE2
-  dtype: int
+  dtype: VARCHAR2(105)
   key_type: biz_key
   source:
     name: ADDRESS_LINE2
-    dtype: int
+    dtype: VARCHAR2(105)
 - target: CUS_ADDRESS_LINE3
-  dtype: int
+  dtype: VARCHAR2(105)
   key_type: biz_key
   source:
     name: ADDRESS_LINE3
-    dtype: int
+    dtype: VARCHAR2(105)
 - target: CUS_COUNTRY
-  dtype: int
+  dtype: VARCHAR2(3)
   key_type: biz_key
   source:
     name: COUNTRY
-    dtype: int
+    dtype: VARCHAR2(3)

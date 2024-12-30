@@ -156,9 +156,9 @@ class LinkDataVaultParser:
         
         return output_dict
 
-    def process_data_vault_definition(self, input_file: str, output_dir: str) -> None:
+    def process_link_file(self, input_file: str, output_dir: str) -> None:
         """
-        Process complete data vault definition with enhanced metadata
+        Process complete link metadata with enhanced metadata
         """
         try:
             # Read input file
@@ -224,7 +224,7 @@ def main():
     input_file = r'D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\hub_link.json'
 
     try:
-        parser.process_data_vault_definition(
+        parser.process_link_file(
             input_file,
             "output"
         )
