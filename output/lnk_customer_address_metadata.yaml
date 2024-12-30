@@ -1,4 +1,4 @@
-source_schema: source
+source_schema: FLEXLIVE
 source_table: STTM_CUSTOMER
 target_schema: integration_demo
 target_table: LNK_CUSTOMER_ADDRESS
@@ -6,32 +6,42 @@ target_entity_type: lnk
 collision_code: mdm
 description: Links a customer to their associated address.
 metadata:
-  created_at: '2024-12-28T19:36:53.486178'
+  created_at: '2024-12-30T17:50:20.966032'
   validation_status: warnings
   validation_warnings:
   - 'Link LNK_CUSTOMER_ADDRESS is missing business keys from hub HUB_CUSTOMER: [''UNIQUE_ID_VALUE'']'
 columns:
 - target: dv_hkey_lnk_customer_address
-  dtype: string
+  dtype: raw
   key_type: hash_key_lnk
   source:
-  - CUSTOMER_NO
-  - ADDRESS_LINE1
-  - ADDRESS_LINE2
-  - ADDRESS_LINE3
-  - COUNTRY
+  - name: CUSTOMER_NO
+    dtype: VARCHAR2(255)
+  - name: ADDRESS_LINE1
+    dtype: VARCHAR2(105)
+  - name: ADDRESS_LINE2
+    dtype: VARCHAR2(105)
+  - name: ADDRESS_LINE3
+    dtype: VARCHAR2(105)
+  - name: COUNTRY
+    dtype: VARCHAR2(3)
 - target: dv_hkey_hub_customer
-  dtype: string
+  dtype: raw
   key_type: hash_key_hub
   parent: hub_customer
   source:
-  - CUSTOMER_NO
+  - name: CUSTOMER_NO
+    dtype: VARCHAR2(255)
 - target: dv_hkey_hub_address
-  dtype: string
+  dtype: raw
   key_type: hash_key_hub
   parent: hub_address
   source:
-  - ADDRESS_LINE3
-  - ADDRESS_LINE2
-  - COUNTRY
-  - ADDRESS_LINE1
+  - name: ADDRESS_LINE3
+    dtype: VARCHAR2(105)
+  - name: COUNTRY
+    dtype: VARCHAR2(3)
+  - name: ADDRESS_LINE1
+    dtype: VARCHAR2(105)
+  - name: ADDRESS_LINE2
+    dtype: VARCHAR2(105)
