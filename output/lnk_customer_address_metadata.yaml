@@ -1,12 +1,12 @@
 source_schema: FLEXLIVE
 source_table: STTM_CUSTOMER
-target_schema: integration_demo
+target_schema: integration
 target_table: LNK_CUSTOMER_ADDRESS
 target_entity_type: lnk
 collision_code: mdm
 description: Links a customer to their associated address.
 metadata:
-  created_at: '2025-01-02T15:12:17.428674'
+  created_at: '2025-01-02T15:59:02.257696'
   version: 1.0.0
   validation_status: warnings
   validation_warnings:
@@ -33,11 +33,11 @@ columns:
   key_type: hash_key_hub
   parent: hub_address
   source:
-  - name: ADDRESS_LINE2
-    dtype: VARCHAR2(105)
   - name: COUNTRY
     dtype: VARCHAR2(3)
+  - name: ADDRESS_LINE1
+    dtype: VARCHAR2(105)
   - name: ADDRESS_LINE3
     dtype: VARCHAR2(105)
-  - name: ADDRESS_LINE1
+  - name: ADDRESS_LINE2
     dtype: VARCHAR2(105)

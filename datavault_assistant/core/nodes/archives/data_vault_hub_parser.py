@@ -22,7 +22,7 @@ class HubDataVaultParser:
     
     def __init__(self, 
                  source_schema: str = "source",
-                 target_schema: str = "integration_demo"):
+                 target_schema: str = "integration"):
         self.source_schema = source_schema
         self.target_schema = target_schema
         

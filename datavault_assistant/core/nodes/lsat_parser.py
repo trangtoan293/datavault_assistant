@@ -151,7 +151,6 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
             warnings.append(
                 f"Link satellite {lsat_data['name']} contains extra business keys not in parent link {link_name}: {sorted(list(extra_keys))}"
             )
-        
         return warnings
     
     def _get_source_schema(self, lsat_data: Dict[str, Any], mapping_df: pd.DataFrame) -> str:
@@ -208,7 +207,6 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
             columns.append({
                 "target": attr,
                 "dtype": datatype_info[attr]['data_type'],
-                "key_type": "descriptive",
                 "source": {
                     "name": attr,
                     "dtype": datatype_info[attr]['data_type']
@@ -257,13 +255,28 @@ class FileProcessor:
                 self.parser._cache_links_metadata(input_data)
             
             # Process entities
+            results=[]
             entity_type = "link_satellites" if isinstance(self.parser, LinkSatelliteParser) else "satellites"
             for entity in input_data.get(entity_type, []):
-                self.logger.info(f"Processing {entity_type}: {entity.get('name')}")
-                result = self.parser.parse(entity, mapping_df)
-                output_file = output_dir / f"{entity['name'].lower()}_metadata.yaml"
-                self._save_yaml(result, output_file)
-                
+                try:
+                    self.logger.info(f"Processing {entity_type}: {entity.get('name')}")
+                    result = self.parser.parse(entity, mapping_df)
+                    output_file = output_dir / f"{entity['name'].lower()}_metadata.yaml"
+                    self._save_yaml(result, output_file)
+                    results.append({
+                            "lsat": entity["name"],
+                            "status": result["metadata"]["validation_status"],
+                            "warnings": result["metadata"].get("validation_warnings", [])
+                        })
+                        
+                except Exception as e:
+                    self.logger.error(f"Error processing lsat {entity.get('name')}: {str(e)}")
+                    results.append({
+                        "lsat": entity.get("name"),
+                        "status": "error",
+                        "error": str(e)
+                    })
+            self._save_processing_summary(results, output_dir)
         except Exception as e:
             self.logger.error(f"Error processing file: {str(e)}")
             raise
@@ -302,7 +315,7 @@ class FileProcessor:
             }
         }
         
-        summary_file = output_dir / "processing_hub_summary.yaml"
+        summary_file = output_dir / "processing_lsat_summary.yaml"
         self._save_yaml(summary, summary_file)
 
 def main():

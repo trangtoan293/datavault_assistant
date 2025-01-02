@@ -212,12 +212,27 @@ class FileProcessor:
             mapping_df = pd.read_csv(mapping_file)
             
             # Process each satellite
+            results=[]
             for sat in input_data.get("satellites", []):
-                self.logger.info(f"Processing satellite: {sat.get('name')}")
-                result = self.parser.parse(sat, mapping_df)
-                output_file = output_dir / f"{sat['name'].lower()}_metadata.yaml"
-                self._save_yaml(result, output_file)
-                
+                try: 
+                    self.logger.info(f"Processing satellite: {sat.get('name')}")
+                    result = self.parser.parse(sat, mapping_df)
+                    output_file = output_dir / f"{sat['name'].lower()}_metadata.yaml"
+                    self._save_yaml(result, output_file)
+                    results.append({
+                            "lsat": sat["name"],
+                            "status": result["metadata"]["validation_status"],
+                            "warnings": result["metadata"].get("validation_warnings", [])
+                        })
+                        
+                except Exception as e:
+                    self.logger.error(f"Error processing lsat {sat.get('name')}: {str(e)}")
+                    results.append({
+                        "lsat": sat.get("name"),
+                        "status": "error",
+                        "error": str(e)
+                    })                
+            self._save_processing_summary(results, output_dir)
         except Exception as e:
             self.logger.error(f"Error processing file: {str(e)}")
             raise
@@ -246,6 +261,22 @@ class FileProcessor:
             self.logger.info(f"Successfully saved YAML to: {output_path}")
         except Exception as e:
             raise Exception(f"Error saving YAML: {str(e)}")
+        
+    def _save_processing_summary(self, results: List[Dict[str, Any]], output_dir: Path) -> None:
+        """Save processing summary"""
+        summary = {
+            "processing_summary": {
+                "processed_at": datetime.now().isoformat(),
+                "total_hubs": len(results),
+                "successful": sum(1 for r in results if r["status"] != "error"),
+                "warnings": sum(1 for r in results if r["status"] == "warnings"),
+                "errors": sum(1 for r in results if r["status"] == "error"),
+                "details": results
+            }
+        }
+        
+        summary_file = output_dir / "processing_sat_summary.yaml"
+        self._save_yaml(summary, summary_file)
 
 def main():
     config = ParserConfig()

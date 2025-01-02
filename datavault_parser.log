@@ -887,3 +887,339 @@ DataVaultParserException: Error in satellite transformation: object of type 'int
 2025-01-02 15:12:53,809 - HubParser - INFO - Parsing hub: HUB_RISK_PROFILE
 2025-01-02 15:12:53,815 - FileProcessor - INFO - Saved YAML to: output\hub_risk_profile_metadata.yaml
 2025-01-02 15:12:53,821 - FileProcessor - INFO - Saved YAML to: output\processing_hub_summary.yaml
+2025-01-02 15:16:34,425 - FileProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-02 15:16:34,429 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-02 15:16:34,451 - FileProcessor - INFO - Saved YAML to: output\hub_customer_metadata.yaml
+2025-01-02 15:16:34,454 - FileProcessor - INFO - Processing hub: HUB_ADDRESS
+2025-01-02 15:16:34,455 - HubParser - INFO - Parsing hub: HUB_ADDRESS
+2025-01-02 15:16:34,475 - FileProcessor - INFO - Saved YAML to: output\hub_address_metadata.yaml
+2025-01-02 15:16:34,477 - FileProcessor - INFO - Processing hub: HUB_CONTACT
+2025-01-02 15:16:34,477 - HubParser - INFO - Parsing hub: HUB_CONTACT
+2025-01-02 15:16:34,491 - FileProcessor - INFO - Saved YAML to: output\hub_contact_metadata.yaml
+2025-01-02 15:16:34,492 - FileProcessor - INFO - Processing hub: HUB_RISK_PROFILE
+2025-01-02 15:16:34,492 - HubParser - INFO - Parsing hub: HUB_RISK_PROFILE
+2025-01-02 15:16:34,501 - FileProcessor - INFO - Saved YAML to: output\hub_risk_profile_metadata.yaml
+2025-01-02 15:16:34,509 - FileProcessor - INFO - Saved YAML to: output\processing_hub_summary.yaml
+2025-01-02 15:17:04,897 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-02 15:17:04,898 - FileProcessor - INFO - Processing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:17:04,898 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:17:04,904 - FileProcessor - INFO - Saved YAML to: output\lnk_customer_address_metadata.yaml
+2025-01-02 15:17:04,905 - FileProcessor - INFO - Processing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:17:04,905 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:17:04,911 - FileProcessor - INFO - Saved YAML to: output\lnk_customer_contact_metadata.yaml
+2025-01-02 15:17:04,912 - FileProcessor - INFO - Processing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:17:04,912 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:17:04,919 - FileProcessor - INFO - Saved YAML to: output\lnk_customer_risk_profile_metadata.yaml
+2025-01-02 15:17:04,925 - FileProcessor - INFO - Saved YAML to: output\processing_link_summary.yaml
+2025-01-02 15:17:12,244 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 15:17:12,245 - FileProcessor - INFO - Reading mapping file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv
+2025-01-02 15:17:12,248 - FileProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:17:12,248 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:17:12,289 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_details_metadata.yaml
+2025-01-02 15:17:12,290 - FileProcessor - INFO - Processing satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:17:12,290 - SatelliteParser - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:17:12,296 - FileProcessor - INFO - Successfully saved YAML to: output\sat_address_details_metadata.yaml
+2025-01-02 15:17:12,297 - FileProcessor - INFO - Processing satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:17:12,299 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:17:12,302 - FileProcessor - INFO - Successfully saved YAML to: output\sat_contact_details_metadata.yaml
+2025-01-02 15:17:12,302 - FileProcessor - INFO - Processing satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:17:12,303 - SatelliteParser - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:17:12,318 - FileProcessor - INFO - Successfully saved YAML to: output\sat_risk_profile_details_metadata.yaml
+2025-01-02 15:17:21,399 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 15:17:21,399 - FileProcessor - INFO - Reading mapping file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv
+2025-01-02 15:17:21,403 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 15:17:21,403 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:17:21,404 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:17:21,410 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_address_details_metadata.yaml
+2025-01-02 15:17:21,411 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:17:21,411 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:17:21,417 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_contact_details_metadata.yaml
+2025-01-02 15:17:21,418 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:17:21,419 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:17:21,433 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_risk_profile_details_metadata.yaml
+2025-01-02 15:21:43,564 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 15:21:43,566 - FileProcessor - INFO - Reading mapping file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv
+2025-01-02 15:21:43,571 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 15:21:43,572 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:21:43,572 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:21:43,580 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_address_details_metadata.yaml
+2025-01-02 15:21:43,581 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:21:43,581 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:21:43,592 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_contact_details_metadata.yaml
+2025-01-02 15:21:43,593 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:21:43,593 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:21:43,608 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_risk_profile_details_metadata.yaml
+2025-01-02 15:21:43,608 - FileProcessor - ERROR - Error processing file: string indices must be integers
+2025-01-02 15:21:43,609 - root - ERROR - Error in main: string indices must be integers
+2025-01-02 15:23:59,844 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 15:23:59,845 - FileProcessor - INFO - Reading mapping file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv
+2025-01-02 15:23:59,848 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 15:23:59,848 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:23:59,849 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:23:59,855 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_address_details_metadata.yaml
+2025-01-02 15:23:59,856 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:23:59,856 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:23:59,862 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_contact_details_metadata.yaml
+2025-01-02 15:23:59,863 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:23:59,863 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:23:59,880 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_risk_profile_details_metadata.yaml
+2025-01-02 15:23:59,880 - FileProcessor - ERROR - Error processing file: string indices must be integers
+2025-01-02 15:23:59,881 - root - ERROR - Error in main: string indices must be integers
+2025-01-02 15:24:05,583 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 15:24:05,584 - FileProcessor - INFO - Reading mapping file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv
+2025-01-02 15:24:05,587 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 15:24:05,588 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:24:05,588 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:24:05,595 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_address_details_metadata.yaml
+2025-01-02 15:24:05,595 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:24:05,596 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:24:05,601 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_contact_details_metadata.yaml
+2025-01-02 15:24:05,602 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:24:05,603 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:24:05,614 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_risk_profile_details_metadata.yaml
+2025-01-02 15:24:05,619 - FileProcessor - INFO - Saved YAML to: output\processing_hub_summary.yaml
+2025-01-02 15:24:57,161 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 15:24:57,162 - FileProcessor - INFO - Reading mapping file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv
+2025-01-02 15:24:57,166 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 15:24:57,166 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:24:57,167 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:24:57,173 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_address_details_metadata.yaml
+2025-01-02 15:24:57,174 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:24:57,174 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:24:57,179 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_contact_details_metadata.yaml
+2025-01-02 15:24:57,180 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:24:57,180 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:24:57,197 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_risk_profile_details_metadata.yaml
+2025-01-02 15:24:57,200 - FileProcessor - INFO - Saved YAML to: output\processing_lsat_summary.yaml
+2025-01-02 15:27:25,728 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 15:27:25,729 - FileProcessor - INFO - Reading mapping file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv
+2025-01-02 15:27:25,732 - FileProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:27:25,732 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:27:25,772 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_details_metadata.yaml
+2025-01-02 15:27:25,772 - FileProcessor - INFO - Processing satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:27:25,773 - SatelliteParser - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:27:25,781 - FileProcessor - INFO - Successfully saved YAML to: output\sat_address_details_metadata.yaml
+2025-01-02 15:27:25,781 - FileProcessor - INFO - Processing satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:27:25,782 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:27:25,786 - FileProcessor - INFO - Successfully saved YAML to: output\sat_contact_details_metadata.yaml
+2025-01-02 15:27:25,787 - FileProcessor - INFO - Processing satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:27:25,787 - SatelliteParser - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:27:25,804 - FileProcessor - INFO - Successfully saved YAML to: output\sat_risk_profile_details_metadata.yaml
+2025-01-02 15:27:25,807 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-02 15:28:30,949 - FileProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-02 15:28:30,950 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-02 15:28:30,954 - FileProcessor - INFO - Saved YAML to: output\hub_customer_metadata.yaml
+2025-01-02 15:28:30,955 - FileProcessor - INFO - Processing hub: HUB_ADDRESS
+2025-01-02 15:28:30,955 - HubParser - INFO - Parsing hub: HUB_ADDRESS
+2025-01-02 15:28:30,961 - FileProcessor - INFO - Saved YAML to: output\hub_address_metadata.yaml
+2025-01-02 15:28:30,961 - FileProcessor - INFO - Processing hub: HUB_CONTACT
+2025-01-02 15:28:30,962 - HubParser - INFO - Parsing hub: HUB_CONTACT
+2025-01-02 15:28:30,969 - FileProcessor - INFO - Saved YAML to: output\hub_contact_metadata.yaml
+2025-01-02 15:28:30,969 - FileProcessor - INFO - Processing hub: HUB_RISK_PROFILE
+2025-01-02 15:28:30,970 - HubParser - INFO - Parsing hub: HUB_RISK_PROFILE
+2025-01-02 15:28:30,975 - FileProcessor - INFO - Saved YAML to: output\hub_risk_profile_metadata.yaml
+2025-01-02 15:28:30,978 - FileProcessor - INFO - Saved YAML to: output\processing_hub_summary.yaml
+2025-01-02 15:53:13,985 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-02 15:53:13,986 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-02 15:53:13,988 - FileProcessor - ERROR - Error saving YAML to output\hub_customer_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:13,988 - DataProcessor - ERROR - Error processing hub HUB_CUSTOMER: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:13,989 - DataProcessor - INFO - Processing hub: HUB_ADDRESS
+2025-01-02 15:53:13,990 - HubParser - INFO - Parsing hub: HUB_ADDRESS
+2025-01-02 15:53:13,993 - FileProcessor - ERROR - Error saving YAML to output\hub_address_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:13,993 - DataProcessor - ERROR - Error processing hub HUB_ADDRESS: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:13,993 - DataProcessor - INFO - Processing hub: HUB_CONTACT
+2025-01-02 15:53:13,993 - HubParser - INFO - Parsing hub: HUB_CONTACT
+2025-01-02 15:53:13,996 - FileProcessor - ERROR - Error saving YAML to output\hub_contact_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:13,996 - DataProcessor - ERROR - Error processing hub HUB_CONTACT: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:13,996 - DataProcessor - INFO - Processing hub: HUB_RISK_PROFILE
+2025-01-02 15:53:13,997 - HubParser - INFO - Parsing hub: HUB_RISK_PROFILE
+2025-01-02 15:53:13,999 - FileProcessor - ERROR - Error saving YAML to output\hub_risk_profile_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:13,999 - DataProcessor - ERROR - Error processing hub HUB_RISK_PROFILE: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,000 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-02 15:53:14,000 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:53:14,001 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:53:14,005 - FileProcessor - ERROR - Error saving YAML to output\lnk_customer_address_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,006 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_ADDRESS: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,006 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:53:14,007 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:53:14,009 - FileProcessor - ERROR - Error saving YAML to output\lnk_customer_contact_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,009 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CONTACT: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,010 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:53:14,010 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:53:14,013 - FileProcessor - ERROR - Error saving YAML to output\lnk_customer_risk_profile_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,013 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_RISK_PROFILE: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,013 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:53:14,014 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:53:14,035 - FileProcessor - ERROR - Error saving YAML to output\sat_customer_details_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,036 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,036 - DataProcessor - INFO - Processing satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:53:14,037 - SatelliteParser - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:53:14,040 - FileProcessor - ERROR - Error saving YAML to output\sat_address_details_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,040 - DataProcessor - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,041 - DataProcessor - INFO - Processing satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:53:14,041 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:53:14,045 - FileProcessor - ERROR - Error saving YAML to output\sat_contact_details_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,046 - DataProcessor - ERROR - Error processing satellite SAT_CONTACT_DETAILS: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,046 - DataProcessor - INFO - Processing satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:53:14,047 - SatelliteParser - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:53:14,055 - FileProcessor - ERROR - Error saving YAML to output\sat_risk_profile_details_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,055 - DataProcessor - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,056 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 15:53:14,056 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:53:14,057 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:53:14,061 - FileProcessor - ERROR - Error saving YAML to output\lsat_customer_address_details_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,062 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_ADDRESS_DETAILS: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,062 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:53:14,063 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:53:14,065 - FileProcessor - ERROR - Error saving YAML to output\lsat_customer_contact_details_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,066 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_CONTACT_DETAILS: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,066 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:53:14,067 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:53:14,072 - FileProcessor - ERROR - Error saving YAML to output\lsat_customer_risk_profile_details_metadata.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,072 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_RISK_PROFILE_DETAILS: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,073 - FileProcessor - ERROR - Error saving YAML to output\processing_hub_summary.yaml: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:53:14,074 - DataProcessor - ERROR - Error processing data: open() argument 'encoding' must be str or None, not ParserConfig
+2025-01-02 15:57:35,246 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-02 15:57:35,246 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-02 15:57:35,251 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-02 15:57:35,252 - DataProcessor - INFO - Processing hub: HUB_ADDRESS
+2025-01-02 15:57:35,252 - HubParser - INFO - Parsing hub: HUB_ADDRESS
+2025-01-02 15:57:35,261 - FileProcessor - INFO - Successfully saved YAML to: output\hub_address_metadata.yaml
+2025-01-02 15:57:35,261 - DataProcessor - INFO - Processing hub: HUB_CONTACT
+2025-01-02 15:57:35,262 - HubParser - INFO - Parsing hub: HUB_CONTACT
+2025-01-02 15:57:35,268 - FileProcessor - INFO - Successfully saved YAML to: output\hub_contact_metadata.yaml
+2025-01-02 15:57:35,269 - DataProcessor - INFO - Processing hub: HUB_RISK_PROFILE
+2025-01-02 15:57:35,269 - HubParser - INFO - Parsing hub: HUB_RISK_PROFILE
+2025-01-02 15:57:35,275 - FileProcessor - INFO - Successfully saved YAML to: output\hub_risk_profile_metadata.yaml
+2025-01-02 15:57:35,276 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-02 15:57:35,277 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:57:35,277 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:57:35,285 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_address_metadata.yaml
+2025-01-02 15:57:35,285 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:57:35,286 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:57:35,294 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_contact_metadata.yaml
+2025-01-02 15:57:35,295 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:57:35,296 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:57:35,304 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_risk_profile_metadata.yaml
+2025-01-02 15:57:35,304 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:57:35,305 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:57:35,348 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_details_metadata.yaml
+2025-01-02 15:57:35,348 - DataProcessor - INFO - Processing satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:57:35,349 - SatelliteParser - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:57:35,355 - FileProcessor - INFO - Successfully saved YAML to: output\sat_address_details_metadata.yaml
+2025-01-02 15:57:35,356 - DataProcessor - INFO - Processing satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:57:35,356 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:57:35,365 - FileProcessor - INFO - Successfully saved YAML to: output\sat_contact_details_metadata.yaml
+2025-01-02 15:57:35,366 - DataProcessor - INFO - Processing satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:57:35,366 - SatelliteParser - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:57:35,390 - FileProcessor - INFO - Successfully saved YAML to: output\sat_risk_profile_details_metadata.yaml
+2025-01-02 15:57:35,390 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 15:57:35,391 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:57:35,391 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:57:35,398 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_address_details_metadata.yaml
+2025-01-02 15:57:35,398 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:57:35,399 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:57:35,403 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_contact_details_metadata.yaml
+2025-01-02 15:57:35,403 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:57:35,404 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:57:35,415 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_risk_profile_details_metadata.yaml
+2025-01-02 15:57:35,419 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-02 15:57:35,421 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-02 15:57:35,424 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-02 15:57:35,428 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-02 15:57:55,602 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-02 15:57:55,603 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-02 15:57:55,608 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-02 15:57:55,609 - DataProcessor - INFO - Processing hub: HUB_ADDRESS
+2025-01-02 15:57:55,609 - HubParser - INFO - Parsing hub: HUB_ADDRESS
+2025-01-02 15:57:55,622 - FileProcessor - INFO - Successfully saved YAML to: output\hub_address_metadata.yaml
+2025-01-02 15:57:55,622 - DataProcessor - INFO - Processing hub: HUB_CONTACT
+2025-01-02 15:57:55,623 - HubParser - INFO - Parsing hub: HUB_CONTACT
+2025-01-02 15:57:55,628 - FileProcessor - INFO - Successfully saved YAML to: output\hub_contact_metadata.yaml
+2025-01-02 15:57:55,629 - DataProcessor - INFO - Processing hub: HUB_RISK_PROFILE
+2025-01-02 15:57:55,629 - HubParser - INFO - Parsing hub: HUB_RISK_PROFILE
+2025-01-02 15:57:55,634 - FileProcessor - INFO - Successfully saved YAML to: output\hub_risk_profile_metadata.yaml
+2025-01-02 15:57:55,635 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-02 15:57:55,635 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:57:55,636 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:57:55,648 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_address_metadata.yaml
+2025-01-02 15:57:55,649 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:57:55,649 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:57:55,657 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_contact_metadata.yaml
+2025-01-02 15:57:55,657 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:57:55,658 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:57:55,665 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_risk_profile_metadata.yaml
+2025-01-02 15:57:55,666 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:57:55,666 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:57:55,706 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_details_metadata.yaml
+2025-01-02 15:57:55,706 - DataProcessor - INFO - Processing satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:57:55,707 - SatelliteParser - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:57:55,713 - FileProcessor - INFO - Successfully saved YAML to: output\sat_address_details_metadata.yaml
+2025-01-02 15:57:55,714 - DataProcessor - INFO - Processing satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:57:55,714 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:57:55,723 - FileProcessor - INFO - Successfully saved YAML to: output\sat_contact_details_metadata.yaml
+2025-01-02 15:57:55,724 - DataProcessor - INFO - Processing satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:57:55,724 - SatelliteParser - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:57:55,739 - FileProcessor - INFO - Successfully saved YAML to: output\sat_risk_profile_details_metadata.yaml
+2025-01-02 15:57:55,740 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 15:57:55,741 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:57:55,742 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:57:55,749 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_address_details_metadata.yaml
+2025-01-02 15:57:55,749 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:57:55,750 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:57:55,755 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_contact_details_metadata.yaml
+2025-01-02 15:57:55,755 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:57:55,756 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:57:55,770 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_risk_profile_details_metadata.yaml
+2025-01-02 15:57:55,775 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-02 15:57:55,780 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-02 15:57:55,784 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-02 15:57:55,788 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-02 15:59:02,217 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-02 15:59:02,218 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-02 15:59:02,223 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-02 15:59:02,224 - DataProcessor - INFO - Processing hub: HUB_ADDRESS
+2025-01-02 15:59:02,224 - HubParser - INFO - Parsing hub: HUB_ADDRESS
+2025-01-02 15:59:02,234 - FileProcessor - INFO - Successfully saved YAML to: output\hub_address_metadata.yaml
+2025-01-02 15:59:02,235 - DataProcessor - INFO - Processing hub: HUB_CONTACT
+2025-01-02 15:59:02,235 - HubParser - INFO - Parsing hub: HUB_CONTACT
+2025-01-02 15:59:02,242 - FileProcessor - INFO - Successfully saved YAML to: output\hub_contact_metadata.yaml
+2025-01-02 15:59:02,242 - DataProcessor - INFO - Processing hub: HUB_RISK_PROFILE
+2025-01-02 15:59:02,243 - HubParser - INFO - Parsing hub: HUB_RISK_PROFILE
+2025-01-02 15:59:02,249 - FileProcessor - INFO - Successfully saved YAML to: output\hub_risk_profile_metadata.yaml
+2025-01-02 15:59:02,250 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-02 15:59:02,251 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:59:02,253 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:59:02,261 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_address_metadata.yaml
+2025-01-02 15:59:02,261 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:59:02,262 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:59:02,273 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_contact_metadata.yaml
+2025-01-02 15:59:02,274 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:59:02,274 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:59:02,280 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_risk_profile_metadata.yaml
+2025-01-02 15:59:02,280 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:59:02,281 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 15:59:02,327 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_details_metadata.yaml
+2025-01-02 15:59:02,327 - DataProcessor - INFO - Processing satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:59:02,328 - SatelliteParser - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 15:59:02,334 - FileProcessor - INFO - Successfully saved YAML to: output\sat_address_details_metadata.yaml
+2025-01-02 15:59:02,334 - DataProcessor - INFO - Processing satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:59:02,335 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 15:59:02,344 - FileProcessor - INFO - Successfully saved YAML to: output\sat_contact_details_metadata.yaml
+2025-01-02 15:59:02,345 - DataProcessor - INFO - Processing satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:59:02,345 - SatelliteParser - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 15:59:02,368 - FileProcessor - INFO - Successfully saved YAML to: output\sat_risk_profile_details_metadata.yaml
+2025-01-02 15:59:02,369 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 15:59:02,370 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:59:02,370 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:59:02,378 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_address_details_metadata.yaml
+2025-01-02 15:59:02,378 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:59:02,379 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:59:02,384 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_contact_details_metadata.yaml
+2025-01-02 15:59:02,385 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:59:02,385 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:59:02,400 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_risk_profile_details_metadata.yaml
+2025-01-02 15:59:02,405 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-02 15:59:02,409 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-02 15:59:02,412 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-02 15:59:02,415 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml

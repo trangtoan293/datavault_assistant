@@ -25,7 +25,14 @@ class Settings(BaseSettings):
     
     model_config = SettingsConfigDict(env_file='.env', case_sensitive=True)
 
-
+class ParserConfig:
+    version: str = "1.0.0"
+    source_schema: str = "source"
+    target_schema: str = "integration"
+    default_varchar_length: int = 255
+    enable_detailed_logging: bool = True
+    validation_level: str = "strict"
+    
 @lru_cache()
 def get_settings() -> Settings:
     return Settings()
