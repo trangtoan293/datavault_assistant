@@ -1,0 +1,308 @@
+source_schema: FLEXLIVE
+source_table: STTM_CUSTOMER
+target_schema: integration
+target_table: SAT_CUSTOMER_DETAILS
+target_entity_type: sat
+parent_table: HUB_CUSTOMER
+collision_code: CUSTOMER
+description: ''
+metadata:
+  created_at: '2025-01-02T14:34:46.917198'
+  version: 1.0.0
+  validation_status: valid
+  processing_info:
+    start_time: '2025-01-02T14:34:46.862898'
+    end_time: '2025-01-02T14:34:46.916227'
+    duration_seconds: 0.053
+  validation_warnings: null
+columns:
+- target: dv_hkey_sat_customer_details
+  dtype: string
+  key_type: hash_key_sat
+  source: null
+- target: dv_hkey_hub_customer
+  dtype: string
+  key_type: hash_key_hub
+  source:
+  - CUSTOMER_NO
+  - UNIQUE_ID_VALUE
+- target: dv_hsh_diff
+  dtype: string
+  key_type: hash_diff
+  source: null
+- target: CUSTOMER_TYPE
+  dtype: CHAR
+  key_type: descriptive
+  source:
+    name: CUSTOMER_TYPE
+    dtype: CHAR
+- target: CUSTOMER_NAME1
+  dtype: VARCHAR2(105)
+  key_type: descriptive
+  source:
+    name: CUSTOMER_NAME1
+    dtype: VARCHAR2(105)
+- target: SHORT_NAME
+  dtype: VARCHAR2(255)
+  key_type: descriptive
+  source:
+    name: SHORT_NAME
+    dtype: VARCHAR2(255)
+- target: NATIONALITY
+  dtype: VARCHAR2(3)
+  key_type: descriptive
+  source:
+    name: NATIONALITY
+    dtype: VARCHAR2(3)
+- target: LANGUAGE
+  dtype: VARCHAR2(3)
+  key_type: descriptive
+  source:
+    name: LANGUAGE
+    dtype: VARCHAR2(3)
+- target: LOCAL_BRANCH
+  dtype: VARCHAR2(255)
+  key_type: descriptive
+  source:
+    name: LOCAL_BRANCH
+    dtype: VARCHAR2(255)
+- target: LIABILITY_NO
+  dtype: VARCHAR2(9)
+  key_type: descriptive
+  source:
+    name: LIABILITY_NO
+    dtype: VARCHAR2(9)
+- target: FROZEN
+  dtype: CHAR
+  key_type: descriptive
+  source:
+    name: FROZEN
+    dtype: CHAR
+- target: DECEASED
+  dtype: CHAR
+  key_type: descriptive
+  source:
+    name: DECEASED
+    dtype: CHAR
+- target: WHEREABOUTS_UNKNOWN
+  dtype: CHAR
+  key_type: descriptive
+  source:
+    name: WHEREABOUTS_UNKNOWN
+    dtype: CHAR
+- target: CUSTOMER_CATEGORY
+  dtype: VARCHAR2(10)
+  key_type: descriptive
+  source:
+    name: CUSTOMER_CATEGORY
+    dtype: VARCHAR2(10)
+- target: NO_AC_NO
+  dtype: CHAR
+  key_type: descriptive
+  source:
+    name: NO_AC_NO
+    dtype: CHAR
+- target: RECORD_STAT
+  dtype: CHAR
+  key_type: descriptive
+  source:
+    name: RECORD_STAT
+    dtype: CHAR
+- target: AUTH_STAT
+  dtype: CHAR
+  key_type: descriptive
+  source:
+    name: AUTH_STAT
+    dtype: CHAR
+- target: MOD_NO
+  dtype: NUMBER
+  key_type: descriptive
+  source:
+    name: MOD_NO
+    dtype: NUMBER
+- target: MAKER_ID
+  dtype: VARCHAR2(12)
+  key_type: descriptive
+  source:
+    name: MAKER_ID
+    dtype: VARCHAR2(12)
+- target: MAKER_DT_STAMP
+  dtype: DATE
+  key_type: descriptive
+  source:
+    name: MAKER_DT_STAMP
+    dtype: DATE
+- target: CHECKER_ID
+  dtype: VARCHAR2(12)
+  key_type: descriptive
+  source:
+    name: CHECKER_ID
+    dtype: VARCHAR2(12)
+- target: CHECKER_DT_STAMP
+  dtype: DATE
+  key_type: descriptive
+  source:
+    name: CHECKER_DT_STAMP
+    dtype: DATE
+- target: ONCE_AUTH
+  dtype: CHAR
+  key_type: descriptive
+  source:
+    name: ONCE_AUTH
+    dtype: CHAR
+- target: CREDIT_RATING
+  dtype: VARCHAR2(10)
+  key_type: descriptive
+  source:
+    name: CREDIT_RATING
+    dtype: VARCHAR2(10)
+- target: REVISION_DATE
+  dtype: DATE
+  key_type: descriptive
+  source:
+    name: REVISION_DATE
+    dtype: DATE
+- target: LIMIT_CCY
+  dtype: VARCHAR2(3)
+  key_type: descriptive
+  source:
+    name: LIMIT_CCY
+    dtype: VARCHAR2(3)
+- target: CAS_CUST
+  dtype: CHAR
+  key_type: descriptive
+  source:
+    name: CAS_CUST
+    dtype: CHAR
+- target: LIAB_NODE
+  dtype: VARCHAR2(105)
+  key_type: descriptive
+  source:
+    name: LIAB_NODE
+    dtype: VARCHAR2(105)
+- target: PAST_DUE_FLAG
+  dtype: VARCHAR2(3)
+  key_type: descriptive
+  source:
+    name: PAST_DUE_FLAG
+    dtype: VARCHAR2(3)
+- target: DEFAULT_MEDIA
+  dtype: VARCHAR2(1)
+  key_type: descriptive
+  source:
+    name: DEFAULT_MEDIA
+    dtype: VARCHAR2(1)
+- target: SSN
+  dtype: VARCHAR2(11)
+  key_type: descriptive
+  source:
+    name: SSN
+    dtype: VARCHAR2(11)
+- target: SWIFT_CODE
+  dtype: VARCHAR2(12)
+  key_type: descriptive
+  source:
+    name: SWIFT_CODE
+    dtype: VARCHAR2(12)
+- target: LOC_CODE
+  dtype: VARCHAR2(3)
+  key_type: descriptive
+  source:
+    name: LOC_CODE
+    dtype: VARCHAR2(3)
+- target: SHORT_NAME2
+  dtype: VARCHAR2(20)
+  key_type: descriptive
+  source:
+    name: SHORT_NAME2
+    dtype: VARCHAR2(20)
+- target: UTILITY_PROVIDER
+  dtype: VARCHAR2(1)
+  key_type: descriptive
+  source:
+    name: UTILITY_PROVIDER
+    dtype: VARCHAR2(1)
+- target: UTILITY_PROVIDER_ID
+  dtype: VARCHAR2(35)
+  key_type: descriptive
+  source:
+    name: UTILITY_PROVIDER_ID
+    dtype: VARCHAR2(35)
+- target: TAX_GROUP
+  dtype: VARCHAR2(10)
+  key_type: descriptive
+  source:
+    name: TAX_GROUP
+    dtype: VARCHAR2(10)
+- target: CONSOL_TAX_CERT_REQD
+  dtype: VARCHAR2(1)
+  key_type: descriptive
+  source:
+    name: CONSOL_TAX_CERT_REQD
+    dtype: VARCHAR2(1)
+- target: INDIVIDUAL_TAX_CERT_REQD
+  dtype: VARCHAR2(255)
+  key_type: descriptive
+  source:
+    name: INDIVIDUAL_TAX_CERT_REQD
+    dtype: VARCHAR2(255)
+- target: CLS_CCY_ALLOWED
+  dtype: VARCHAR2(1)
+  key_type: descriptive
+  source:
+    name: CLS_CCY_ALLOWED
+    dtype: VARCHAR2(1)
+- target: CLS_PARTICIPANT
+  dtype: VARCHAR2(255)
+  key_type: descriptive
+  source:
+    name: CLS_PARTICIPANT
+    dtype: VARCHAR2(255)
+- target: FX_NETTING_CUSTOMER
+  dtype: VARCHAR2(9)
+  key_type: descriptive
+  source:
+    name: FX_NETTING_CUSTOMER
+    dtype: VARCHAR2(9)
+- target: CRM_CUSTOMER
+  dtype: VARCHAR2(1)
+  key_type: descriptive
+  source:
+    name: CRM_CUSTOMER
+    dtype: VARCHAR2(1)
+- target: ISSUER_CUSTOMER
+  dtype: VARCHAR2(1)
+  key_type: descriptive
+  source:
+    name: ISSUER_CUSTOMER
+    dtype: VARCHAR2(1)
+- target: TREASURY_CUSTOMER
+  dtype: VARCHAR2(1)
+  key_type: descriptive
+  source:
+    name: TREASURY_CUSTOMER
+    dtype: VARCHAR2(1)
+- target: CIF_CREATION_DATE
+  dtype: DATE
+  key_type: descriptive
+  source:
+    name: CIF_CREATION_DATE
+    dtype: DATE
+- target: WHT_PCT
+  dtype: NUMBER
+  key_type: descriptive
+  source:
+    name: WHT_PCT
+    dtype: NUMBER
+- target: RP_CUSTOMER
+  dtype: VARCHAR2(1)
+  key_type: descriptive
+  source:
+    name: RP_CUSTOMER
+    dtype: VARCHAR2(1)
+- target: GENERATE_MT920
+  dtype: VARCHAR2(1)
+  key_type: descriptive
+  source:
+    name: GENERATE_MT920
+    dtype: VARCHAR2(1)

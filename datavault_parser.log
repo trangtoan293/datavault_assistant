@@ -1,0 +1,889 @@
+2025-01-02 13:36:29,767 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\hub_link.json
+2025-01-02 13:36:29,767 - __main__ - ERROR - Error in satellite file processing: 'SatDataVaultParser' object has no attribute 'read_json_file'
+2025-01-02 13:36:29,767 - __main__ - ERROR - Error in main: Error processing satellite file: 'SatDataVaultParser' object has no attribute 'read_json_file'
+2025-01-02 13:37:12,605 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\hub_link.json
+2025-01-02 13:37:12,641 - __main__ - ERROR - Error in satellite file processing: 'SatDataVaultParser' object has no attribute 'save_yaml'
+2025-01-02 13:37:12,641 - __main__ - ERROR - Error in main: Error processing satellite file: 'SatDataVaultParser' object has no attribute 'save_yaml'
+2025-01-02 13:37:52,394 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\hub_link.json
+2025-01-02 13:37:52,412 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 13:37:52,413 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 13:37:52,414 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 13:39:23,018 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 13:39:23,018 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 13:39:23,018 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: 'SatDataVaultParser' object has no attribute '_validate_satellite_metadata'
+2025-01-02 13:39:23,018 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: 'SatDataVaultParser' object has no attribute '_validate_satellite_metadata'
+2025-01-02 13:39:23,018 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 13:39:23,030 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: 'SatDataVaultParser' object has no attribute '_validate_satellite_metadata'
+2025-01-02 13:39:23,031 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: 'SatDataVaultParser' object has no attribute '_validate_satellite_metadata'
+2025-01-02 13:39:23,032 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 13:39:23,033 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: 'SatDataVaultParser' object has no attribute '_validate_satellite_metadata'
+2025-01-02 13:39:23,034 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: 'SatDataVaultParser' object has no attribute '_validate_satellite_metadata'
+2025-01-02 13:39:23,035 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 13:39:23,035 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: 'SatDataVaultParser' object has no attribute '_validate_satellite_metadata'
+2025-01-02 13:39:23,036 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: 'SatDataVaultParser' object has no attribute '_validate_satellite_metadata'
+2025-01-02 13:39:23,041 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 13:39:23,041 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 13:39:23,041 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 13:42:20,661 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 13:42:20,678 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 13:42:20,695 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 13:42:20,700 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 13:42:20,703 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 13:42:20,732 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 13:42:20,735 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 13:42:20,736 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: 'SatDataVaultParser' object has no attribute '_validate_satellite_business_keys'
+2025-01-02 13:42:20,736 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: 'SatDataVaultParser' object has no attribute '_validate_satellite_business_keys'
+2025-01-02 13:42:20,743 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 13:42:20,745 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: descriptive_attrs cannot be empty
+2025-01-02 13:42:20,746 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: descriptive_attrs cannot be empty
+2025-01-02 13:42:20,747 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 13:42:20,747 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: descriptive_attrs cannot be empty
+2025-01-02 13:42:20,747 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: descriptive_attrs cannot be empty
+2025-01-02 13:42:20,748 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 13:42:20,753 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 13:42:20,754 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 13:42:20,762 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 13:42:20,767 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 13:42:20,770 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: 'SatDataVaultParser' object has no attribute '_validate_satellite_business_keys'
+2025-01-02 13:42:20,770 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: 'SatDataVaultParser' object has no attribute '_validate_satellite_business_keys'
+2025-01-02 13:42:20,774 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 13:42:20,776 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 13:42:20,777 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 13:43:07,111 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 13:43:07,111 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 13:43:07,120 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 13:43:07,126 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 13:43:07,130 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 13:43:07,155 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 13:43:07,155 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 13:43:07,155 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: Parent hub does not exist: HUB_CUSTOMER
+2025-01-02 13:43:07,155 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_CUSTOMER
+2025-01-02 13:43:07,171 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 13:43:07,171 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: descriptive_attrs cannot be empty
+2025-01-02 13:43:07,171 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: descriptive_attrs cannot be empty
+2025-01-02 13:43:07,174 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 13:43:07,174 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: descriptive_attrs cannot be empty
+2025-01-02 13:43:07,175 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: descriptive_attrs cannot be empty
+2025-01-02 13:43:07,176 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 13:43:07,180 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 13:43:07,183 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 13:43:07,185 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 13:43:07,188 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 13:43:07,188 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: Parent hub does not exist: HUB_RISK_PROFILE
+2025-01-02 13:43:07,196 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_RISK_PROFILE
+2025-01-02 13:43:07,198 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 13:43:07,199 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 13:43:07,199 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 13:43:53,469 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 13:43:53,469 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 13:43:53,477 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 13:43:53,480 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 13:43:53,484 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 13:43:53,508 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 13:43:53,512 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 13:43:53,521 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: Parent hub does not exist: HUB_CUSTOMER
+2025-01-02 13:43:53,521 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_CUSTOMER
+2025-01-02 13:43:53,522 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 13:43:53,527 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: Parent hub does not exist: HUB_ADDRESS
+2025-01-02 13:43:53,527 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_ADDRESS
+2025-01-02 13:43:53,529 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 13:43:53,536 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: Parent hub does not exist: HUB_CONTACT
+2025-01-02 13:43:53,537 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_CONTACT
+2025-01-02 13:43:53,538 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 13:43:53,543 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 13:43:53,546 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 13:43:53,548 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 13:43:53,554 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 13:43:53,558 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: Parent hub does not exist: HUB_RISK_PROFILE
+2025-01-02 13:43:53,559 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_RISK_PROFILE
+2025-01-02 13:43:53,562 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 13:43:53,563 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 13:43:53,563 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 13:48:02,568 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 13:48:02,573 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 13:48:02,577 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 13:48:02,581 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 13:48:02,586 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 13:48:02,616 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 13:48:02,619 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 13:48:02,631 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: Parent hub does not exist: HUB_CUSTOMER
+2025-01-02 13:48:02,633 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_CUSTOMER
+2025-01-02 13:48:02,633 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 13:48:02,639 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: Parent hub does not exist: HUB_ADDRESS
+2025-01-02 13:48:02,639 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_ADDRESS
+2025-01-02 13:48:02,639 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 13:48:02,645 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: Parent hub does not exist: HUB_CONTACT
+2025-01-02 13:48:02,646 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_CONTACT
+2025-01-02 13:48:02,647 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 13:48:02,654 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 13:48:02,660 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 13:48:02,663 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 13:48:02,670 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 13:48:02,678 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: Parent hub does not exist: HUB_RISK_PROFILE
+2025-01-02 13:48:02,678 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_RISK_PROFILE
+2025-01-02 13:48:02,678 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 13:48:02,678 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 13:48:02,678 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 13:49:06,818 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 13:49:06,828 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 13:49:06,831 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 13:49:06,831 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 13:49:06,837 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 13:49:06,866 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 13:49:06,867 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 13:49:06,880 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: Parent hub does not exist: HUB_CUSTOMER
+2025-01-02 13:49:06,880 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_CUSTOMER
+2025-01-02 13:49:06,881 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 13:49:06,885 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: Parent hub does not exist: HUB_ADDRESS
+2025-01-02 13:49:06,886 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_ADDRESS
+2025-01-02 13:49:06,887 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 13:49:06,888 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: Parent hub does not exist: HUB_CONTACT
+2025-01-02 13:49:06,890 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_CONTACT
+2025-01-02 13:49:06,891 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 13:49:06,898 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 13:49:06,903 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 13:49:06,905 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 13:49:06,910 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 13:49:06,914 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: Parent hub does not exist: HUB_RISK_PROFILE
+2025-01-02 13:49:06,915 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_RISK_PROFILE
+2025-01-02 13:49:06,919 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 13:49:06,920 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 13:49:06,921 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 13:50:04,578 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 13:50:04,578 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 13:50:04,578 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 13:50:04,594 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 13:50:04,597 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 13:50:04,622 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 13:50:04,625 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 13:50:04,635 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: 'HUB_CUSTOMER'
+2025-01-02 13:50:04,635 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: 'HUB_CUSTOMER'
+2025-01-02 13:50:04,637 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 13:50:04,641 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: 'HUB_ADDRESS'
+2025-01-02 13:50:04,641 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: 'HUB_ADDRESS'
+2025-01-02 13:50:04,641 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 13:50:04,645 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: 'HUB_CONTACT'
+2025-01-02 13:50:04,646 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: 'HUB_CONTACT'
+2025-01-02 13:50:04,646 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 13:50:04,652 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 13:50:04,654 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 13:50:04,656 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 13:50:04,661 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 13:50:04,665 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: 'HUB_RISK_PROFILE'
+2025-01-02 13:50:04,665 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: 'HUB_RISK_PROFILE'
+2025-01-02 13:50:04,669 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 13:50:04,670 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 13:50:04,670 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 13:57:55,459 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 13:57:55,474 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 13:57:55,476 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 13:57:55,481 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 13:57:55,484 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 13:57:55,505 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 13:57:55,508 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 13:57:55,514 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: 'HUB_CUSTOMER'
+2025-01-02 13:57:55,515 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: 'HUB_CUSTOMER'
+2025-01-02 13:57:55,515 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 13:57:55,518 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: 'HUB_ADDRESS'
+2025-01-02 13:57:55,518 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: 'HUB_ADDRESS'
+2025-01-02 13:57:55,518 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 13:57:55,523 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: 'HUB_CONTACT'
+2025-01-02 13:57:55,523 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: 'HUB_CONTACT'
+2025-01-02 13:57:55,524 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 13:57:55,528 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 13:57:55,532 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 13:57:55,534 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 13:57:55,537 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 13:57:55,540 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: 'HUB_RISK_PROFILE'
+2025-01-02 13:57:55,540 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: 'HUB_RISK_PROFILE'
+2025-01-02 13:57:55,543 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 13:57:55,543 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 13:57:55,543 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 14:06:53,660 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:06:53,660 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:06:53,678 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 14:06:53,682 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 14:06:53,685 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 14:06:53,715 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 14:06:53,717 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 14:06:53,719 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: Parent hub does not exist: HUB_CUSTOMER
+2025-01-02 14:06:53,719 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_CUSTOMER
+2025-01-02 14:06:53,719 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:06:53,728 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: Parent hub does not exist: HUB_ADDRESS
+2025-01-02 14:06:53,728 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_ADDRESS
+2025-01-02 14:06:53,728 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:06:53,728 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: Parent hub does not exist: HUB_CONTACT
+2025-01-02 14:06:53,728 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_CONTACT
+2025-01-02 14:06:53,728 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:06:53,745 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 14:06:53,745 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 14:06:53,745 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 14:06:53,758 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 14:06:53,762 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: Parent hub does not exist: HUB_RISK_PROFILE
+2025-01-02 14:06:53,762 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: Parent hub does not exist: HUB_RISK_PROFILE
+2025-01-02 14:06:53,767 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 14:06:53,768 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 14:06:53,769 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 14:08:59,602 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:08:59,617 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:08:59,617 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 14:08:59,624 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 14:08:59,626 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 14:08:59,647 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 14:08:59,651 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 14:08:59,656 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: name 'warnings' is not defined
+2025-01-02 14:08:59,657 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: name 'warnings' is not defined
+2025-01-02 14:08:59,657 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:08:59,657 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: name 'warnings' is not defined
+2025-01-02 14:08:59,657 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: name 'warnings' is not defined
+2025-01-02 14:08:59,657 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:08:59,657 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: name 'warnings' is not defined
+2025-01-02 14:08:59,668 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: name 'warnings' is not defined
+2025-01-02 14:08:59,668 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:08:59,674 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 14:08:59,674 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 14:08:59,674 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 14:08:59,683 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 14:08:59,686 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: name 'warnings' is not defined
+2025-01-02 14:08:59,686 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: name 'warnings' is not defined
+2025-01-02 14:08:59,687 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 14:08:59,690 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 14:08:59,690 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 14:10:22,241 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:10:22,246 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:10:22,247 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 14:10:22,254 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 14:10:22,257 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 14:10:22,283 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 14:10:22,287 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 14:10:22,290 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: string indices must be integers
+2025-01-02 14:10:22,290 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:10:22,290 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:10:22,305 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: string indices must be integers
+2025-01-02 14:10:22,338 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:10:22,339 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:10:22,356 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: string indices must be integers
+2025-01-02 14:10:22,356 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:10:22,356 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:10:22,356 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 14:10:22,373 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 14:10:22,373 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 14:10:22,373 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 14:10:22,389 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: string indices must be integers
+2025-01-02 14:10:22,389 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:10:22,389 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 14:10:22,389 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 14:10:22,389 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 14:15:04,279 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:15:04,286 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:15:04,290 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 14:15:04,295 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 14:15:04,300 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 14:15:04,336 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 14:15:04,340 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 14:15:04,352 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: string indices must be integers
+2025-01-02 14:15:04,353 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:15:04,353 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:15:04,362 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: string indices must be integers
+2025-01-02 14:15:04,363 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:15:04,363 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:15:04,367 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: string indices must be integers
+2025-01-02 14:15:04,368 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:15:04,368 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:15:04,374 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 14:15:04,379 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 14:15:04,379 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 14:15:04,379 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 14:15:04,394 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: string indices must be integers
+2025-01-02 14:15:04,394 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:15:04,399 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 14:15:04,400 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 14:15:04,400 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 14:18:28,911 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:18:28,911 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:18:28,926 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:18:28,926 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:18:28,929 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 14:18:28,932 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 14:18:28,934 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 14:18:28,961 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 14:18:28,963 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 14:18:28,964 - __main__ - INFO - Completed datatype lookup. Found types for 48 columns
+2025-01-02 14:18:28,964 - __main__ - INFO - Validating business keys
+2025-01-02 14:18:28,964 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: string indices must be integers
+2025-01-02 14:18:28,970 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:18:28,970 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:18:28,972 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:18:28,972 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:18:28,976 - __main__ - INFO - Completed datatype lookup. Found types for 4 columns
+2025-01-02 14:18:28,977 - __main__ - INFO - Validating business keys
+2025-01-02 14:18:28,977 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: string indices must be integers
+2025-01-02 14:18:28,978 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:18:28,978 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:18:28,980 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:18:28,980 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:18:28,982 - __main__ - INFO - Completed datatype lookup. Found types for 2 columns
+2025-01-02 14:18:28,984 - __main__ - INFO - Validating business keys
+2025-01-02 14:18:28,984 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: string indices must be integers
+2025-01-02 14:18:28,984 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:18:28,984 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:18:28,986 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:18:28,986 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:18:28,992 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 14:18:28,994 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 14:18:28,998 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 14:18:29,002 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 14:18:29,005 - __main__ - INFO - Completed datatype lookup. Found types for 18 columns
+2025-01-02 14:18:29,006 - __main__ - INFO - Validating business keys
+2025-01-02 14:18:29,006 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: string indices must be integers
+2025-01-02 14:18:29,007 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: string indices must be integers
+2025-01-02 14:18:29,008 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 14:18:29,008 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 14:18:29,008 - __main__ - INFO - Satellite processing completed successfully
+2025-01-02 14:20:01,658 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:20:01,658 - __main__ - INFO - Beginning to process 4 satellites
+2025-01-02 14:20:01,658 - __main__ - INFO - Processing satellite 1/4: SAT_CUSTOMER_DETAILS
+2025-01-02 14:20:01,658 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:20:01,672 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:20:01,672 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:20:01,674 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 14:20:01,677 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 14:20:01,681 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 14:20:01,701 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 14:20:01,703 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 14:20:01,707 - __main__ - INFO - Completed datatype lookup. Found types for 48 columns
+2025-01-02 14:20:01,707 - __main__ - INFO - Validating business keys
+2025-01-02 14:20:01,707 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: string indices must be integers
+2025-01-02 14:20:01,710 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: string indices must be integers
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 236, in transform_satellite_metadata_with_datatypes
+    warnings = self._validate_satellite_business_keys(sat_data)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 185, in _validate_satellite_business_keys
+    hub_keys = self.hubs_metadata[hub_name]["business_keys"]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: string indices must be integers
+2025-01-02 14:20:01,712 - __main__ - INFO - Processing satellite 2/4: SAT_ADDRESS_DETAILS
+2025-01-02 14:20:01,712 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:20:01,712 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:20:01,712 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:20:01,723 - __main__ - INFO - Completed datatype lookup. Found types for 4 columns
+2025-01-02 14:20:01,723 - __main__ - INFO - Validating business keys
+2025-01-02 14:20:01,723 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: string indices must be integers
+2025-01-02 14:20:01,724 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: string indices must be integers
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 236, in transform_satellite_metadata_with_datatypes
+    warnings = self._validate_satellite_business_keys(sat_data)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 185, in _validate_satellite_business_keys
+    hub_keys = self.hubs_metadata[hub_name]["business_keys"]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: string indices must be integers
+2025-01-02 14:20:01,727 - __main__ - INFO - Processing satellite 3/4: SAT_CONTACT_DETAILS
+2025-01-02 14:20:01,728 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:20:01,728 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:20:01,728 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:20:01,728 - __main__ - INFO - Completed datatype lookup. Found types for 2 columns
+2025-01-02 14:20:01,728 - __main__ - INFO - Validating business keys
+2025-01-02 14:20:01,728 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: string indices must be integers
+2025-01-02 14:20:01,728 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: string indices must be integers
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 236, in transform_satellite_metadata_with_datatypes
+    warnings = self._validate_satellite_business_keys(sat_data)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 185, in _validate_satellite_business_keys
+    hub_keys = self.hubs_metadata[hub_name]["business_keys"]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: string indices must be integers
+2025-01-02 14:20:01,728 - __main__ - INFO - Processing satellite 4/4: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:20:01,728 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:20:01,739 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:20:01,739 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:20:01,743 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 14:20:01,745 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 14:20:01,748 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 14:20:01,751 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 14:20:01,753 - __main__ - INFO - Completed datatype lookup. Found types for 18 columns
+2025-01-02 14:20:01,753 - __main__ - INFO - Validating business keys
+2025-01-02 14:20:01,753 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: string indices must be integers
+2025-01-02 14:20:01,753 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: string indices must be integers
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 236, in transform_satellite_metadata_with_datatypes
+    warnings = self._validate_satellite_business_keys(sat_data)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 185, in _validate_satellite_business_keys
+    hub_keys = self.hubs_metadata[hub_name]["business_keys"]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: string indices must be integers
+2025-01-02 14:20:01,762 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 14:20:01,762 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 14:20:01,762 - __main__ - INFO - Satellite processing completed in 0.1 seconds
+2025-01-02 14:20:01,762 - __main__ - INFO - Processed 4 satellites
+2025-01-02 14:20:01,762 - __main__ - INFO - Found 0 warnings
+2025-01-02 14:20:01,762 - __main__ - INFO - Encountered 4 errors
+2025-01-02 14:21:54,617 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:21:54,632 - __main__ - INFO - Beginning to process 4 satellites
+2025-01-02 14:21:54,632 - __main__ - INFO - Processing satellite 1/4: SAT_CUSTOMER_DETAILS
+2025-01-02 14:21:54,632 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:21:54,639 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:21:54,639 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:21:54,640 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 14:21:54,643 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 14:21:54,645 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 14:21:54,664 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 14:21:54,664 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 14:21:54,671 - __main__ - INFO - Completed datatype lookup. Found types for 48 columns
+2025-01-02 14:21:54,672 - __main__ - INFO - Validating business keys
+2025-01-02 14:21:54,672 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: string indices must be integers
+2025-01-02 14:21:54,672 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: string indices must be integers
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 236, in transform_satellite_metadata_with_datatypes
+    warnings = self._validate_satellite_business_keys(sat_data)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 185, in _validate_satellite_business_keys
+    hub_keys = self.hubs_metadata[hub_name]["business_keys"]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: string indices must be integers
+2025-01-02 14:21:54,677 - __main__ - INFO - Processing satellite 2/4: SAT_ADDRESS_DETAILS
+2025-01-02 14:21:54,677 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:21:54,679 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:21:54,679 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:21:54,684 - __main__ - INFO - Completed datatype lookup. Found types for 4 columns
+2025-01-02 14:21:54,684 - __main__ - INFO - Validating business keys
+2025-01-02 14:21:54,685 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: string indices must be integers
+2025-01-02 14:21:54,685 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: string indices must be integers
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 236, in transform_satellite_metadata_with_datatypes
+    warnings = self._validate_satellite_business_keys(sat_data)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 185, in _validate_satellite_business_keys
+    hub_keys = self.hubs_metadata[hub_name]["business_keys"]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: string indices must be integers
+2025-01-02 14:21:54,688 - __main__ - INFO - Processing satellite 3/4: SAT_CONTACT_DETAILS
+2025-01-02 14:21:54,689 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:21:54,690 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:21:54,690 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:21:54,693 - __main__ - INFO - Completed datatype lookup. Found types for 2 columns
+2025-01-02 14:21:54,693 - __main__ - INFO - Validating business keys
+2025-01-02 14:21:54,694 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: string indices must be integers
+2025-01-02 14:21:54,695 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: string indices must be integers
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 236, in transform_satellite_metadata_with_datatypes
+    warnings = self._validate_satellite_business_keys(sat_data)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 185, in _validate_satellite_business_keys
+    hub_keys = self.hubs_metadata[hub_name]["business_keys"]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: string indices must be integers
+2025-01-02 14:21:54,698 - __main__ - INFO - Processing satellite 4/4: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:21:54,698 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:21:54,700 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:21:54,701 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:21:54,706 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 14:21:54,708 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 14:21:54,710 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 14:21:54,711 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 14:21:54,715 - __main__ - INFO - Completed datatype lookup. Found types for 18 columns
+2025-01-02 14:21:54,716 - __main__ - INFO - Validating business keys
+2025-01-02 14:21:54,716 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: string indices must be integers
+2025-01-02 14:21:54,716 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: string indices must be integers
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 236, in transform_satellite_metadata_with_datatypes
+    warnings = self._validate_satellite_business_keys(sat_data)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 185, in _validate_satellite_business_keys
+    hub_keys = self.hubs_metadata[hub_name]["business_keys"]
+TypeError: string indices must be integers
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: string indices must be integers
+2025-01-02 14:21:54,722 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 14:21:54,723 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 14:21:54,724 - __main__ - INFO - Satellite processing completed in 0.1 seconds
+2025-01-02 14:21:54,724 - __main__ - INFO - Processed 4 satellites
+2025-01-02 14:21:54,724 - __main__ - INFO - Found 0 warnings
+2025-01-02 14:21:54,725 - __main__ - INFO - Encountered 4 errors
+2025-01-02 14:23:00,448 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:23:00,453 - __main__ - INFO - Beginning to process 4 satellites
+2025-01-02 14:23:00,454 - __main__ - INFO - Processing satellite 1/4: SAT_CUSTOMER_DETAILS
+2025-01-02 14:23:00,454 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:23:00,455 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:23:00,456 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:23:00,457 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 14:23:00,460 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 14:23:00,463 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 14:23:00,487 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 14:23:00,487 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 14:23:00,499 - __main__ - INFO - Completed datatype lookup. Found types for 48 columns
+2025-01-02 14:23:00,499 - __main__ - INFO - Validating business keys
+2025-01-02 14:23:00,500 - __main__ - ERROR - Error transforming satellite SAT_CUSTOMER_DETAILS: object of type 'int' has no len()
+2025-01-02 14:23:00,501 - __main__ - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: Error in satellite transformation: object of type 'int' has no len()
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 238, in transform_satellite_metadata_with_datatypes
+    logger.warning(f"Found {len(warnings)} validation warnings")
+TypeError: object of type 'int' has no len()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: object of type 'int' has no len()
+2025-01-02 14:23:00,505 - __main__ - INFO - Processing satellite 2/4: SAT_ADDRESS_DETAILS
+2025-01-02 14:23:00,505 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:23:00,505 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:23:00,505 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:23:00,505 - __main__ - INFO - Completed datatype lookup. Found types for 4 columns
+2025-01-02 14:23:00,505 - __main__ - INFO - Validating business keys
+2025-01-02 14:23:00,505 - __main__ - ERROR - Error transforming satellite SAT_ADDRESS_DETAILS: object of type 'int' has no len()
+2025-01-02 14:23:00,505 - __main__ - ERROR - Error processing satellite SAT_ADDRESS_DETAILS: Error in satellite transformation: object of type 'int' has no len()
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 238, in transform_satellite_metadata_with_datatypes
+    logger.warning(f"Found {len(warnings)} validation warnings")
+TypeError: object of type 'int' has no len()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: object of type 'int' has no len()
+2025-01-02 14:23:00,514 - __main__ - INFO - Processing satellite 3/4: SAT_CONTACT_DETAILS
+2025-01-02 14:23:00,515 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:23:00,516 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:23:00,516 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:23:00,518 - __main__ - INFO - Completed datatype lookup. Found types for 2 columns
+2025-01-02 14:23:00,519 - __main__ - INFO - Validating business keys
+2025-01-02 14:23:00,519 - __main__ - ERROR - Error transforming satellite SAT_CONTACT_DETAILS: object of type 'int' has no len()
+2025-01-02 14:23:00,520 - __main__ - ERROR - Error processing satellite SAT_CONTACT_DETAILS: Error in satellite transformation: object of type 'int' has no len()
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 238, in transform_satellite_metadata_with_datatypes
+    logger.warning(f"Found {len(warnings)} validation warnings")
+TypeError: object of type 'int' has no len()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: object of type 'int' has no len()
+2025-01-02 14:23:00,522 - __main__ - INFO - Processing satellite 4/4: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:23:00,522 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:23:00,523 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:23:00,525 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:23:00,530 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 14:23:00,532 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 14:23:00,534 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 14:23:00,538 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 14:23:00,541 - __main__ - INFO - Completed datatype lookup. Found types for 18 columns
+2025-01-02 14:23:00,541 - __main__ - INFO - Validating business keys
+2025-01-02 14:23:00,541 - __main__ - ERROR - Error transforming satellite SAT_RISK_PROFILE_DETAILS: object of type 'int' has no len()
+2025-01-02 14:23:00,541 - __main__ - ERROR - Error processing satellite SAT_RISK_PROFILE_DETAILS: Error in satellite transformation: object of type 'int' has no len()
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 238, in transform_satellite_metadata_with_datatypes
+    logger.warning(f"Found {len(warnings)} validation warnings")
+TypeError: object of type 'int' has no len()
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 357, in process_satellite_file
+    transformed_data = self.transform_satellite_metadata_with_datatypes(sat, mapping_df)
+  File "D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\core\nodes\data_vault_sat_parser.py", line 318, in transform_satellite_metadata_with_datatypes
+    raise DataVaultParserException(f"Error in satellite transformation: {str(e)}")
+DataVaultParserException: Error in satellite transformation: object of type 'int' has no len()
+2025-01-02 14:23:00,547 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 14:23:00,548 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 14:23:00,548 - __main__ - INFO - Satellite processing completed in 0.09 seconds
+2025-01-02 14:23:00,549 - __main__ - INFO - Processed 4 satellites
+2025-01-02 14:23:00,549 - __main__ - INFO - Found 0 warnings
+2025-01-02 14:23:00,550 - __main__ - INFO - Encountered 4 errors
+2025-01-02 14:23:27,490 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:23:27,490 - __main__ - INFO - Beginning to process 4 satellites
+2025-01-02 14:23:27,490 - __main__ - INFO - Processing satellite 1/4: SAT_CUSTOMER_DETAILS
+2025-01-02 14:23:27,490 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:23:27,505 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:23:27,506 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:23:27,508 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 14:23:27,510 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 14:23:27,512 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 14:23:27,534 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 14:23:27,536 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 14:23:27,542 - __main__ - INFO - Completed datatype lookup. Found types for 48 columns
+2025-01-02 14:23:27,542 - __main__ - INFO - Validating business keys
+2025-01-02 14:23:27,542 - __main__ - INFO - Building output dictionary structure
+2025-01-02 14:23:27,542 - __main__ - INFO - Adding column definitions
+2025-01-02 14:23:27,542 - __main__ - INFO - Adding 46 descriptive attributes
+2025-01-02 14:23:27,542 - __main__ - INFO - Successfully transformed satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:23:27,574 - __main__ - INFO - Successfully saved YAML to: output\sat_customer_details_metadata.yaml
+2025-01-02 14:23:27,575 - __main__ - INFO - Processing satellite 2/4: SAT_ADDRESS_DETAILS
+2025-01-02 14:23:27,575 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:23:27,575 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:23:27,575 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:23:27,575 - __main__ - INFO - Completed datatype lookup. Found types for 4 columns
+2025-01-02 14:23:27,575 - __main__ - INFO - Validating business keys
+2025-01-02 14:23:27,575 - __main__ - INFO - Building output dictionary structure
+2025-01-02 14:23:27,575 - __main__ - INFO - Adding column definitions
+2025-01-02 14:23:27,575 - __main__ - INFO - Adding 0 descriptive attributes
+2025-01-02 14:23:27,575 - __main__ - INFO - Successfully transformed satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:23:27,588 - __main__ - INFO - Successfully saved YAML to: output\sat_address_details_metadata.yaml
+2025-01-02 14:23:27,588 - __main__ - INFO - Processing satellite 3/4: SAT_CONTACT_DETAILS
+2025-01-02 14:23:27,589 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:23:27,590 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:23:27,591 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:23:27,592 - __main__ - INFO - Completed datatype lookup. Found types for 2 columns
+2025-01-02 14:23:27,592 - __main__ - INFO - Validating business keys
+2025-01-02 14:23:27,592 - __main__ - INFO - Building output dictionary structure
+2025-01-02 14:23:27,592 - __main__ - INFO - Adding column definitions
+2025-01-02 14:23:27,597 - __main__ - INFO - Adding 0 descriptive attributes
+2025-01-02 14:23:27,597 - __main__ - INFO - Successfully transformed satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:23:27,601 - __main__ - INFO - Successfully saved YAML to: output\sat_contact_details_metadata.yaml
+2025-01-02 14:23:27,601 - __main__ - INFO - Processing satellite 4/4: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:23:27,601 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:23:27,602 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:23:27,602 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:23:27,606 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 14:23:27,608 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 14:23:27,612 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 14:23:27,615 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 14:23:27,619 - __main__ - INFO - Completed datatype lookup. Found types for 18 columns
+2025-01-02 14:23:27,619 - __main__ - INFO - Validating business keys
+2025-01-02 14:23:27,620 - __main__ - INFO - Building output dictionary structure
+2025-01-02 14:23:27,620 - __main__ - INFO - Adding column definitions
+2025-01-02 14:23:27,620 - __main__ - INFO - Adding 16 descriptive attributes
+2025-01-02 14:23:27,621 - __main__ - INFO - Successfully transformed satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:23:27,625 - __main__ - INFO - Successfully saved YAML to: output\sat_risk_profile_details_metadata.yaml
+2025-01-02 14:23:27,625 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 14:23:27,625 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 14:23:27,625 - __main__ - INFO - Satellite processing completed in 0.13 seconds
+2025-01-02 14:23:27,625 - __main__ - INFO - Processed 4 satellites
+2025-01-02 14:23:27,625 - __main__ - INFO - Found 0 warnings
+2025-01-02 14:23:27,640 - __main__ - INFO - Encountered 0 errors
+2025-01-02 14:27:35,050 - FileProcessor - ERROR - Error processing file: 'FileProcessor' object has no attribute '_read_json'
+2025-01-02 14:27:35,050 - root - ERROR - Error in main: 'FileProcessor' object has no attribute '_read_json'
+2025-01-02 14:28:22,981 - FileProcessor - INFO - Reading input file: data\sat_lsat.json
+2025-01-02 14:28:52,719 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:28:52,719 - FileProcessor - INFO - Reading mapping file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv
+2025-01-02 14:28:52,719 - FileProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:28:52,719 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:28:52,735 - root - ERROR - Error processing column CUSTOMER_NO: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-01-02 14:28:52,735 - SatelliteParser - ERROR - Error in satellite transformation: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-01-02 14:28:52,735 - FileProcessor - ERROR - Error processing file: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-01-02 14:28:52,735 - root - ERROR - Error in main: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-01-02 14:33:24,801 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:33:24,802 - FileProcessor - INFO - Reading mapping file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv
+2025-01-02 14:33:24,805 - FileProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:33:24,806 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:33:24,823 - SatelliteParser - ERROR - Error in satellite transformation: 'SatelliteParser' object has no attribute '_build_metadata'
+2025-01-02 14:33:24,824 - FileProcessor - ERROR - Error processing file: 'SatelliteParser' object has no attribute '_build_metadata'
+2025-01-02 14:33:24,824 - root - ERROR - Error in main: 'SatelliteParser' object has no attribute '_build_metadata'
+2025-01-02 14:34:46,855 - __main__ - INFO - Starting satellite processing from file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 14:34:46,861 - __main__ - INFO - Beginning to process 4 satellites
+2025-01-02 14:34:46,862 - __main__ - INFO - Processing satellite 1/4: SAT_CUSTOMER_DETAILS
+2025-01-02 14:34:46,862 - __main__ - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:34:46,864 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:34:46,865 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:34:46,866 - __main__ - WARNING - Using default length for CUSTOMER_NO: VARCHAR2(255)
+2025-01-02 14:34:46,870 - __main__ - WARNING - Using default length for SHORT_NAME: VARCHAR2(255)
+2025-01-02 14:34:46,875 - __main__ - WARNING - Using default length for LOCAL_BRANCH: VARCHAR2(255)
+2025-01-02 14:34:46,903 - __main__ - WARNING - Using default length for INDIVIDUAL_TAX_CERT_REQD: VARCHAR2(255)
+2025-01-02 14:34:46,906 - __main__ - WARNING - Using default length for CLS_PARTICIPANT: VARCHAR2(255)
+2025-01-02 14:34:46,915 - __main__ - INFO - Completed datatype lookup. Found types for 48 columns
+2025-01-02 14:34:46,916 - __main__ - INFO - Validating business keys
+2025-01-02 14:34:46,916 - __main__ - INFO - Building output dictionary structure
+2025-01-02 14:34:46,917 - __main__ - INFO - Adding column definitions
+2025-01-02 14:34:46,917 - __main__ - INFO - Adding 46 descriptive attributes
+2025-01-02 14:34:46,918 - __main__ - INFO - Successfully transformed satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 14:34:46,951 - __main__ - INFO - Successfully saved YAML to: output\sat_customer_details_metadata.yaml
+2025-01-02 14:34:46,951 - __main__ - INFO - Processing satellite 2/4: SAT_ADDRESS_DETAILS
+2025-01-02 14:34:46,951 - __main__ - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:34:46,951 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:34:46,951 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:34:46,951 - __main__ - INFO - Completed datatype lookup. Found types for 4 columns
+2025-01-02 14:34:46,951 - __main__ - INFO - Validating business keys
+2025-01-02 14:34:46,951 - __main__ - INFO - Building output dictionary structure
+2025-01-02 14:34:46,951 - __main__ - INFO - Adding column definitions
+2025-01-02 14:34:46,951 - __main__ - INFO - Adding 0 descriptive attributes
+2025-01-02 14:34:46,951 - __main__ - INFO - Successfully transformed satellite: SAT_ADDRESS_DETAILS
+2025-01-02 14:34:46,968 - __main__ - INFO - Successfully saved YAML to: output\sat_address_details_metadata.yaml
+2025-01-02 14:34:46,968 - __main__ - INFO - Processing satellite 3/4: SAT_CONTACT_DETAILS
+2025-01-02 14:34:46,969 - __main__ - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:34:46,970 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:34:46,970 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:34:46,972 - __main__ - INFO - Completed datatype lookup. Found types for 2 columns
+2025-01-02 14:34:46,973 - __main__ - INFO - Validating business keys
+2025-01-02 14:34:46,973 - __main__ - INFO - Building output dictionary structure
+2025-01-02 14:34:46,973 - __main__ - INFO - Adding column definitions
+2025-01-02 14:34:46,973 - __main__ - INFO - Adding 0 descriptive attributes
+2025-01-02 14:34:46,973 - __main__ - INFO - Successfully transformed satellite: SAT_CONTACT_DETAILS
+2025-01-02 14:34:46,981 - __main__ - INFO - Successfully saved YAML to: output\sat_contact_details_metadata.yaml
+2025-01-02 14:34:46,981 - __main__ - INFO - Processing satellite 4/4: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:34:46,981 - __main__ - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:34:46,981 - __main__ - INFO - Determined source schema: FLEXLIVE
+2025-01-02 14:34:46,981 - __main__ - INFO - Starting datatype lookup for columns
+2025-01-02 14:34:46,981 - __main__ - WARNING - Using default length for CIF_STATUS: VARCHAR2(255)
+2025-01-02 14:34:46,981 - __main__ - WARNING - Using default length for CHARGE_GROUP: VARCHAR2(255)
+2025-01-02 14:34:46,996 - __main__ - WARNING - Using default length for CUST_CLG_GROUP: VARCHAR2(255)
+2025-01-02 14:34:46,998 - __main__ - WARNING - Using default length for UNADVISED: VARCHAR2(255)
+2025-01-02 14:34:46,998 - __main__ - INFO - Completed datatype lookup. Found types for 18 columns
+2025-01-02 14:34:46,998 - __main__ - INFO - Validating business keys
+2025-01-02 14:34:46,998 - __main__ - INFO - Building output dictionary structure
+2025-01-02 14:34:46,998 - __main__ - INFO - Adding column definitions
+2025-01-02 14:34:46,998 - __main__ - INFO - Adding 16 descriptive attributes
+2025-01-02 14:34:46,998 - __main__ - INFO - Successfully transformed satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 14:34:47,018 - __main__ - INFO - Successfully saved YAML to: output\sat_risk_profile_details_metadata.yaml
+2025-01-02 14:34:47,021 - __main__ - INFO - Successfully saved YAML to: output\processing_summary.yaml
+2025-01-02 14:34:47,021 - __main__ - INFO - Saved processing summary to: output\processing_summary.yaml
+2025-01-02 14:34:47,022 - __main__ - INFO - Satellite processing completed in 0.16 seconds
+2025-01-02 14:34:47,022 - __main__ - INFO - Processed 4 satellites
+2025-01-02 14:34:47,022 - __main__ - INFO - Found 0 warnings
+2025-01-02 14:34:47,023 - __main__ - INFO - Encountered 0 errors
+2025-01-02 14:39:16,090 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-02 14:39:16,090 - FileProcessor - INFO - Processing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 14:39:16,090 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 14:39:16,113 - FileProcessor - INFO - Saved YAML to: output\lnk_customer_address_metadata.yaml
+2025-01-02 14:39:16,113 - FileProcessor - INFO - Processing link: LNK_CUSTOMER_CONTACT
+2025-01-02 14:39:16,114 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CONTACT
+2025-01-02 14:39:16,125 - FileProcessor - INFO - Saved YAML to: output\lnk_customer_contact_metadata.yaml
+2025-01-02 14:39:16,126 - FileProcessor - INFO - Processing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 14:39:16,126 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 14:39:16,126 - FileProcessor - INFO - Saved YAML to: output\lnk_customer_risk_profile_metadata.yaml
+2025-01-02 14:39:16,126 - FileProcessor - INFO - Saved YAML to: output\processing_link_summary.yaml
+2025-01-02 14:54:40,334 - FileProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-02 14:54:40,334 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-02 14:54:40,334 - FileProcessor - INFO - Saved YAML to: output\hub_customer_metadata.yaml
+2025-01-02 14:54:40,334 - FileProcessor - INFO - Processing hub: HUB_ADDRESS
+2025-01-02 14:54:40,334 - HubParser - INFO - Parsing hub: HUB_ADDRESS
+2025-01-02 14:54:40,354 - FileProcessor - INFO - Saved YAML to: output\hub_address_metadata.yaml
+2025-01-02 14:54:40,355 - FileProcessor - INFO - Processing hub: HUB_CONTACT
+2025-01-02 14:54:40,355 - HubParser - INFO - Parsing hub: HUB_CONTACT
+2025-01-02 14:54:40,361 - FileProcessor - INFO - Saved YAML to: output\hub_contact_metadata.yaml
+2025-01-02 14:54:40,361 - FileProcessor - INFO - Processing hub: HUB_RISK_PROFILE
+2025-01-02 14:54:40,361 - HubParser - INFO - Parsing hub: HUB_RISK_PROFILE
+2025-01-02 14:54:40,372 - FileProcessor - INFO - Saved YAML to: output\hub_risk_profile_metadata.yaml
+2025-01-02 14:54:40,372 - FileProcessor - INFO - Saved YAML to: output\processing_hub_summary.yaml
+2025-01-02 14:55:39,026 - FileProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-02 14:55:39,026 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-02 14:55:39,040 - FileProcessor - INFO - Saved YAML to: output\hub_customer_metadata.yaml
+2025-01-02 14:55:39,041 - FileProcessor - INFO - Processing hub: HUB_ADDRESS
+2025-01-02 14:55:39,042 - HubParser - INFO - Parsing hub: HUB_ADDRESS
+2025-01-02 14:55:39,052 - FileProcessor - INFO - Saved YAML to: output\hub_address_metadata.yaml
+2025-01-02 14:55:39,053 - FileProcessor - INFO - Processing hub: HUB_CONTACT
+2025-01-02 14:55:39,054 - HubParser - INFO - Parsing hub: HUB_CONTACT
+2025-01-02 14:55:39,061 - FileProcessor - INFO - Saved YAML to: output\hub_contact_metadata.yaml
+2025-01-02 14:55:39,062 - FileProcessor - INFO - Processing hub: HUB_RISK_PROFILE
+2025-01-02 14:55:39,062 - HubParser - INFO - Parsing hub: HUB_RISK_PROFILE
+2025-01-02 14:55:39,071 - FileProcessor - INFO - Saved YAML to: output\hub_risk_profile_metadata.yaml
+2025-01-02 14:55:39,075 - FileProcessor - INFO - Saved YAML to: output\processing_hub_summary.yaml
+2025-01-02 15:09:33,662 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 15:09:33,663 - FileProcessor - ERROR - Error processing file: 'FileProcessor' object has no attribute '_read_json'
+2025-01-02 15:09:33,663 - root - ERROR - Error in main: 'FileProcessor' object has no attribute '_read_json'
+2025-01-02 15:10:18,981 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 15:10:18,982 - FileProcessor - INFO - Reading mapping file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv
+2025-01-02 15:10:18,986 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 15:10:18,986 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:10:18,987 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:10:18,999 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_address_details_metadata.yaml
+2025-01-02 15:10:19,000 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:10:19,001 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:10:19,008 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_contact_details_metadata.yaml
+2025-01-02 15:10:19,009 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:10:19,009 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:10:19,024 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_risk_profile_details_metadata.yaml
+2025-01-02 15:11:21,868 - FileProcessor - INFO - Reading input file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json
+2025-01-02 15:11:21,869 - FileProcessor - INFO - Reading mapping file: D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv
+2025-01-02 15:11:21,873 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 15:11:21,874 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:11:21,875 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 15:11:21,889 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_address_details_metadata.yaml
+2025-01-02 15:11:21,890 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:11:21,890 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 15:11:21,900 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_contact_details_metadata.yaml
+2025-01-02 15:11:21,901 - FileProcessor - INFO - Processing link_satellites: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:11:21,901 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 15:11:21,918 - FileProcessor - INFO - Saved YAML to: output\lsat_customer_risk_profile_details_metadata.yaml
+2025-01-02 15:12:17,424 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-02 15:12:17,425 - FileProcessor - INFO - Processing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:12:17,425 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 15:12:17,433 - FileProcessor - INFO - Saved YAML to: output\lnk_customer_address_metadata.yaml
+2025-01-02 15:12:17,433 - FileProcessor - INFO - Processing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:12:17,434 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CONTACT
+2025-01-02 15:12:17,440 - FileProcessor - INFO - Saved YAML to: output\lnk_customer_contact_metadata.yaml
+2025-01-02 15:12:17,441 - FileProcessor - INFO - Processing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:12:17,441 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 15:12:17,447 - FileProcessor - INFO - Saved YAML to: output\lnk_customer_risk_profile_metadata.yaml
+2025-01-02 15:12:17,451 - FileProcessor - INFO - Saved YAML to: output\processing_link_summary.yaml
+2025-01-02 15:12:53,782 - FileProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-02 15:12:53,782 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-02 15:12:53,789 - FileProcessor - INFO - Saved YAML to: output\hub_customer_metadata.yaml
+2025-01-02 15:12:53,790 - FileProcessor - INFO - Processing hub: HUB_ADDRESS
+2025-01-02 15:12:53,790 - HubParser - INFO - Parsing hub: HUB_ADDRESS
+2025-01-02 15:12:53,799 - FileProcessor - INFO - Saved YAML to: output\hub_address_metadata.yaml
+2025-01-02 15:12:53,800 - FileProcessor - INFO - Processing hub: HUB_CONTACT
+2025-01-02 15:12:53,801 - HubParser - INFO - Parsing hub: HUB_CONTACT
+2025-01-02 15:12:53,807 - FileProcessor - INFO - Saved YAML to: output\hub_contact_metadata.yaml
+2025-01-02 15:12:53,808 - FileProcessor - INFO - Processing hub: HUB_RISK_PROFILE
+2025-01-02 15:12:53,809 - HubParser - INFO - Parsing hub: HUB_RISK_PROFILE
+2025-01-02 15:12:53,815 - FileProcessor - INFO - Saved YAML to: output\hub_risk_profile_metadata.yaml
+2025-01-02 15:12:53,821 - FileProcessor - INFO - Saved YAML to: output\processing_hub_summary.yaml

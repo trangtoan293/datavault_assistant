@@ -1,22 +1,22 @@
 source_schema: FLEXLIVE
 source_table: sttm_customer
-target_schema: integration_demo
+target_schema: integration
 target_table: hub_risk_profile
 target_entity_type: hub
 collision_code: RISK
 description: Risk profile information associated with a customer.
 metadata:
-  created_at: '2024-12-30T17:07:17.337427'
-  version: '1.0'
+  created_at: '2025-01-02T15:12:53.812779'
+  version: 1.0.0
+  validation_status: valid
+  validation_warnings: null
 columns:
 - target: dv_hkey_hub_risk_profile
   dtype: raw
   key_type: hash_key_hub
   source:
-  - name: RISK_PROFILE
-    dtype: VARCHAR2(20)
-  - name: RISK_CATEGORY
-    dtype: VARCHAR2(4)
+  - RISK_PROFILE
+  - RISK_CATEGORY
 - target: CUS_RISK_PROFILE
   dtype: VARCHAR2(20)
   key_type: biz_key

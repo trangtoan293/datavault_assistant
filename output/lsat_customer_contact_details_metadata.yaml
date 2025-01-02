@@ -1,0 +1,27 @@
+source_schema: FLEXLIVE
+source_table: STTM_CUSTOMER
+target_schema: integration
+target_table: LSAT_CUSTOMER_CONTACT_DETAILS
+target_entity_type: lsat
+parent_table: LNK_CUSTOMER_CONTACT
+metadata:
+  created_at: '2025-01-02T15:11:21.894213'
+  version: 1.0.0
+  validation_status: valid
+  validation_warnings: null
+columns:
+- target: dv_hkey_lsat_customer_contact_details
+  dtype: raw
+  key_type: hash_key_lsat
+  source: null
+- target: dv_hkey_lnk_customer_contact
+  dtype: raw
+  key_type: hash_key_lnk
+  source:
+  - CUSTOMER_NO
+  - FAX_NUMBER
+  - EXT_REF_NO
+- target: dv_hsh_diff
+  dtype: raw
+  key_type: hash_diff
+  source: null

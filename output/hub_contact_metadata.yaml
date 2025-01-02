@@ -1,22 +1,22 @@
 source_schema: FLEXLIVE
 source_table: sttm_customer
-target_schema: integration_demo
+target_schema: integration
 target_table: hub_contact
 target_entity_type: hub
 collision_code: CONTACT
 description: Contact information associated with a customer.
 metadata:
-  created_at: '2024-12-30T17:07:17.332461'
-  version: '1.0'
+  created_at: '2025-01-02T15:12:53.804750'
+  version: 1.0.0
+  validation_status: valid
+  validation_warnings: null
 columns:
 - target: dv_hkey_hub_contact
   dtype: raw
   key_type: hash_key_hub
   source:
-  - name: FAX_NUMBER
-    dtype: VARCHAR2(105)
-  - name: EXT_REF_NO
-    dtype: VARCHAR2(20)
+  - FAX_NUMBER
+  - EXT_REF_NO
 - target: CUS_FAX_NUMBER
   dtype: VARCHAR2(105)
   key_type: biz_key

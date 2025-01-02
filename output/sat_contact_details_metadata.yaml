@@ -1,0 +1,32 @@
+source_schema: FLEXLIVE
+source_table: STTM_CUSTOMER
+target_schema: integration
+target_table: SAT_CONTACT_DETAILS
+target_entity_type: sat
+parent_table: HUB_CONTACT
+collision_code: CONTACT
+description: ''
+metadata:
+  created_at: '2025-01-02T14:34:46.973114'
+  version: 1.0.0
+  validation_status: valid
+  processing_info:
+    start_time: '2025-01-02T14:34:46.969196'
+    end_time: '2025-01-02T14:34:46.973114'
+    duration_seconds: 0.004
+  validation_warnings: null
+columns:
+- target: dv_hkey_sat_contact_details
+  dtype: string
+  key_type: hash_key_sat
+  source: null
+- target: dv_hkey_hub_contact
+  dtype: string
+  key_type: hash_key_hub
+  source:
+  - FAX_NUMBER
+  - EXT_REF_NO
+- target: dv_hsh_diff
+  dtype: string
+  key_type: hash_diff
+  source: null

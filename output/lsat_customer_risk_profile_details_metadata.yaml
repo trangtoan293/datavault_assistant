@@ -1,0 +1,75 @@
+source_schema: FLEXLIVE
+source_table: STTM_CUSTOMER
+target_schema: integration
+target_table: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+target_entity_type: lsat
+parent_table: LNK_CUSTOMER_RISK_PROFILE
+metadata:
+  created_at: '2025-01-02T15:11:21.908284'
+  version: 1.0.0
+  validation_status: valid
+  validation_warnings: null
+columns:
+- target: dv_hkey_lsat_customer_risk_profile_details
+  dtype: raw
+  key_type: hash_key_lsat
+  source: null
+- target: dv_hkey_lnk_customer_risk_profile
+  dtype: raw
+  key_type: hash_key_lnk
+  source:
+  - CUSTOMER_NO
+  - RISK_PROFILE
+  - RISK_CATEGORY
+- target: dv_hsh_diff
+  dtype: raw
+  key_type: hash_diff
+  source: null
+- target: FX_CUST_CLEAN_RISK_LIMIT
+  dtype: NUMBER
+  key_type: descriptive
+  source:
+    name: FX_CUST_CLEAN_RISK_LIMIT
+    dtype: NUMBER
+- target: OVERALL_LIMIT
+  dtype: NUMBER
+  key_type: descriptive
+  source:
+    name: OVERALL_LIMIT
+    dtype: NUMBER
+- target: FX_CLEAN_RISK_LIMIT
+  dtype: NUMBER
+  key_type: descriptive
+  source:
+    name: FX_CLEAN_RISK_LIMIT
+    dtype: NUMBER
+- target: SEC_CUST_CLEAN_RISK_LIMIT
+  dtype: NUMBER
+  key_type: descriptive
+  source:
+    name: SEC_CUST_CLEAN_RISK_LIMIT
+    dtype: NUMBER
+- target: SEC_CLEAN_RISK_LIMIT
+  dtype: NUMBER
+  key_type: descriptive
+  source:
+    name: SEC_CLEAN_RISK_LIMIT
+    dtype: NUMBER
+- target: SEC_CUST_PSTL_RISK_LIMIT
+  dtype: NUMBER
+  key_type: descriptive
+  source:
+    name: SEC_CUST_PSTL_RISK_LIMIT
+    dtype: NUMBER
+- target: SEC_PSTL_RISK_LIMIT
+  dtype: NUMBER
+  key_type: descriptive
+  source:
+    name: SEC_PSTL_RISK_LIMIT
+    dtype: NUMBER
+- target: LIAB_BR
+  dtype: VARCHAR2(255)
+  key_type: descriptive
+  source:
+    name: LIAB_BR
+    dtype: VARCHAR2(255)
