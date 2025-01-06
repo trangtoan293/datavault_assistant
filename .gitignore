@@ -5,3 +5,22 @@ __pycache__/
 */__pycache__/
 **/__pycache__/
 *.py[cod]
+*output/
+
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.env
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDE
+.idea/
+.vscode/
+
+*output/

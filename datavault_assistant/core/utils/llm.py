@@ -1,7 +1,7 @@
 from langchain_ollama import ChatOllama
 from langchain_groq import ChatGroq
 from typing import Optional
-from configs.settings import settings
+from datavault_assistant.configs.settings import settings
 
 class LLMFactory:
     """Factory class để khởi tạo các LLM models"""

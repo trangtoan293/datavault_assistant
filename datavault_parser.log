@@ -1223,3 +1223,747 @@ DataVaultParserException: Error in satellite transformation: object of type 'int
 2025-01-02 15:59:02,409 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
 2025-01-02 15:59:02,412 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
 2025-01-02 15:59:02,415 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-02 17:21:36,505 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-02 17:21:36,505 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-02 17:21:36,510 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-02 17:21:36,510 - DataProcessor - INFO - Processing hub: HUB_ADDRESS
+2025-01-02 17:21:36,512 - HubParser - INFO - Parsing hub: HUB_ADDRESS
+2025-01-02 17:21:36,519 - FileProcessor - INFO - Successfully saved YAML to: output\hub_address_metadata.yaml
+2025-01-02 17:21:36,519 - DataProcessor - INFO - Processing hub: HUB_CONTACT
+2025-01-02 17:21:36,520 - HubParser - INFO - Parsing hub: HUB_CONTACT
+2025-01-02 17:21:36,527 - FileProcessor - INFO - Successfully saved YAML to: output\hub_contact_metadata.yaml
+2025-01-02 17:21:36,527 - DataProcessor - INFO - Processing hub: HUB_RISK_PROFILE
+2025-01-02 17:21:36,528 - HubParser - INFO - Parsing hub: HUB_RISK_PROFILE
+2025-01-02 17:21:36,536 - FileProcessor - INFO - Successfully saved YAML to: output\hub_risk_profile_metadata.yaml
+2025-01-02 17:21:36,537 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-02 17:21:36,537 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 17:21:36,538 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_ADDRESS
+2025-01-02 17:21:36,551 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_address_metadata.yaml
+2025-01-02 17:21:36,551 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CONTACT
+2025-01-02 17:21:36,552 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CONTACT
+2025-01-02 17:21:36,557 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_contact_metadata.yaml
+2025-01-02 17:21:36,558 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 17:21:36,559 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_RISK_PROFILE
+2025-01-02 17:21:36,567 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_risk_profile_metadata.yaml
+2025-01-02 17:21:36,568 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 17:21:36,568 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-02 17:21:36,620 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_details_metadata.yaml
+2025-01-02 17:21:36,620 - DataProcessor - INFO - Processing satellite: SAT_ADDRESS_DETAILS
+2025-01-02 17:21:36,621 - SatelliteParser - INFO - Starting transformation for satellite: SAT_ADDRESS_DETAILS
+2025-01-02 17:21:36,625 - FileProcessor - INFO - Successfully saved YAML to: output\sat_address_details_metadata.yaml
+2025-01-02 17:21:36,626 - DataProcessor - INFO - Processing satellite: SAT_CONTACT_DETAILS
+2025-01-02 17:21:36,626 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CONTACT_DETAILS
+2025-01-02 17:21:36,634 - FileProcessor - INFO - Successfully saved YAML to: output\sat_contact_details_metadata.yaml
+2025-01-02 17:21:36,634 - DataProcessor - INFO - Processing satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 17:21:36,635 - SatelliteParser - INFO - Starting transformation for satellite: SAT_RISK_PROFILE_DETAILS
+2025-01-02 17:21:36,654 - FileProcessor - INFO - Successfully saved YAML to: output\sat_risk_profile_details_metadata.yaml
+2025-01-02 17:21:36,654 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-02 17:21:36,655 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 17:21:36,655 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_ADDRESS_DETAILS
+2025-01-02 17:21:36,661 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_address_details_metadata.yaml
+2025-01-02 17:21:36,661 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 17:21:36,662 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CONTACT_DETAILS
+2025-01-02 17:21:36,670 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_contact_details_metadata.yaml
+2025-01-02 17:21:36,671 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 17:21:36,672 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_RISK_PROFILE_DETAILS
+2025-01-02 17:21:36,686 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_risk_profile_details_metadata.yaml
+2025-01-02 17:21:36,693 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-02 17:21:36,698 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-02 17:21:36,702 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-02 17:21:36,704 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-03 13:48:11,142 - httpx - INFO - HTTP Request: POST http://192.168.1.8:11434/api/chat "HTTP/1.1 200 OK"
+2025-01-03 13:49:01,380 - httpx - INFO - HTTP Request: POST http://192.168.1.8:11434/api/chat "HTTP/1.1 200 OK"
+2025-01-03 13:51:18,579 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 13:51:25,237 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 13:55:07,133 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 13:55:13,053 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 13:57:15,169 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 13:57:24,131 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 13:58:16,305 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 13:58:25,443 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 13:58:25,443 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 13:58:25,443 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 13:58:25,443 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 13:58:25,443 - DataProcessor - ERROR - Error processing hub HUB_CUSTOMER: string indices must be integers
+2025-01-03 13:58:25,443 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 13:58:25,443 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 13:58:25,443 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 13:58:25,443 - DataProcessor - ERROR - Error processing hub HUB_CORPORATION: string indices must be integers
+2025-01-03 13:58:25,456 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 13:58:25,456 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 13:58:25,457 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 13:58:25,457 - DataProcessor - ERROR - Error processing hub HUB_CARD: string indices must be integers
+2025-01-03 13:58:25,457 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 13:58:25,459 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 13:58:25,459 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 13:58:25,459 - LinkParser - ERROR - Error in link transformation: string indices must be integers
+2025-01-03 13:58:25,460 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CORPORATION: string indices must be integers
+2025-01-03 13:58:25,460 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 13:58:25,460 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 13:58:25,461 - LinkParser - ERROR - Error in link transformation: string indices must be integers
+2025-01-03 13:58:25,462 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CARD: string indices must be integers
+2025-01-03 13:58:25,462 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DEMOGRAPHICS
+2025-01-03 13:58:25,463 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DEMOGRAPHICS
+2025-01-03 13:58:25,463 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 13:58:25,464 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_DEMOGRAPHICS: string indices must be integers
+2025-01-03 13:58:25,464 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_CARD_INFO
+2025-01-03 13:58:25,465 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_CARD_INFO
+2025-01-03 13:58:25,465 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 13:58:25,466 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_CARD_INFO: string indices must be integers
+2025-01-03 13:58:25,466 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_INFO
+2025-01-03 13:58:25,467 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_INFO
+2025-01-03 13:58:25,467 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 13:58:25,467 - DataProcessor - ERROR - Error processing satellite SAT_CORPORATION_INFO: string indices must be integers
+2025-01-03 13:58:25,467 - DataProcessor - INFO - Processing satellite: SAT_CARD_INFO
+2025-01-03 13:58:25,467 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_INFO
+2025-01-03 13:58:25,467 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 13:58:25,467 - DataProcessor - ERROR - Error processing satellite SAT_CARD_INFO: string indices must be integers
+2025-01-03 13:58:25,467 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 13:58:25,467 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CORPORATION_REL
+2025-01-03 13:58:25,467 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CORPORATION_REL
+2025-01-03 13:58:25,467 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 13:58:25,467 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_CORPORATION_REL: string indices must be integers
+2025-01-03 13:58:25,467 - DataProcessor - INFO - Processing link satellite: LSAT_CORPORATION_CUSTOMER_REL
+2025-01-03 13:58:25,467 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CORPORATION_CUSTOMER_REL
+2025-01-03 13:58:25,467 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 13:58:25,467 - DataProcessor - ERROR - Error processing link satellite LSAT_CORPORATION_CUSTOMER_REL: string indices must be integers
+2025-01-03 13:58:25,467 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CARD_REL
+2025-01-03 13:58:25,467 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CARD_REL
+2025-01-03 13:58:25,475 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 13:58:25,475 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_CARD_REL: string indices must be integers
+2025-01-03 13:58:25,476 - DataProcessor - INFO - Processing link satellite: LSAT_CARD_CUSTOMER_REL
+2025-01-03 13:58:25,477 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CARD_CUSTOMER_REL
+2025-01-03 13:58:25,477 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 13:58:25,477 - DataProcessor - ERROR - Error processing link satellite LSAT_CARD_CUSTOMER_REL: string indices must be integers
+2025-01-03 13:58:25,477 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 13:58:25,477 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 13:58:25,493 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 13:58:25,497 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-03 14:03:37,407 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 14:03:44,359 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 14:03:44,363 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 14:03:44,363 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 14:03:44,363 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 14:03:44,363 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 14:03:44,368 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:03:44,369 - DataProcessor - ERROR - Error processing hub HUB_CUSTOMER: string indices must be integers
+2025-01-03 14:03:44,370 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 14:03:44,370 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 14:03:44,371 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 14:03:44,371 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 14:03:44,372 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:03:44,372 - DataProcessor - ERROR - Error processing hub HUB_CORPORATION: string indices must be integers
+2025-01-03 14:03:44,372 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 14:03:44,372 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 14:03:44,372 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 14:03:44,372 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 14:03:44,372 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:03:44,372 - DataProcessor - ERROR - Error processing hub HUB_CARD: string indices must be integers
+2025-01-03 14:03:44,372 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 14:03:44,372 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 14:03:44,372 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 14:03:44,372 - LinkParser - ERROR - Error in link transformation: string indices must be integers
+2025-01-03 14:03:44,378 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CORPORATION: string indices must be integers
+2025-01-03 14:03:44,378 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 14:03:44,379 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 14:03:44,379 - LinkParser - ERROR - Error in link transformation: string indices must be integers
+2025-01-03 14:03:44,380 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CARD: string indices must be integers
+2025-01-03 14:03:44,380 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 14:03:44,380 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 14:03:44,382 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:03:44,382 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: string indices must be integers
+2025-01-03 14:03:44,382 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_DETAILS
+2025-01-03 14:03:44,383 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_DETAILS
+2025-01-03 14:03:44,384 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:03:44,384 - DataProcessor - ERROR - Error processing satellite SAT_CORPORATION_DETAILS: string indices must be integers
+2025-01-03 14:03:44,384 - DataProcessor - INFO - Processing satellite: SAT_CARD_DETAILS
+2025-01-03 14:03:44,385 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_DETAILS
+2025-01-03 14:03:44,385 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:03:44,386 - DataProcessor - ERROR - Error processing satellite SAT_CARD_DETAILS: string indices must be integers
+2025-01-03 14:03:44,386 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 14:03:44,386 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CARD_RELATION
+2025-01-03 14:03:44,387 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CARD_RELATION
+2025-01-03 14:03:44,387 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 14:03:44,387 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_CARD_RELATION: string indices must be integers
+2025-01-03 14:03:44,390 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 14:03:44,396 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 14:03:44,399 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 14:03:44,403 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-03 14:05:09,707 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 14:05:20,219 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 14:05:20,219 - datavault_assistant.core.nodes.data_vault_builder - ERROR - Analysis failed: Extra data: line 23 column 2 (char 611)
+2025-01-03 14:06:05,710 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 14:06:09,511 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 14:06:09,528 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 14:06:09,529 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 14:06:09,530 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 14:06:09,531 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 14:06:09,531 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:06:09,532 - DataProcessor - ERROR - Error processing hub HUB_CUSTOMER: string indices must be integers
+2025-01-03 14:06:09,533 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 14:06:09,534 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 14:06:09,534 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 14:06:09,535 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 14:06:09,536 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:06:09,536 - DataProcessor - ERROR - Error processing hub HUB_CORPORATION: string indices must be integers
+2025-01-03 14:06:09,537 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 14:06:09,538 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 14:06:09,539 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 14:06:09,540 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 14:06:09,540 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:06:09,541 - DataProcessor - ERROR - Error processing hub HUB_CARD: string indices must be integers
+2025-01-03 14:06:09,542 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 14:06:09,543 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 14:06:09,543 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 14:06:09,544 - LinkParser - ERROR - Error in link transformation: string indices must be integers
+2025-01-03 14:06:09,545 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CORPORATION: string indices must be integers
+2025-01-03 14:06:09,545 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 14:06:09,546 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 14:06:09,546 - LinkParser - ERROR - Error in link transformation: string indices must be integers
+2025-01-03 14:06:09,547 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CARD: string indices must be integers
+2025-01-03 14:06:09,548 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 14:06:09,549 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 14:06:09,549 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:06:09,550 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_COREBANK: string indices must be integers
+2025-01-03 14:06:09,550 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 14:06:09,550 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 14:06:09,550 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:06:09,550 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_CORECARD: string indices must be integers
+2025-01-03 14:06:09,550 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_COREBANK
+2025-01-03 14:06:09,550 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_COREBANK
+2025-01-03 14:06:09,550 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:06:09,550 - DataProcessor - ERROR - Error processing satellite SAT_CORPORATION_COREBANK: string indices must be integers
+2025-01-03 14:06:09,550 - DataProcessor - INFO - Processing satellite: SAT_CARD_CORECARD
+2025-01-03 14:06:09,550 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_CORECARD
+2025-01-03 14:06:09,550 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:06:09,550 - DataProcessor - ERROR - Error processing satellite SAT_CARD_CORECARD: string indices must be integers
+2025-01-03 14:06:09,550 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 14:06:09,561 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 14:06:09,561 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 14:06:09,577 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 14:06:30,285 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 14:06:30,285 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 14:06:30,285 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 14:06:30,285 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 14:06:30,285 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:06:30,285 - DataProcessor - ERROR - Error processing hub HUB_CUSTOMER: string indices must be integers
+2025-01-03 14:06:30,285 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 14:06:30,285 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 14:06:30,285 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 14:06:30,285 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 14:06:30,285 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:06:30,285 - DataProcessor - ERROR - Error processing hub HUB_CORPORATION: string indices must be integers
+2025-01-03 14:06:30,285 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 14:06:30,300 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 14:06:30,300 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 14:06:30,300 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 14:06:30,301 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:06:30,301 - DataProcessor - ERROR - Error processing hub HUB_CARD: string indices must be integers
+2025-01-03 14:06:30,302 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 14:06:30,302 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 14:06:30,303 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 14:06:30,303 - LinkParser - ERROR - Error in link transformation: string indices must be integers
+2025-01-03 14:06:30,304 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CORPORATION: string indices must be integers
+2025-01-03 14:06:30,304 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 14:06:30,305 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 14:06:30,305 - LinkParser - ERROR - Error in link transformation: string indices must be integers
+2025-01-03 14:06:30,306 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CARD: string indices must be integers
+2025-01-03 14:06:30,306 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DEMOGRAPHICS
+2025-01-03 14:06:30,307 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DEMOGRAPHICS
+2025-01-03 14:06:30,307 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:06:30,307 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_DEMOGRAPHICS: string indices must be integers
+2025-01-03 14:06:30,308 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_CARD_INFO
+2025-01-03 14:06:30,308 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_CARD_INFO
+2025-01-03 14:06:30,308 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:06:30,309 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_CARD_INFO: string indices must be integers
+2025-01-03 14:06:30,309 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_INFO
+2025-01-03 14:06:30,310 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_INFO
+2025-01-03 14:06:30,310 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:06:30,311 - DataProcessor - ERROR - Error processing satellite SAT_CORPORATION_INFO: string indices must be integers
+2025-01-03 14:06:30,311 - DataProcessor - INFO - Processing satellite: SAT_CARD_INFO
+2025-01-03 14:06:30,311 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_INFO
+2025-01-03 14:06:30,311 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:06:30,311 - DataProcessor - ERROR - Error processing satellite SAT_CARD_INFO: string indices must be integers
+2025-01-03 14:06:30,311 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 14:06:30,311 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CORPORATION_REL
+2025-01-03 14:06:30,311 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CORPORATION_REL
+2025-01-03 14:06:30,315 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 14:06:30,316 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_CORPORATION_REL: string indices must be integers
+2025-01-03 14:06:30,316 - DataProcessor - INFO - Processing link satellite: LSAT_CORPORATION_CUSTOMER_REL
+2025-01-03 14:06:30,317 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CORPORATION_CUSTOMER_REL
+2025-01-03 14:06:30,318 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 14:06:30,318 - DataProcessor - ERROR - Error processing link satellite LSAT_CORPORATION_CUSTOMER_REL: string indices must be integers
+2025-01-03 14:06:30,319 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CARD_REL
+2025-01-03 14:06:30,319 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CARD_REL
+2025-01-03 14:06:30,321 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 14:06:30,321 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_CARD_REL: string indices must be integers
+2025-01-03 14:06:30,322 - DataProcessor - INFO - Processing link satellite: LSAT_CARD_CUSTOMER_REL
+2025-01-03 14:06:30,322 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CARD_CUSTOMER_REL
+2025-01-03 14:06:30,322 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 14:06:30,323 - DataProcessor - ERROR - Error processing link satellite LSAT_CARD_CUSTOMER_REL: string indices must be integers
+2025-01-03 14:06:30,325 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 14:06:30,326 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 14:06:30,326 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 14:06:30,339 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-03 14:09:41,409 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 14:09:41,410 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 14:09:41,410 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 14:09:41,410 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 14:09:41,411 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:09:41,411 - DataProcessor - ERROR - Error processing hub HUB_CUSTOMER: string indices must be integers
+2025-01-03 14:09:41,411 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 14:09:41,412 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 14:09:41,412 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 14:09:41,412 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 14:09:41,413 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:09:41,413 - DataProcessor - ERROR - Error processing hub HUB_CORPORATION: string indices must be integers
+2025-01-03 14:09:41,413 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 14:09:41,414 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 14:09:41,415 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 14:09:41,415 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 14:09:41,415 - HubParser - ERROR - Error in hub transformation: string indices must be integers
+2025-01-03 14:09:41,415 - DataProcessor - ERROR - Error processing hub HUB_CARD: string indices must be integers
+2025-01-03 14:09:41,416 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 14:09:41,416 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 14:09:41,416 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 14:09:41,417 - LinkParser - ERROR - Error in link transformation: string indices must be integers
+2025-01-03 14:09:41,417 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CORPORATION: string indices must be integers
+2025-01-03 14:09:41,417 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 14:09:41,418 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 14:09:41,418 - LinkParser - ERROR - Error in link transformation: string indices must be integers
+2025-01-03 14:09:41,418 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CARD: string indices must be integers
+2025-01-03 14:09:41,418 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DEMOGRAPHICS
+2025-01-03 14:09:41,418 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DEMOGRAPHICS
+2025-01-03 14:09:41,418 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:09:41,418 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_DEMOGRAPHICS: string indices must be integers
+2025-01-03 14:09:41,420 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_CARD_INFO
+2025-01-03 14:09:41,421 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_CARD_INFO
+2025-01-03 14:09:41,421 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:09:41,421 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_CARD_INFO: string indices must be integers
+2025-01-03 14:09:41,421 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_INFO
+2025-01-03 14:09:41,421 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_INFO
+2025-01-03 14:09:41,423 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:09:41,423 - DataProcessor - ERROR - Error processing satellite SAT_CORPORATION_INFO: string indices must be integers
+2025-01-03 14:09:41,423 - DataProcessor - INFO - Processing satellite: SAT_CARD_INFO
+2025-01-03 14:09:41,423 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_INFO
+2025-01-03 14:09:41,423 - SatelliteParser - ERROR - Error in satellite transformation: string indices must be integers
+2025-01-03 14:09:41,423 - DataProcessor - ERROR - Error processing satellite SAT_CARD_INFO: string indices must be integers
+2025-01-03 14:09:41,423 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 14:09:41,423 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CORPORATION_REL
+2025-01-03 14:09:41,423 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CORPORATION_REL
+2025-01-03 14:09:41,423 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 14:09:41,423 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_CORPORATION_REL: string indices must be integers
+2025-01-03 14:09:41,428 - DataProcessor - INFO - Processing link satellite: LSAT_CORPORATION_CUSTOMER_REL
+2025-01-03 14:09:41,429 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CORPORATION_CUSTOMER_REL
+2025-01-03 14:09:41,430 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 14:09:41,430 - DataProcessor - ERROR - Error processing link satellite LSAT_CORPORATION_CUSTOMER_REL: string indices must be integers
+2025-01-03 14:09:41,430 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CARD_REL
+2025-01-03 14:09:41,430 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CARD_REL
+2025-01-03 14:09:41,431 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 14:09:41,431 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_CARD_REL: string indices must be integers
+2025-01-03 14:09:41,431 - DataProcessor - INFO - Processing link satellite: LSAT_CARD_CUSTOMER_REL
+2025-01-03 14:09:41,432 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CARD_CUSTOMER_REL
+2025-01-03 14:09:41,432 - LinkSatelliteParser - ERROR - Error in link satellite transformation: string indices must be integers
+2025-01-03 14:09:41,433 - DataProcessor - ERROR - Error processing link satellite LSAT_CARD_CUSTOMER_REL: string indices must be integers
+2025-01-03 14:09:41,436 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 14:09:41,442 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 14:09:41,442 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 14:09:41,442 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-03 14:10:26,811 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 14:10:26,811 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 14:10:26,811 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 14:10:26,811 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 14:10:26,832 - HubParser - INFO - Get datatypes for business keys: HUB_CUSTOMER
+2025-01-03 14:10:26,835 - HubParser - INFO - Get output yml format file: HUB_CUSTOMER
+2025-01-03 14:10:26,835 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-03 14:10:26,835 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 14:10:26,835 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 14:10:26,835 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 14:10:26,835 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 14:10:26,847 - HubParser - INFO - Get datatypes for business keys: HUB_CORPORATION
+2025-01-03 14:10:26,849 - HubParser - INFO - Get output yml format file: HUB_CORPORATION
+2025-01-03 14:10:26,854 - FileProcessor - INFO - Successfully saved YAML to: output\hub_corporation_metadata.yaml
+2025-01-03 14:10:26,856 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 14:10:26,856 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 14:10:26,856 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 14:10:26,856 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 14:10:26,856 - HubParser - INFO - Get datatypes for business keys: HUB_CARD
+2025-01-03 14:10:26,856 - HubParser - INFO - Get output yml format file: HUB_CARD
+2025-01-03 14:10:26,856 - FileProcessor - INFO - Successfully saved YAML to: output\hub_card_metadata.yaml
+2025-01-03 14:10:26,856 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 14:10:26,856 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 14:10:26,864 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 14:10:26,865 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_corporation_metadata.yaml
+2025-01-03 14:10:26,865 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 14:10:26,865 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 14:10:26,878 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_card_metadata.yaml
+2025-01-03 14:10:26,879 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DEMOGRAPHICS
+2025-01-03 14:10:26,880 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DEMOGRAPHICS
+2025-01-03 14:10:26,904 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_demographics_metadata.yaml
+2025-01-03 14:10:26,904 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_CARD_INFO
+2025-01-03 14:10:26,905 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_CARD_INFO
+2025-01-03 14:10:26,926 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_card_info_metadata.yaml
+2025-01-03 14:10:26,927 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_INFO
+2025-01-03 14:10:26,927 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_INFO
+2025-01-03 14:10:26,932 - FileProcessor - INFO - Successfully saved YAML to: output\sat_corporation_info_metadata.yaml
+2025-01-03 14:10:26,932 - DataProcessor - INFO - Processing satellite: SAT_CARD_INFO
+2025-01-03 14:10:26,932 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_INFO
+2025-01-03 14:10:26,956 - FileProcessor - INFO - Successfully saved YAML to: output\sat_card_info_metadata.yaml
+2025-01-03 14:10:26,957 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 14:10:26,958 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CORPORATION_REL
+2025-01-03 14:10:26,958 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CORPORATION_REL
+2025-01-03 14:10:26,973 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_corporation_rel_metadata.yaml
+2025-01-03 14:10:26,973 - DataProcessor - INFO - Processing link satellite: LSAT_CORPORATION_CUSTOMER_REL
+2025-01-03 14:10:26,973 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CORPORATION_CUSTOMER_REL
+2025-01-03 14:10:26,986 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_corporation_customer_rel_metadata.yaml
+2025-01-03 14:10:26,986 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CARD_REL
+2025-01-03 14:10:26,986 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CARD_REL
+2025-01-03 14:10:27,031 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_card_rel_metadata.yaml
+2025-01-03 14:10:27,046 - DataProcessor - INFO - Processing link satellite: LSAT_CARD_CUSTOMER_REL
+2025-01-03 14:10:27,065 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CARD_CUSTOMER_REL
+2025-01-03 14:10:27,091 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_card_customer_rel_metadata.yaml
+2025-01-03 14:10:27,095 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 14:10:27,099 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 14:10:27,103 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 14:10:27,105 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-03 15:02:48,322 - datavault_assistant.core.nodes.data_vault_builder - ERROR - Analysis failed: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+2025-01-03 15:03:26,845 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:03:30,605 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:03:30,636 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 15:03:30,636 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 15:03:30,636 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 15:03:30,636 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 15:03:30,636 - HubParser - INFO - Get datatypes for business keys: HUB_CUSTOMER
+2025-01-03 15:03:30,636 - HubParser - INFO - Get output yml format file: HUB_CUSTOMER
+2025-01-03 15:03:30,636 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-03 15:03:30,636 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 15:03:30,636 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 15:03:30,647 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 15:03:30,647 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 15:03:30,648 - HubParser - INFO - Get datatypes for business keys: HUB_CORPORATION
+2025-01-03 15:03:30,649 - HubParser - INFO - Get output yml format file: HUB_CORPORATION
+2025-01-03 15:03:30,654 - FileProcessor - INFO - Successfully saved YAML to: output\hub_corporation_metadata.yaml
+2025-01-03 15:03:30,655 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 15:03:30,655 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 15:03:30,656 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 15:03:30,656 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 15:03:30,657 - HubParser - INFO - Get datatypes for business keys: HUB_CARD
+2025-01-03 15:03:30,658 - HubParser - INFO - Get output yml format file: HUB_CARD
+2025-01-03 15:03:30,661 - FileProcessor - INFO - Successfully saved YAML to: output\hub_card_metadata.yaml
+2025-01-03 15:03:30,661 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 15:03:30,662 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:03:30,662 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:03:30,668 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_corporation_metadata.yaml
+2025-01-03 15:03:30,669 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 15:03:30,669 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 15:03:30,675 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_card_metadata.yaml
+2025-01-03 15:03:30,675 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 15:03:30,676 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 15:03:30,682 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_details_metadata.yaml
+2025-01-03 15:03:30,682 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_CARD_DETAILS
+2025-01-03 15:03:30,682 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_CARD_DETAILS
+2025-01-03 15:03:30,698 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_card_details_metadata.yaml
+2025-01-03 15:03:30,698 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_DETAILS
+2025-01-03 15:03:30,698 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_DETAILS
+2025-01-03 15:03:30,718 - FileProcessor - INFO - Successfully saved YAML to: output\sat_corporation_details_metadata.yaml
+2025-01-03 15:03:30,718 - DataProcessor - INFO - Processing satellite: SAT_CARD_DETAILS
+2025-01-03 15:03:30,718 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_DETAILS
+2025-01-03 15:03:30,736 - FileProcessor - INFO - Successfully saved YAML to: output\sat_card_details_metadata.yaml
+2025-01-03 15:03:30,737 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 15:03:30,737 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CORPORATION_DETAILS
+2025-01-03 15:03:30,738 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CORPORATION_DETAILS
+2025-01-03 15:03:30,741 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_corporation_details_metadata.yaml
+2025-01-03 15:03:30,741 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CARD_DETAILS
+2025-01-03 15:03:30,741 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CARD_DETAILS
+2025-01-03 15:03:30,748 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_card_details_metadata.yaml
+2025-01-03 15:03:30,754 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 15:03:30,756 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 15:03:30,760 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 15:03:30,762 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-03 15:05:53,757 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:05:58,998 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:05:59,029 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 15:05:59,030 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 15:05:59,030 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 15:05:59,031 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 15:05:59,032 - HubParser - INFO - Get datatypes for business keys: HUB_CUSTOMER
+2025-01-03 15:05:59,035 - HubParser - INFO - Get output yml format file: HUB_CUSTOMER
+2025-01-03 15:05:59,043 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-03 15:05:59,043 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 15:05:59,044 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 15:05:59,044 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 15:05:59,044 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 15:05:59,046 - HubParser - INFO - Get datatypes for business keys: HUB_CORPORATION
+2025-01-03 15:05:59,047 - HubParser - INFO - Get output yml format file: HUB_CORPORATION
+2025-01-03 15:05:59,053 - FileProcessor - INFO - Successfully saved YAML to: output\hub_corporation_metadata.yaml
+2025-01-03 15:05:59,054 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 15:05:59,054 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 15:05:59,055 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 15:05:59,055 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 15:05:59,056 - HubParser - INFO - Get datatypes for business keys: HUB_CARD
+2025-01-03 15:05:59,057 - HubParser - INFO - Get output yml format file: HUB_CARD
+2025-01-03 15:05:59,063 - FileProcessor - INFO - Successfully saved YAML to: output\hub_card_metadata.yaml
+2025-01-03 15:05:59,064 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 15:05:59,064 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:05:59,065 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:05:59,066 - LinkParser - ERROR - Error in link transformation: Link LNK_CUSTOMER_CORPORATION contains business keys that don't belong to any related hub: ['BRN_CODE']
+2025-01-03 15:05:59,066 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CORPORATION: Link LNK_CUSTOMER_CORPORATION contains business keys that don't belong to any related hub: ['BRN_CODE']
+2025-01-03 15:05:59,067 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 15:05:59,067 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 15:05:59,072 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_card_metadata.yaml
+2025-01-03 15:05:59,073 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 15:05:59,073 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 15:05:59,074 - SatelliteParser - ERROR - Error in satellite transformation: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 15:05:59,075 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 15:05:59,075 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_DETAILS
+2025-01-03 15:05:59,076 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_DETAILS
+2025-01-03 15:05:59,076 - SatelliteParser - ERROR - Error in satellite transformation: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 15:05:59,077 - DataProcessor - ERROR - Error processing satellite SAT_CORPORATION_DETAILS: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 15:05:59,078 - DataProcessor - INFO - Processing satellite: SAT_CARD_DETAILS
+2025-01-03 15:05:59,078 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_DETAILS
+2025-01-03 15:05:59,079 - SatelliteParser - ERROR - Error in satellite transformation: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 15:05:59,080 - DataProcessor - ERROR - Error processing satellite SAT_CARD_DETAILS: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 15:05:59,080 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 15:05:59,080 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CARD_RELATION
+2025-01-03 15:05:59,081 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CARD_RELATION
+2025-01-03 15:05:59,081 - LinkSatelliteParser - ERROR - Error in link satellite transformation: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 15:05:59,082 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_CARD_RELATION: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 15:05:59,084 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 15:05:59,084 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 15:05:59,084 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 15:05:59,092 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-03 15:13:17,014 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:13:22,193 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:13:22,226 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 15:13:22,226 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 15:13:22,227 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 15:13:22,227 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 15:13:22,229 - HubParser - INFO - Get datatypes for business keys: HUB_CUSTOMER
+2025-01-03 15:13:22,231 - HubParser - INFO - Get output yml format file: HUB_CUSTOMER
+2025-01-03 15:13:22,234 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-03 15:13:22,235 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 15:13:22,235 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 15:13:22,236 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 15:13:22,236 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 15:13:22,237 - HubParser - INFO - Get datatypes for business keys: HUB_CORPORATION
+2025-01-03 15:13:22,239 - HubParser - INFO - Get output yml format file: HUB_CORPORATION
+2025-01-03 15:13:22,244 - FileProcessor - INFO - Successfully saved YAML to: output\hub_corporation_metadata.yaml
+2025-01-03 15:13:22,245 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 15:13:22,245 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 15:13:22,246 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 15:13:22,246 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 15:13:22,247 - HubParser - INFO - Get datatypes for business keys: HUB_CARD
+2025-01-03 15:13:22,249 - HubParser - INFO - Get output yml format file: HUB_CARD
+2025-01-03 15:13:22,252 - FileProcessor - INFO - Successfully saved YAML to: output\hub_card_metadata.yaml
+2025-01-03 15:13:22,253 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 15:13:22,253 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:13:22,253 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:13:22,255 - LinkParser - ERROR - Error in link transformation: Link LNK_CUSTOMER_CORPORATION contains business keys that don't belong to any related hub: ['BRN_CODE']
+2025-01-03 15:13:22,255 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CORPORATION: Link LNK_CUSTOMER_CORPORATION contains business keys that don't belong to any related hub: ['BRN_CODE']
+2025-01-03 15:13:22,256 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 15:13:22,256 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 15:13:22,263 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_card_metadata.yaml
+2025-01-03 15:13:22,263 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 15:13:22,264 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 15:13:22,265 - SatelliteParser - ERROR - Error in satellite transformation: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 15:13:22,265 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 15:13:22,266 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_DETAILS
+2025-01-03 15:13:22,266 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_DETAILS
+2025-01-03 15:13:22,267 - SatelliteParser - ERROR - Error in satellite transformation: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 15:13:22,267 - DataProcessor - ERROR - Error processing satellite SAT_CORPORATION_DETAILS: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 15:13:22,267 - DataProcessor - INFO - Processing satellite: SAT_CARD_DETAILS
+2025-01-03 15:13:22,268 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_DETAILS
+2025-01-03 15:13:22,268 - SatelliteParser - ERROR - Error in satellite transformation: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 15:13:22,269 - DataProcessor - ERROR - Error processing satellite SAT_CARD_DETAILS: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 15:13:22,269 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 15:13:22,270 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CARD_RELATION
+2025-01-03 15:13:22,270 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CARD_RELATION
+2025-01-03 15:13:22,271 - LinkSatelliteParser - ERROR - Error in link satellite transformation: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 15:13:22,271 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_CARD_RELATION: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 15:13:22,273 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 15:13:22,277 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 15:13:22,279 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 15:13:22,281 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-03 15:16:10,189 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:16:14,009 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:16:14,051 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 15:16:14,052 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 15:16:14,052 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 15:16:14,053 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 15:16:14,054 - HubParser - INFO - Get datatypes for business keys: HUB_CUSTOMER
+2025-01-03 15:16:14,057 - HubParser - INFO - Get output yml format file: HUB_CUSTOMER
+2025-01-03 15:16:14,062 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-03 15:16:14,062 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 15:16:14,062 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 15:16:14,062 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 15:16:14,062 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 15:16:14,068 - HubParser - INFO - Get datatypes for business keys: HUB_CORPORATION
+2025-01-03 15:16:14,070 - HubParser - INFO - Get output yml format file: HUB_CORPORATION
+2025-01-03 15:16:14,073 - FileProcessor - INFO - Successfully saved YAML to: output\hub_corporation_metadata.yaml
+2025-01-03 15:16:14,073 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 15:16:14,074 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 15:16:14,075 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 15:16:14,075 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 15:16:14,076 - HubParser - INFO - Get datatypes for business keys: HUB_CARD
+2025-01-03 15:16:14,078 - HubParser - INFO - Get output yml format file: HUB_CARD
+2025-01-03 15:16:14,081 - FileProcessor - INFO - Successfully saved YAML to: output\hub_card_metadata.yaml
+2025-01-03 15:16:14,082 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 15:16:14,082 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:16:14,083 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:16:14,084 - LinkParser - ERROR - Error in link transformation: Link LNK_CUSTOMER_CORPORATION contains business keys that don't belong to any related hub: ['BRN_CODE']
+2025-01-03 15:16:14,084 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CORPORATION: Link LNK_CUSTOMER_CORPORATION contains business keys that don't belong to any related hub: ['BRN_CODE']
+2025-01-03 15:16:14,085 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 15:16:14,085 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 15:16:14,091 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_card_metadata.yaml
+2025-01-03 15:16:14,092 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 15:16:14,092 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 15:16:14,093 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 15:16:14,094 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 15:16:14,101 - SatelliteParser - INFO - validate satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 15:16:14,107 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_corebank_metadata.yaml
+2025-01-03 15:16:14,108 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 15:16:14,108 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 15:16:14,109 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 15:16:14,110 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 15:16:14,114 - SatelliteParser - INFO - validate satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 15:16:14,124 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_corecard_metadata.yaml
+2025-01-03 15:16:14,125 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_COREBANK
+2025-01-03 15:16:14,125 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_COREBANK
+2025-01-03 15:16:14,125 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CORPORATION_COREBANK
+2025-01-03 15:16:14,127 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CORPORATION_COREBANK
+2025-01-03 15:16:14,130 - SatelliteParser - INFO - validate satellite: SAT_CORPORATION_COREBANK
+2025-01-03 15:16:14,136 - FileProcessor - INFO - Successfully saved YAML to: output\sat_corporation_corebank_metadata.yaml
+2025-01-03 15:16:14,137 - DataProcessor - INFO - Processing satellite: SAT_CARD_CORECARD
+2025-01-03 15:16:14,137 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_CORECARD
+2025-01-03 15:16:14,138 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CARD_CORECARD
+2025-01-03 15:16:14,139 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CARD_CORECARD
+2025-01-03 15:16:14,141 - SatelliteParser - INFO - validate satellite: SAT_CARD_CORECARD
+2025-01-03 15:16:14,145 - FileProcessor - INFO - Successfully saved YAML to: output\sat_card_corecard_metadata.yaml
+2025-01-03 15:16:14,146 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 15:16:14,148 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 15:16:14,151 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 15:16:14,155 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 15:18:38,915 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:18:42,726 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:18:42,763 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 15:18:42,763 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 15:18:42,764 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 15:18:42,764 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 15:18:42,767 - HubParser - INFO - Get datatypes for business keys: HUB_CUSTOMER
+2025-01-03 15:18:42,770 - HubParser - INFO - Get output yml format file: HUB_CUSTOMER
+2025-01-03 15:18:42,778 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-03 15:18:42,778 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 15:18:42,779 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 15:18:42,779 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 15:18:42,780 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 15:18:42,781 - HubParser - INFO - Get datatypes for business keys: HUB_CORPORATION
+2025-01-03 15:18:42,784 - HubParser - INFO - Get output yml format file: HUB_CORPORATION
+2025-01-03 15:18:42,788 - FileProcessor - INFO - Successfully saved YAML to: output\hub_corporation_metadata.yaml
+2025-01-03 15:18:42,789 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 15:18:42,789 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 15:18:42,790 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 15:18:42,791 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 15:18:42,792 - HubParser - INFO - Get datatypes for business keys: HUB_CARD
+2025-01-03 15:18:42,795 - HubParser - INFO - Get output yml format file: HUB_CARD
+2025-01-03 15:18:42,800 - FileProcessor - INFO - Successfully saved YAML to: output\hub_card_metadata.yaml
+2025-01-03 15:18:42,801 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 15:18:42,801 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:18:42,802 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:18:42,804 - LinkParser - ERROR - Error in link transformation: Link LNK_CUSTOMER_CORPORATION contains business keys that don't belong to any related hub: ['BRN_CODE']
+2025-01-03 15:18:42,804 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CORPORATION: Link LNK_CUSTOMER_CORPORATION contains business keys that don't belong to any related hub: ['BRN_CODE']
+2025-01-03 15:18:42,805 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 15:18:42,806 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 15:18:42,815 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_card_metadata.yaml
+2025-01-03 15:18:42,816 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 15:18:42,816 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 15:18:42,817 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 15:18:42,818 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 15:18:42,829 - SatelliteParser - INFO - validate satellite: SAT_CUSTOMER_COREBANK
+2025-01-03 15:18:42,839 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_corebank_metadata.yaml
+2025-01-03 15:18:42,840 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 15:18:42,840 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 15:18:42,841 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 15:18:42,843 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 15:18:42,848 - SatelliteParser - INFO - validate satellite: SAT_CUSTOMER_CORECARD
+2025-01-03 15:18:42,856 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_corecard_metadata.yaml
+2025-01-03 15:18:42,857 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_COREBANK
+2025-01-03 15:18:42,858 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_COREBANK
+2025-01-03 15:18:42,858 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CORPORATION_COREBANK
+2025-01-03 15:18:42,860 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CORPORATION_COREBANK
+2025-01-03 15:18:42,864 - SatelliteParser - INFO - validate satellite: SAT_CORPORATION_COREBANK
+2025-01-03 15:18:42,864 - FileProcessor - INFO - Successfully saved YAML to: output\sat_corporation_corebank_metadata.yaml
+2025-01-03 15:18:42,864 - DataProcessor - INFO - Processing satellite: SAT_CARD_CORECARD
+2025-01-03 15:18:42,878 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_CORECARD
+2025-01-03 15:18:42,879 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CARD_CORECARD
+2025-01-03 15:18:42,879 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CARD_CORECARD
+2025-01-03 15:18:42,879 - SatelliteParser - INFO - validate satellite: SAT_CARD_CORECARD
+2025-01-03 15:18:42,879 - FileProcessor - INFO - Successfully saved YAML to: output\sat_card_corecard_metadata.yaml
+2025-01-03 15:18:42,879 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 15:18:42,898 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 15:18:42,903 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 15:18:42,908 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 15:21:29,087 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:21:32,752 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 15:21:32,787 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 15:21:32,788 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 15:21:32,788 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 15:21:32,788 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 15:21:32,790 - HubParser - INFO - Get datatypes for business keys: HUB_CUSTOMER
+2025-01-03 15:21:32,792 - HubParser - INFO - Get output yml format file: HUB_CUSTOMER
+2025-01-03 15:21:32,796 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-03 15:21:32,796 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 15:21:32,796 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 15:21:32,796 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 15:21:32,796 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 15:21:32,796 - HubParser - INFO - Get datatypes for business keys: HUB_CORPORATION
+2025-01-03 15:21:32,805 - HubParser - INFO - Get output yml format file: HUB_CORPORATION
+2025-01-03 15:21:32,806 - FileProcessor - INFO - Successfully saved YAML to: output\hub_corporation_metadata.yaml
+2025-01-03 15:21:32,806 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 15:21:32,806 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 15:21:32,806 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 15:21:32,806 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 15:21:32,806 - HubParser - INFO - Get datatypes for business keys: HUB_CARD
+2025-01-03 15:21:32,806 - HubParser - INFO - Get output yml format file: HUB_CARD
+2025-01-03 15:21:32,806 - FileProcessor - INFO - Successfully saved YAML to: output\hub_card_metadata.yaml
+2025-01-03 15:21:32,806 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 15:21:32,806 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:21:32,806 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 15:21:32,826 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_corporation_metadata.yaml
+2025-01-03 15:21:32,826 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 15:21:32,827 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 15:21:32,835 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_card_metadata.yaml
+2025-01-03 15:21:32,836 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 15:21:32,836 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 15:21:32,837 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 15:21:32,838 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 15:21:32,846 - SatelliteParser - INFO - validate satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 15:21:32,854 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_details_metadata.yaml
+2025-01-03 15:21:32,854 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_CARD_DETAILS
+2025-01-03 15:21:32,855 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_CARD_DETAILS
+2025-01-03 15:21:32,855 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CUSTOMER_CARD_DETAILS
+2025-01-03 15:21:32,856 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CUSTOMER_CARD_DETAILS
+2025-01-03 15:21:32,862 - SatelliteParser - INFO - validate satellite: SAT_CUSTOMER_CARD_DETAILS
+2025-01-03 15:21:32,868 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_card_details_metadata.yaml
+2025-01-03 15:21:32,869 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_DETAILS
+2025-01-03 15:21:32,869 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_DETAILS
+2025-01-03 15:21:32,870 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CORPORATION_DETAILS
+2025-01-03 15:21:32,871 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CORPORATION_DETAILS
+2025-01-03 15:21:32,875 - SatelliteParser - INFO - validate satellite: SAT_CORPORATION_DETAILS
+2025-01-03 15:21:32,879 - FileProcessor - INFO - Successfully saved YAML to: output\sat_corporation_details_metadata.yaml
+2025-01-03 15:21:32,880 - DataProcessor - INFO - Processing satellite: SAT_CARD_DETAILS
+2025-01-03 15:21:32,880 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_DETAILS
+2025-01-03 15:21:32,881 - SatelliteParser - INFO - _get_source_schema satellite: SAT_CARD_DETAILS
+2025-01-03 15:21:32,882 - SatelliteParser - INFO - _get_datatype_info satellite: SAT_CARD_DETAILS
+2025-01-03 15:21:32,883 - SatelliteParser - INFO - validate satellite: SAT_CARD_DETAILS
+2025-01-03 15:21:32,887 - FileProcessor - INFO - Successfully saved YAML to: output\sat_card_details_metadata.yaml
+2025-01-03 15:21:32,888 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 15:21:32,888 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CORPORATION_DETAILS
+2025-01-03 15:21:32,889 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CORPORATION_DETAILS
+2025-01-03 15:21:32,894 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_corporation_details_metadata.yaml
+2025-01-03 15:21:32,894 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CARD_DETAILS
+2025-01-03 15:21:32,895 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CARD_DETAILS
+2025-01-03 15:21:32,899 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_card_details_metadata.yaml
+2025-01-03 15:21:32,902 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 15:21:32,908 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 15:21:32,911 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 15:21:32,914 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml

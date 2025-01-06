@@ -24,6 +24,9 @@ class Settings(BaseSettings):
     MEMORY_KEY: str = "chat_history"
     
     model_config = SettingsConfigDict(env_file='.env', case_sensitive=True)
+    # class Config:
+    #     env_file = ".env"
+    
 
 class ParserConfig:
     version: str = "1.0.0"
@@ -36,6 +39,9 @@ class ParserConfig:
 @lru_cache()
 def get_settings() -> Settings:
     return Settings()
+
+def clear_settings_cache():
+    get_settings.cache_clear()
 
 # Initialize settings
 settings = get_settings()

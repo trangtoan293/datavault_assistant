@@ -1,11 +1,11 @@
 from fastapi import UploadFile, HTTPException
 from typing import Dict,Union
 from pathlib import Path
-from core.nodes.metadata_reader import MetadataService
-from core.nodes.metadata_analyzer import LLMMetadataAnalyzer
-from core.nodes.data_vault_builder import LLMDataVaultBuilder
-from core.nodes.datavault_analyzer import HubAnalyzer
-from core.utils.llm import init_llm
+from datavault_assistant.core.nodes.metadata_reader import MetadataService
+from datavault_assistant.core.nodes.metadata_analyzer import LLMMetadataAnalyzer
+from datavault_assistant.core.nodes.data_vault_builder import LLMDataVaultBuilder
+from datavault_assistant.core.nodes.datavault_analyzer import HubAnalyzer
+from datavault_assistant.core.utils.llm import init_llm
 
 class MetadataController:
     def __init__(self):

@@ -67,7 +67,7 @@ class DataTypeService:
             data_type = column_info['DATA_TYPE']
             length = str(column_info.get('LENGTH', '')).strip()
             
-            if data_type == 'VARCHAR2':
+            if data_type.upper() == 'VARCHAR2':
                 data_type = self._process_varchar(length)
                 
             return {
@@ -86,9 +86,12 @@ class DataTypeService:
             'error': f"Column {col} not found in mapping data",
             'data_type': f"VARCHAR2({self.config.default_varchar_length})"
         }
-        
+
     def _process_varchar(self, length: str) -> str:
-        return f"VARCHAR2({length})" if length and length != '-' else f"VARCHAR2({self.config.default_varchar_length})"
+        import numpy as np
+        if length and length.lower() not in ['-', ' ','nan']:
+            return f"VARCHAR2({length})"
+        return f"VARCHAR2({self.config.default_varchar_length})"
 # Link Satellite Parser Implementation
 class LinkSatelliteParser(DataVaultParser, LoggingMixin):
     def __init__(self, config: ParserConfig):
@@ -224,114 +227,9 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
             "target_schema": self.config.target_schema,
             "target_table": lsat_data["name"],
             "target_entity_type": "lsat",
+            "collision_code": "mdm",
             "parent_table": lsat_data["link"],
             "metadata": self._build_metadata(warnings),
             "columns": self._build_columns(lsat_data, datatype_info)
         }
         return output_dict
-
-# Modified File Processor
-class FileProcessor:
-    def __init__(self, parser: DataVaultParser, config: ParserConfig):
-        self.parser = parser
-        self.config = config
-        self.logger = logging.getLogger(self.__class__.__name__)
-        
-    def process_file(self, input_file: Path, mapping_file: Path, output_dir: Path):
-        """Process input files and generate output YAML files"""
-        try:
-            # Create output directory
-            output_dir.mkdir(parents=True, exist_ok=True)
-            
-            # Read input files
-            self.logger.info(f"Reading input file: {input_file}")
-            input_data = self._read_json(input_file)
-            
-            self.logger.info(f"Reading mapping file: {mapping_file}")
-            mapping_df = pd.read_csv(mapping_file)
-            
-            # Cache link metadata if processing link satellites
-            if isinstance(self.parser, LinkSatelliteParser):
-                self.parser._cache_links_metadata(input_data)
-            
-            # Process entities
-            results=[]
-            entity_type = "link_satellites" if isinstance(self.parser, LinkSatelliteParser) else "satellites"
-            for entity in input_data.get(entity_type, []):
-                try:
-                    self.logger.info(f"Processing {entity_type}: {entity.get('name')}")
-                    result = self.parser.parse(entity, mapping_df)
-                    output_file = output_dir / f"{entity['name'].lower()}_metadata.yaml"
-                    self._save_yaml(result, output_file)
-                    results.append({
-                            "lsat": entity["name"],
-                            "status": result["metadata"]["validation_status"],
-                            "warnings": result["metadata"].get("validation_warnings", [])
-                        })
-                        
-                except Exception as e:
-                    self.logger.error(f"Error processing lsat {entity.get('name')}: {str(e)}")
-                    results.append({
-                        "lsat": entity.get("name"),
-                        "status": "error",
-                        "error": str(e)
-                    })
-            self._save_processing_summary(results, output_dir)
-        except Exception as e:
-            self.logger.error(f"Error processing file: {str(e)}")
-            raise
-    def _read_json(self, file_path: Path) -> Dict[str, Any]:
-        """Read and parse JSON file"""
-        try:
-            if not file_path.exists():
-                raise FileNotFoundError(f"File không tồn tại: {file_path}")
-                
-            with open(file_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except json.JSONDecodeError as e:
-            raise ValueError(f"Lỗi parse JSON: {str(e)}")
-        except Exception as e:
-            raise Exception(f"Unexpected error reading JSON: {str(e)}")
-            
-    def _save_yaml(self, data: Dict[str, Any], output_path: Path) -> None:
-        """Save data to YAML file"""
-        try:
-            with open(output_path, 'w', encoding='utf-8') as f:
-                yaml.dump(data, f, sort_keys=False, allow_unicode=True)
-            self.logger.info(f"Saved YAML to: {output_path}")
-        except Exception as e:
-            raise Exception(f"Error saving YAML: {str(e)}")
-            
-    def _save_processing_summary(self, results: List[Dict[str, Any]], output_dir: Path) -> None:
-        """Save processing summary"""
-        summary = {
-            "processing_summary": {
-                "processed_at": datetime.now().isoformat(),
-                "total_hubs": len(results),
-                "successful": sum(1 for r in results if r["status"] != "error"),
-                "warnings": sum(1 for r in results if r["status"] == "warnings"),
-                "errors": sum(1 for r in results if r["status"] == "error"),
-                "details": results
-            }
-        }
-        
-        summary_file = output_dir / "processing_lsat_summary.yaml"
-        self._save_yaml(summary, summary_file)
-
-def main():
-    config = ParserConfig()
-    parser = LinkSatelliteParser(config)
-    processor = FileProcessor(parser, config)
-    
-    try:
-        processor.process_file(
-            input_file=Path(r"D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json"),
-            output_dir=Path("output"),
-            mapping_file=Path(r"D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv")
-        )
-    except Exception as e:
-        logging.error(f"Error in main: {str(e)}")
-        raise
-
-if __name__ == "__main__":
-    main()

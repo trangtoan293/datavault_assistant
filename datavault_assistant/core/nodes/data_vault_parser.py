@@ -1,3 +1,5 @@
+from fastapi import HTTPException
+from fastapi.responses import FileResponse
 from pathlib import Path
 from typing import Dict, Any, List, Optional,Union
 from datetime import datetime
@@ -5,11 +7,15 @@ import pandas as pd
 import logging
 import yaml
 import json
-from configs.settings import ParserConfig
-from core.nodes.hub_parser import HubParser
-from core.nodes.link_parser import LinkParser
-from core.nodes.sat_parser import SatelliteParser
-from core.nodes.lsat_parser import LinkSatelliteParser
+import tempfile
+import shutil
+import zipfile
+import io
+from datavault_assistant.configs.settings import ParserConfig
+from datavault_assistant.core.nodes.hub_parser import HubParser
+from datavault_assistant.core.nodes.link_parser import LinkParser
+from datavault_assistant.core.nodes.sat_parser import SatelliteParser
+from datavault_assistant.core.nodes.lsat_parser import LinkSatelliteParser
 
 class FileProcessor:
     """Class xử lý file I/O operations"""
@@ -198,6 +204,129 @@ class FileProcessor:
             raise
 
 
+
+class YAMLDownloader:
+    """Class xử lý download YAML files"""
+    
+    def __init__(self, file_processor: FileProcessor):
+        """
+        Initialize YAMLDownloader
+        
+        Args:
+            file_processor: Instance của FileProcessor để xử lý file operations
+        """
+        self.file_processor = file_processor
+        self.logger = logging.getLogger(self.__class__.__name__)
+
+    async def download_single_yaml(self, 
+                                 data: Dict[str, Any], 
+                                 filename: str) -> FileResponse:
+        """
+        Download single YAML file
+        
+        Args:
+            data: Data to save as YAML
+            filename: Output filename
+            
+        Returns:
+            FileResponse for downloading
+        """
+        try:
+            with tempfile.NamedTemporaryFile(
+                mode='w',
+                suffix='.yml',
+                delete=False
+            ) as temp_file:
+                # Sử dụng FileProcessor để save YAML
+                self.file_processor._save_yaml(
+                    data=data,
+                    output_path=temp_file.name
+                )
+                
+            return FileResponse(
+                path=temp_file.name,
+                filename=f"{filename}.yml",
+                media_type='application/x-yaml',
+                background=self._cleanup_temp_file
+            )
+            
+        except Exception as e:
+            self.logger.error(f"Error creating YAML download: {str(e)}")
+            raise HTTPException(
+                status_code=500,
+                detail=f"Error generating YAML file: {str(e)}"
+            )
+
+    async def download_multiple_yaml(self,
+                                   files_data: List[Dict[str, Any]],
+                                   zip_filename: str = "yaml_files") -> FileResponse:
+        """
+        Download multiple YAML files as ZIP
+        
+        Args:
+            files_data: List of dicts with 'data' and 'filename' keys
+            zip_filename: Name for the ZIP file
+            
+        Returns:
+            FileResponse for downloading ZIP
+        """
+        try:
+            # Create temporary directory
+            temp_dir = Path(tempfile.mkdtemp())
+            zip_buffer = io.BytesIO()
+            
+            # Create ZIP file
+            with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
+                for file_info in files_data:
+                    yaml_path = temp_dir / f"{file_info['filename']}.yml"
+                    
+                    # Save YAML using FileProcessor
+                    self.file_processor._save_yaml(
+                        data=file_info['data'],
+                        output_path=yaml_path
+                    )
+                    
+                    # Add to ZIP
+                    zip_file.write(
+                        yaml_path,
+                        arcname=yaml_path.name
+                    )
+            
+            # Create temporary file for ZIP
+            zip_buffer.seek(0)
+            temp_zip = tempfile.NamedTemporaryFile(delete=False)
+            temp_zip.write(zip_buffer.read())
+            temp_zip.close()
+            
+            return FileResponse(
+                path=temp_zip.name,
+                filename=f"{zip_filename}.zip",
+                media_type='application/zip',
+                background=lambda: self._cleanup_temp_files(temp_dir, temp_zip.name)
+            )
+            
+        except Exception as e:
+            self.logger.error(f"Error creating ZIP download: {str(e)}")
+            raise HTTPException(
+                status_code=500,
+                detail=f"Error generating ZIP file: {str(e)}"
+            )
+
+    async def _cleanup_temp_file(self, path: str):
+        """Cleanup temporary file after download"""
+        try:
+            Path(path).unlink(missing_ok=True)
+        except Exception as e:
+            self.logger.error(f"Error cleaning up temp file: {str(e)}")
+
+    async def _cleanup_temp_files(self, temp_dir: Path, zip_path: str):
+        """Cleanup temporary directory and ZIP file"""
+        try:
+            shutil.rmtree(temp_dir)
+            Path(zip_path).unlink(missing_ok=True)
+        except Exception as e:
+            self.logger.error(f"Error cleaning up temp files: {str(e)}")
+
     
 class DataProcessor:
     """Class xử lý data cho tất cả loại entities trong Data Vault"""
@@ -213,7 +342,7 @@ class DataProcessor:
         self.lsat_parser = LinkSatelliteParser(config)
         
         # Create file processor for saving files
-        self.file_processor = FileProcessor()  # Parser sẽ được set sau
+        self.file_processor = FileProcessor()  
         
     def process_data(self, 
                     input_data: Dict[str, Any], 
@@ -318,7 +447,6 @@ class DataProcessor:
             try:
                 self.logger.info(f"Processing link: {link['name']}")
                 result = self.link_parser.parse(link, mapping_data)
-                
                 output_file = output_dir / f"{link['name'].lower()}_metadata.yaml"
                 self.file_processor._save_yaml(result, output_file)
                 
@@ -425,38 +553,3 @@ class DataProcessor:
                 summary_file = output_dir / filename
                 self.file_processor._save_yaml(summary, summary_file)
 
-# Example usage
-def main():
-    config = ParserConfig()
-    processor = DataProcessor(config)
-    
-    try:
-        # Example 1: Process from file
-        results = processor.process_file(
-            input_file=Path("data/sat_lsat.json"),
-            mapping_file=Path("data/metadata_src.csv"),
-            output_dir=Path("output")
-        )
-        
-        # Example 2: Process from direct data
-        input_data = {
-            "hubs": [...],
-            "links": [...],
-            "satellites": [...],
-            "link_satellites": [...]
-        }
-        
-        mapping_data = pd.DataFrame({...})
-        
-        results = processor.process_data(
-            input_data=input_data,
-            mapping_data=mapping_data,
-            output_dir=Path("output")
-        )
-        
-    except Exception as e:
-        logging.error(f"Error in main: {str(e)}")
-        raise
-
-if __name__ == "__main__":
-    main()

@@ -67,7 +67,7 @@ class DataTypeService:
             data_type = column_info['DATA_TYPE']
             length = str(column_info.get('LENGTH', '')).strip()
             
-            if data_type == 'VARCHAR2':
+            if data_type.upper() == 'VARCHAR2':
                 data_type = self._process_varchar(length)
                 
             return {
@@ -88,7 +88,10 @@ class DataTypeService:
         }
         
     def _process_varchar(self, length: str) -> str:
-        return f"VARCHAR2({length})" if length and length != '-' else f"VARCHAR2({self.config.default_varchar_length})"
+        import numpy as np
+        if length and length.lower() not in ['-', ' ','nan']:
+            return f"VARCHAR2({length})"
+        return f"VARCHAR2({self.config.default_varchar_length})"
 
 # Satellite Parser Implementation
 class SatelliteParser(DataVaultParser, LoggingMixin):
@@ -101,7 +104,6 @@ class SatelliteParser(DataVaultParser, LoggingMixin):
         """Main parsing method for satellite metadata"""
         try:
             self.logger.info(f"Starting transformation for satellite: {sat_data['name']}")
-            
             source_schema = self._get_source_schema(sat_data, mapping_df)
             datatype_info = self._get_datatype_info(sat_data, mapping_df)
             validation_warnings = self.validate(sat_data)
@@ -115,7 +117,16 @@ class SatelliteParser(DataVaultParser, LoggingMixin):
     def validate(self, sat_data: Dict[str, Any]) -> List[str]:
         """Implement validation logic"""
         warnings = []
-        # Add validation logic here
+        required_fields = ["name", "hub", "source_table", "business_keys", "descriptive_attrs"]
+        for field in required_fields:
+            if field not in sat_data:
+                warnings.append(f"Missing required field: {field}")
+        
+        if warnings:  # Nếu thiếu fields bắt buộc thì return luôn
+            return warnings
+        
+        if not sat_data["hub"].startswith("HUB_"):
+            warnings.append(f"Hub name should start with 'HUB_': {sat_data['hub']}")
         return warnings
     
     def _get_source_schema(self, sat_data: Dict[str, Any], mapping_df: pd.DataFrame) -> str:
@@ -185,113 +196,9 @@ class SatelliteParser(DataVaultParser, LoggingMixin):
             "target_schema": self.config.target_schema,
             "target_table": sat_data["name"],
             "target_entity_type": "sat",
+            "collision_code": "mdm",
             "parent_table": sat_data["hub"],
             "metadata": self._build_metadata(warnings),
             "columns": self._build_columns(sat_data, datatype_info)
         }
         return output_dict
-
-# File Processor
-class FileProcessor:
-    def __init__(self, parser: DataVaultParser, config: ParserConfig):
-        self.parser = parser
-        self.config = config
-        self.logger = logging.getLogger(self.__class__.__name__)
-        
-    def process_file(self, input_file: Path, mapping_file: Path, output_dir: Path):
-        """Process input files and generate output YAML files"""
-        try:
-            # Create output directory if it doesn't exist
-            output_dir.mkdir(parents=True, exist_ok=True)
-            
-            # Read input files
-            self.logger.info(f"Reading input file: {input_file}")
-            input_data = self._read_json(input_file)
-            
-            self.logger.info(f"Reading mapping file: {mapping_file}")
-            mapping_df = pd.read_csv(mapping_file)
-            
-            # Process each satellite
-            results=[]
-            for sat in input_data.get("satellites", []):
-                try: 
-                    self.logger.info(f"Processing satellite: {sat.get('name')}")
-                    result = self.parser.parse(sat, mapping_df)
-                    output_file = output_dir / f"{sat['name'].lower()}_metadata.yaml"
-                    self._save_yaml(result, output_file)
-                    results.append({
-                            "lsat": sat["name"],
-                            "status": result["metadata"]["validation_status"],
-                            "warnings": result["metadata"].get("validation_warnings", [])
-                        })
-                        
-                except Exception as e:
-                    self.logger.error(f"Error processing lsat {sat.get('name')}: {str(e)}")
-                    results.append({
-                        "lsat": sat.get("name"),
-                        "status": "error",
-                        "error": str(e)
-                    })                
-            self._save_processing_summary(results, output_dir)
-        except Exception as e:
-            self.logger.error(f"Error processing file: {str(e)}")
-            raise
-            
-    def _read_json(self, file_path: Path) -> Dict[str, Any]:
-        """Read and parse JSON file"""
-        try:
-            if not file_path.exists():
-                raise FileNotFoundError(f"File không tồn tại: {file_path}")
-                
-            with open(file_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except json.JSONDecodeError as e:
-            raise ValueError(f"Lỗi parse JSON: {str(e)}")
-        except Exception as e:
-            raise Exception(f"Unexpected error reading JSON: {str(e)}")
-            
-    def _save_yaml(self, data: Dict[str, Any], output_path: Path) -> None:
-        """Save data to YAML file"""
-        try:
-            output_path.parent.mkdir(parents=True, exist_ok=True)
-            
-            with open(output_path, 'w', encoding='utf-8') as f:
-                yaml.dump(data, f, sort_keys=False, allow_unicode=True)
-                
-            self.logger.info(f"Successfully saved YAML to: {output_path}")
-        except Exception as e:
-            raise Exception(f"Error saving YAML: {str(e)}")
-        
-    def _save_processing_summary(self, results: List[Dict[str, Any]], output_dir: Path) -> None:
-        """Save processing summary"""
-        summary = {
-            "processing_summary": {
-                "processed_at": datetime.now().isoformat(),
-                "total_hubs": len(results),
-                "successful": sum(1 for r in results if r["status"] != "error"),
-                "warnings": sum(1 for r in results if r["status"] == "warnings"),
-                "errors": sum(1 for r in results if r["status"] == "error"),
-                "details": results
-            }
-        }
-        
-        summary_file = output_dir / "processing_sat_summary.yaml"
-        self._save_yaml(summary, summary_file)
-
-def main():
-    config = ParserConfig()
-    parser = SatelliteParser(config)
-    processor = FileProcessor(parser, config)
-    
-    try:
-        processor.process_file(
-            input_file=Path(r"D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\sat_lsat.json"),
-            output_dir=Path("output"),
-            mapping_file=Path(r"D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\metadata_src.csv")
-        )
-    except Exception as e:
-        logging.error(f"Error in main: {str(e)}")
-        raise
-
-if __name__ == "__main__":
-    main()

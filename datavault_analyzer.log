@@ -83,3 +83,157 @@ AssertionError
 2024-12-28 18:10:03,096 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
 2024-12-28 18:10:03,096 - groq._base_client - INFO - Retrying request to /openai/v1/chat/completions in 19.000000 seconds
 2024-12-28 18:10:26,686 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 16:44:14,726 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 16:44:18,405 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 16:44:18,409 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 16:44:18,409 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 16:44:18,410 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 16:44:18,411 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 16:44:18,413 - HubParser - INFO - Get datatypes for business keys: HUB_CUSTOMER
+2025-01-03 16:44:18,417 - HubParser - INFO - Get output yml format file: HUB_CUSTOMER
+2025-01-03 16:44:18,421 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-03 16:44:18,421 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 16:44:18,422 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 16:44:18,422 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 16:44:18,423 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 16:44:18,424 - HubParser - INFO - Get datatypes for business keys: HUB_CORPORATION
+2025-01-03 16:44:18,426 - HubParser - INFO - Get output yml format file: HUB_CORPORATION
+2025-01-03 16:44:18,432 - FileProcessor - INFO - Successfully saved YAML to: output\hub_corporation_metadata.yaml
+2025-01-03 16:44:18,433 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 16:44:18,433 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 16:44:18,434 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 16:44:18,434 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 16:44:18,436 - HubParser - INFO - Get datatypes for business keys: HUB_CARD
+2025-01-03 16:44:18,438 - HubParser - INFO - Get output yml format file: HUB_CARD
+2025-01-03 16:44:18,447 - FileProcessor - INFO - Successfully saved YAML to: output\hub_card_metadata.yaml
+2025-01-03 16:44:18,448 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 16:44:18,450 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 16:44:18,451 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 16:44:18,457 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_corporation_metadata.yaml
+2025-01-03 16:44:18,458 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 16:44:18,458 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 16:44:18,466 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_card_metadata.yaml
+2025-01-03 16:44:18,467 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 16:44:18,467 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 16:44:18,484 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_details_metadata.yaml
+2025-01-03 16:44:18,485 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_CARD_DETAILS
+2025-01-03 16:44:18,485 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_CARD_DETAILS
+2025-01-03 16:44:18,506 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_card_details_metadata.yaml
+2025-01-03 16:44:18,507 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_DETAILS
+2025-01-03 16:44:18,507 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_DETAILS
+2025-01-03 16:44:18,518 - FileProcessor - INFO - Successfully saved YAML to: output\sat_corporation_details_metadata.yaml
+2025-01-03 16:44:18,518 - DataProcessor - INFO - Processing satellite: SAT_CARD_DETAILS
+2025-01-03 16:44:18,519 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_DETAILS
+2025-01-03 16:44:18,525 - FileProcessor - INFO - Successfully saved YAML to: output\sat_card_details_metadata.yaml
+2025-01-03 16:44:18,526 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 16:44:18,526 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CORPORATION_DETAILS
+2025-01-03 16:44:18,527 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CORPORATION_DETAILS
+2025-01-03 16:44:18,533 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_corporation_details_metadata.yaml
+2025-01-03 16:44:18,533 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CARD_DETAILS
+2025-01-03 16:44:18,533 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CARD_DETAILS
+2025-01-03 16:44:18,538 - FileProcessor - INFO - Successfully saved YAML to: output\lsat_customer_card_details_metadata.yaml
+2025-01-03 16:44:18,542 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 16:44:18,545 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 16:44:18,548 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 16:44:18,550 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-03 17:23:20,082 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 17:23:27,620 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 17:23:27,623 - datavault_assistant.core.nodes.data_vault_builder - ERROR - Analysis failed: Extra data: line 23 column 2 (char 611)
+2025-01-03 17:24:17,541 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 17:24:22,764 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-03 17:24:22,767 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-03 17:24:22,768 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-03 17:24:22,768 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-03 17:24:22,769 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-03 17:24:22,771 - HubParser - INFO - Get datatypes for business keys: HUB_CUSTOMER
+2025-01-03 17:24:22,775 - HubParser - INFO - Get output yml format file: HUB_CUSTOMER
+2025-01-03 17:24:22,780 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-03 17:24:22,781 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-03 17:24:22,781 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-03 17:24:22,782 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-03 17:24:22,782 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-03 17:24:22,784 - HubParser - INFO - Get datatypes for business keys: HUB_CORPORATION
+2025-01-03 17:24:22,785 - HubParser - INFO - Get output yml format file: HUB_CORPORATION
+2025-01-03 17:24:22,788 - FileProcessor - INFO - Successfully saved YAML to: output\hub_corporation_metadata.yaml
+2025-01-03 17:24:22,789 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-03 17:24:22,789 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-03 17:24:22,789 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-03 17:24:22,790 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-03 17:24:22,791 - HubParser - INFO - Get datatypes for business keys: HUB_CARD
+2025-01-03 17:24:22,793 - HubParser - INFO - Get output yml format file: HUB_CARD
+2025-01-03 17:24:22,796 - FileProcessor - INFO - Successfully saved YAML to: output\hub_card_metadata.yaml
+2025-01-03 17:24:22,797 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-03 17:24:22,797 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 17:24:22,797 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-03 17:24:22,799 - LinkParser - ERROR - Error in link transformation: Link LNK_CUSTOMER_CORPORATION contains business keys that don't belong to any related hub: ['BRN_CODE']
+2025-01-03 17:24:22,800 - DataProcessor - ERROR - Error processing link LNK_CUSTOMER_CORPORATION: Link LNK_CUSTOMER_CORPORATION contains business keys that don't belong to any related hub: ['BRN_CODE']
+2025-01-03 17:24:22,800 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-03 17:24:22,801 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-03 17:24:22,810 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_card_metadata.yaml
+2025-01-03 17:24:22,811 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 17:24:22,811 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DETAILS
+2025-01-03 17:24:22,812 - SatelliteParser - ERROR - Error in satellite transformation: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 17:24:22,813 - DataProcessor - ERROR - Error processing satellite SAT_CUSTOMER_DETAILS: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 17:24:22,813 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_DETAILS
+2025-01-03 17:24:22,814 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_DETAILS
+2025-01-03 17:24:22,814 - SatelliteParser - ERROR - Error in satellite transformation: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 17:24:22,815 - DataProcessor - ERROR - Error processing satellite SAT_CORPORATION_DETAILS: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 17:24:22,815 - DataProcessor - INFO - Processing satellite: SAT_CARD_DETAILS
+2025-01-03 17:24:22,816 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_DETAILS
+2025-01-03 17:24:22,816 - SatelliteParser - ERROR - Error in satellite transformation: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 17:24:22,816 - DataProcessor - ERROR - Error processing satellite SAT_CARD_DETAILS: ('Lengths must match to compare', (39,), (1,))
+2025-01-03 17:24:22,817 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-03 17:24:22,817 - DataProcessor - INFO - Processing link satellite: LSAT_CUSTOMER_CARD_RELATION
+2025-01-03 17:24:22,818 - LinkSatelliteParser - INFO - Starting transformation for link satellite: LSAT_CUSTOMER_CARD_RELATION
+2025-01-03 17:24:22,818 - LinkSatelliteParser - ERROR - Error in link satellite transformation: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 17:24:22,819 - DataProcessor - ERROR - Error processing link satellite LSAT_CUSTOMER_CARD_RELATION: ('Lengths must match to compare', (39,), (2,))
+2025-01-03 17:24:22,821 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-03 17:24:22,825 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-03 17:24:22,830 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml
+2025-01-03 17:24:22,833 - FileProcessor - INFO - Successfully saved YAML to: output\processing_lsat_summary.yaml
+2025-01-06 14:34:06,956 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-06 14:34:15,632 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-06 14:34:15,634 - DataProcessor - INFO - Processing hub: HUB_CUSTOMER
+2025-01-06 14:34:15,635 - HubParser - INFO - Parsing hub: HUB_CUSTOMER
+2025-01-06 14:34:15,636 - HubParser - INFO - validate hub: HUB_CUSTOMER
+2025-01-06 14:34:15,636 - HubParser - INFO - Get source schema and validate hub: HUB_CUSTOMER
+2025-01-06 14:34:15,649 - HubParser - INFO - Get datatypes for business keys: HUB_CUSTOMER
+2025-01-06 14:34:15,651 - HubParser - INFO - Get output yml format file: HUB_CUSTOMER
+2025-01-06 14:34:15,654 - FileProcessor - INFO - Successfully saved YAML to: output\hub_customer_metadata.yaml
+2025-01-06 14:34:15,654 - DataProcessor - INFO - Processing hub: HUB_CORPORATION
+2025-01-06 14:34:15,655 - HubParser - INFO - Parsing hub: HUB_CORPORATION
+2025-01-06 14:34:15,655 - HubParser - INFO - validate hub: HUB_CORPORATION
+2025-01-06 14:34:15,655 - HubParser - INFO - Get source schema and validate hub: HUB_CORPORATION
+2025-01-06 14:34:15,657 - HubParser - INFO - Get datatypes for business keys: HUB_CORPORATION
+2025-01-06 14:34:15,657 - HubParser - INFO - Get output yml format file: HUB_CORPORATION
+2025-01-06 14:34:15,659 - FileProcessor - INFO - Successfully saved YAML to: output\hub_corporation_metadata.yaml
+2025-01-06 14:34:15,660 - DataProcessor - INFO - Processing hub: HUB_CARD
+2025-01-06 14:34:15,660 - HubParser - INFO - Parsing hub: HUB_CARD
+2025-01-06 14:34:15,660 - HubParser - INFO - validate hub: HUB_CARD
+2025-01-06 14:34:15,660 - HubParser - INFO - Get source schema and validate hub: HUB_CARD
+2025-01-06 14:34:15,661 - HubParser - INFO - Get datatypes for business keys: HUB_CARD
+2025-01-06 14:34:15,662 - HubParser - INFO - Get output yml format file: HUB_CARD
+2025-01-06 14:34:15,664 - FileProcessor - INFO - Successfully saved YAML to: output\hub_card_metadata.yaml
+2025-01-06 14:34:15,665 - HubMetadataService - INFO - Caching hubs metadata
+2025-01-06 14:34:15,665 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CORPORATION
+2025-01-06 14:34:15,665 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CORPORATION
+2025-01-06 14:34:15,673 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_corporation_metadata.yaml
+2025-01-06 14:34:15,673 - DataProcessor - INFO - Processing link: LNK_CUSTOMER_CARD
+2025-01-06 14:34:15,674 - LinkParser - INFO - Parsing link: LNK_CUSTOMER_CARD
+2025-01-06 14:34:15,682 - FileProcessor - INFO - Successfully saved YAML to: output\lnk_customer_card_metadata.yaml
+2025-01-06 14:34:15,683 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_DEMOGRAPHICS
+2025-01-06 14:34:15,683 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_DEMOGRAPHICS
+2025-01-06 14:34:15,697 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_demographics_metadata.yaml
+2025-01-06 14:34:15,697 - DataProcessor - INFO - Processing satellite: SAT_CUSTOMER_CONTACT
+2025-01-06 14:34:15,698 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CUSTOMER_CONTACT
+2025-01-06 14:34:15,710 - FileProcessor - INFO - Successfully saved YAML to: output\sat_customer_contact_metadata.yaml
+2025-01-06 14:34:15,710 - DataProcessor - INFO - Processing satellite: SAT_CORPORATION_DETAILS
+2025-01-06 14:34:15,711 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CORPORATION_DETAILS
+2025-01-06 14:34:15,718 - FileProcessor - INFO - Successfully saved YAML to: output\sat_corporation_details_metadata.yaml
+2025-01-06 14:34:15,718 - DataProcessor - INFO - Processing satellite: SAT_CARD_DETAILS
+2025-01-06 14:34:15,719 - SatelliteParser - INFO - Starting transformation for satellite: SAT_CARD_DETAILS
+2025-01-06 14:34:15,723 - FileProcessor - INFO - Successfully saved YAML to: output\sat_card_details_metadata.yaml
+2025-01-06 14:34:15,723 - LinkSatelliteParser - INFO - Caching links metadata
+2025-01-06 14:34:15,725 - FileProcessor - INFO - Successfully saved YAML to: output\processing_hub_summary.yaml
+2025-01-06 14:34:15,727 - FileProcessor - INFO - Successfully saved YAML to: output\processing_link_summary.yaml
+2025-01-06 14:34:15,729 - FileProcessor - INFO - Successfully saved YAML to: output\processing_sat_summary.yaml

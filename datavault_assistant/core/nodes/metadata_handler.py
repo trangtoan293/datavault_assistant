@@ -6,7 +6,7 @@ import os
 from fastapi import UploadFile
 import logging
 from pydantic import BaseModel
-from core.nodes.data_vault_builder import DataVaultAnalyzer
+from datavault_assistant.core.nodes.data_vault_builder import DataVaultAnalyzer
 
 # Configure logging
 logging.basicConfig(
@@ -139,21 +139,3 @@ class MetadataHandler:
                 except Exception as e:
                     logger.warning(f"Failed to delete temporary file: {str(e)}")
 
-# Usage example
-if __name__ == "__main__":
-    handler = MetadataHandler()
-    # Example synchronous usage
-    try:
-        result = handler.read_metadata_source("path/to/file.xlsx")
-        print("Processed metadata:", result)
-    except Exception as e:
-        print(f"Error processing file: {str(e)}")
-
-    # Example async usage with FastAPI
-    """
-    @app.post("/upload")
-    async def upload_file(file: UploadFile):
-        handler = MetadataHandler()
-        result = await handler.process_upload(file)
-        return result
-    """
