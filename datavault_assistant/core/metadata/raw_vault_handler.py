@@ -301,64 +301,274 @@ class DataVaultMetadataProcessor:
         """
         self.db.execute_query(query, (link_id,))
 
-    def _process_column_mappings(self, data: Dict, parent_id: int) -> None:
-        """Process column mappings for any entity type"""
-        logger.debug(f"Processing column mappings for parent ID: {parent_id}")
-        for column in data['columns']:
-            source_info = column.get('source')
-            if isinstance(source_info, list) and isinstance(source_info[0], dict):
-                source_columns = [item['name'] for item in source_info]
-                source_dtype = source_info[0].get('dtype')
-            elif isinstance(source_info, list):
-                source_columns = source_info
-                source_dtype = None
-            elif isinstance(source_info, dict):
-                source_columns = [source_info['name']]
-                source_dtype = source_info.get('dtype')
-            else:
-                source_columns = None
-                source_dtype = None
-            self._create_column_mapping(
-                parent_id=parent_id,
-                target_column=column['target'],
-                data_type=column['dtype'],
-                key_type=column.get('key_type'),
-                source_columns=source_columns,
-                source_dtype=source_dtype,
-                is_business_key=column.get('key_type') == 'biz_key',
-                is_hash_key=column.get('key_type', '').startswith('hash_key')
-            )
+    # def _process_column_mappings(self, data: Dict, parent_id: int) -> None:
+    #     """Process column mappings for any entity type"""
+    #     logger.debug(f"Processing column mappings for parent ID: {parent_id}")
+    #     for column in data['columns']:
+    #         source_info = column.get('source')
+    #         if isinstance(source_info, list) and isinstance(source_info[0], dict):
+    #             source_columns = [item['name'] for item in source_info]
+    #             source_dtype = source_info[0].get('dtype')
+    #         elif isinstance(source_info, list):
+    #             source_columns = source_info
+    #             source_dtype = None
+    #         elif isinstance(source_info, dict):
+    #             source_columns = [source_info['name']]
+    #             source_dtype = source_info.get('dtype')
+    #         else:
+    #             source_columns = None
+    #             source_dtype = None
+    #         self._create_column_mapping(
+    #             parent_id=parent_id,
+    #             target_column=column['target'],
+    #             data_type=column['dtype'],
+    #             key_type=column.get('key_type'),
+    #             source_columns=source_columns,
+    #             source_dtype=source_dtype,
+    #             is_business_key=column.get('key_type') == 'biz_key',
+    #             is_hash_key=column.get('key_type', '').startswith('hash_key')
+    #         )
 
-    def _create_column_mapping(self, parent_id: int, target_column: str,
-                            data_type: str, key_type: str = None,
-                            source_columns: List[str] = None,
-                            source_dtype: str = None,
-                            is_business_key: bool = False,
-                            is_hash_key: bool = False) -> None:
-        """Create a column mapping record"""
+    # def _create_column_mapping(self, parent_id: int, target_column: str,
+    #                         data_type: str, key_type: str = None,
+    #                         source_columns: List[str] = None,
+    #                         source_dtype: str = None,
+    #                         is_business_key: bool = False,
+    #                         is_hash_key: bool = False) -> None:
+    #     """Create a column mapping record"""
+    #     query = """
+    #         INSERT INTO metadata.dv_column_mappings (
+    #             parent_id, target_column, data_type,
+    #             key_type, source_columns, source_dtype,
+    #             is_business_key, is_hash_key, created_by
+    #         ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
+    #         ON CONFLICT (parent_id, target_column) 
+    #         DO UPDATE SET
+    #             data_type = EXCLUDED.data_type,
+    #             key_type = EXCLUDED.key_type,
+    #             source_columns = EXCLUDED.source_columns,
+    #             source_dtype = EXCLUDED.source_dtype,
+    #             is_business_key = EXCLUDED.is_business_key,
+    #             is_hash_key = EXCLUDED.is_hash_key,
+    #             created_by = EXCLUDED.created_by
+    #     """
+    #     self.db.execute_query(
+    #         query,
+    #         (parent_id, target_column, data_type, key_type,
+    #         source_columns, source_dtype, is_business_key,
+    #         is_hash_key, self.user_id)
+    #     )
+    def _add_source_column_to_mapping(
+            self, 
+            mapping_id: int, 
+            source_column_id: int
+        ) -> None:
+        """Add source column to mapping with specified order"""
         query = """
-            INSERT INTO metadata.dv_column_mappings (
-                parent_id, target_column, data_type,
-                key_type, source_columns, source_dtype,
-                is_business_key, is_hash_key, created_by
-            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-            ON CONFLICT (parent_id, target_column) 
+            INSERT INTO metadata.dv_column_mapping_sources (
+                mapping_id,
+                source_column_id,
+                created_by,
+                updated_by
+            ) VALUES (%s, %s, %s, %s)
+            ON CONFLICT (mapping_id, source_column_id) 
             DO UPDATE SET
-                data_type = EXCLUDED.data_type,
-                key_type = EXCLUDED.key_type,
-                source_columns = EXCLUDED.source_columns,
-                source_dtype = EXCLUDED.source_dtype,
-                is_business_key = EXCLUDED.is_business_key,
-                is_hash_key = EXCLUDED.is_hash_key,
-                created_by = EXCLUDED.created_by
+                updated_by = EXCLUDED.updated_by,
+                updated_at = CURRENT_TIMESTAMP;
         """
         self.db.execute_query(
-            query,
-            (parent_id, target_column, data_type, key_type,
-            source_columns, source_dtype, is_business_key,
-            is_hash_key, self.user_id)
+            query, 
+            (mapping_id, source_column_id, self.user_id, self.user_id)
         )
+
+    def _create_column_mapping(
+            self, 
+            table_id: int,
+            target_schema: str,
+            target_table: str,
+            target_column: str,
+            target_dtype: str,
+            source_columns: List[Dict[str, Any]],
+            is_business_key: bool = False,
+            is_hash_key: bool = False,
+            transformation_rule: Optional[str] = None
+        ) -> int:
+        """Create a column mapping record with multiple source columns"""
+        query = """
+            INSERT INTO metadata.dv_column_mappings (
+                table_id,
+                target_schema,
+                target_table,
+                target_column,
+                target_dtype,
+                is_business_key,
+                is_hash_key,
+                transformation_rule,
+                created_by,
+                updated_by
+            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            ON CONFLICT (target_schema, target_table, target_column) 
+            DO UPDATE SET
+                table_id = EXCLUDED.table_id,
+                target_dtype = EXCLUDED.target_dtype,
+                is_business_key = EXCLUDED.is_business_key,
+                is_hash_key = EXCLUDED.is_hash_key,
+                transformation_rule = EXCLUDED.transformation_rule,
+                updated_by = EXCLUDED.updated_by,
+                updated_at = CURRENT_TIMESTAMP
+            RETURNING id;
+        """
+        result = self.db.execute_query(
+            query,
+            (
+                table_id,
+                target_schema,
+                target_table,
+                target_column,
+                target_dtype,
+                is_business_key,
+                is_hash_key,
+                transformation_rule,
+                self.user_id,
+                self.user_id
+            )
+        )
+        mapping_id = result[0][0]
+
+        # Delete existing source mappings for this target
+        self._delete_existing_source_mappings(mapping_id)
+        
+        # Then insert all source column relationships
+        for idx, source_col in enumerate(source_columns):
+            source_column_name = source_col['name'] if isinstance(source_col, dict) else source_col
+            logger.debug(f"Table ID: {table_id}, Source column: {source_column_name}")
+
+            source_column_id = self._get_source_column_id(table_id, source_column_name)
+            logger.debug(f"Source column ID for {source_column_name}: {source_column_id}")
+            if source_column_id:
+                self._add_source_column_to_mapping(
+                    mapping_id=mapping_id,
+                    source_column_id=source_column_id
+                )
+                
+        return mapping_id
+
+    def _process_column_mappings(self, data: Dict, parent_id: int) -> None:
+        """Process column mappings including multiple source columns"""
+        logger.debug(f"Processing column mappings for parent ID: {parent_id}")
+        
+        source_info = self._get_source_info(data)
+        if not source_info:
+            logger.error("No source information found")
+            return
+            
+        source_table_id = self._get_source_table_id(
+            schema_name=source_info['schema_name'],
+            table_name=source_info['table_name']
+        )
+        if not source_table_id:
+            logger.error(f"Source table not found: {source_info['schema_name']}.{source_info['table_name']}")
+            return
+
+        # Process each column mapping
+        for column in data['columns']:
+            source_info = column.get('source')
+            source_columns = []
+            transformation_rule = None
+            target_dtype = column.get('dtype')
+            
+            # Process source column information
+            if source_info:
+                if isinstance(source_info, dict):
+                    # Single source column with data type
+                    source_columns = [{
+                        'name': source_info['name'],
+                        'dtype': source_info.get('dtype')
+                    }]
+                elif isinstance(source_info, list):
+                    # Multiple source columns
+                    if isinstance(source_info[0], dict):
+                        source_columns = source_info
+                    else:
+                        # Get data types from source system if available
+                        source_columns = []
+                        for col_name in source_info:
+                            source_dtype = self._get_source_column_dtype(source_table_id, col_name)
+                            source_columns.append({
+                                'name': col_name,
+                                'dtype': source_dtype
+                            })
+                            
+                    # Create transformation rule if multiple columns
+                    if len(source_columns) > 1:
+                        transformation_rule = self._create_transformation_rule(source_columns)
+            
+            # Create the mapping
+            self._create_column_mapping(
+                table_id=source_table_id,
+                target_schema=data['target_schema'],
+                target_table=data['target_table'],
+                target_column=column['target'],
+                target_dtype=target_dtype,
+                source_columns=source_columns,
+                is_business_key=column.get('key_type') == 'biz_key',
+                is_hash_key=column.get('key_type', '').startswith('hash_key'),
+                transformation_rule=transformation_rule
+            )
+            
+    def _get_source_info(self, data: Dict) -> Optional[Dict[str, str]]:
+        """Get source schema and table information"""
+        source_schema = data.get('source_schema')
+        source_table = data.get('source_table')
+        if source_schema and source_table:
+            return {
+                'schema_name': source_schema,
+                'table_name': source_table
+            }
+        return None
     
+    def _get_source_table_id(self, schema_name: str, table_name: str) -> Optional[int]:
+        """Get source table ID from metadata.source_tables"""
+        query = """
+            SELECT id 
+            FROM metadata.source_tables 
+            WHERE schema_name = %s AND table_name = %s;
+        """
+        result = self.db.execute_query(query, (schema_name, table_name))
+        return result[0][0] if result else None
+
+    def _get_source_column_id(self, table_id: int, column_name: str) -> Optional[int]:
+        """Get source column ID from metadata.source_columns"""
+        query = """
+            SELECT id 
+            FROM metadata.source_columns
+            WHERE table_id = %s AND column_name = %s;
+        """
+        result = self.db.execute_query(query, (table_id, column_name))
+        return result[0][0] if result else None
+    
+    def _get_source_column_dtype(self, table_id: int, column_name: str) -> Optional[str]:
+        """Get formatted data type of a source column"""
+        query = """
+            select 
+            case 
+                when UPPER(data_type) ='VARCHAR2' and (length is null) then 'VARCHAR2(255)'
+                when UPPER(data_type) ='VARCHAR2' then UPPER(data_type)||'('|| length || ')' 
+                when UPPER(data_type) ='CHAR' and (length is null) then 'VARCHAR2(255)'
+                when UPPER(data_type) ='CHAR' then UPPER(data_type)||'('|| length || ')' 
+                else upper(data_type) 
+            end data_type
+            from metadata.source_columns 
+            WHERE table_id = %s AND column_name = %s;
+        """
+        result = self.db.execute_query(query, (table_id, column_name))
+        return result[0][0] if result else None
+
+    def _create_transformation_rule(self, source_columns: List[Dict[str, Any]]) -> str:
+        """Create transformation rule for multiple source columns"""
+        column_names = [col['name'] for col in source_columns]
+        return f"CONCAT({','.join(column_names)})"
+
     def _get_source_table_name(self, data: Dict) -> str:
         """Helper function to get source table name from data
         
@@ -371,7 +581,7 @@ class DataVaultMetadataProcessor:
         source_schema = data.get('source_schema', '')
         source_table = data.get('source_table', '')
         return f"{source_schema}.{source_table}" if source_schema and source_table else ''   
-     
+    
     def _get_link_satellite_id(self, table_name: str) -> Optional[int]:
         """Get link satellite ID by table name
         
@@ -408,7 +618,15 @@ class DataVaultMetadataProcessor:
         """
         result = self.db.execute_query(query, (table_name,))
         return result[0][0] if result else None
-
+    
+    def _delete_existing_source_mappings(self, mapping_id: int) -> None:
+        """Delete existing source mappings for a given mapping ID"""
+        query = """
+            DELETE FROM metadata.dv_column_mapping_sources
+            WHERE mapping_id = %s;
+        """
+        self.db.execute_query(query, (mapping_id,))
+        
     def _create_link_hub_relation(self, link_id: int, hub_id: int) -> None:
         """Create relationship between link and hub"""
         logger.debug(f"Creating LINK-HUB relation: LINK ID {link_id}, HUB ID {hub_id}")
@@ -419,6 +637,49 @@ class DataVaultMetadataProcessor:
             ON CONFLICT (link_id, hub_id) DO NOTHING
         """
         self.db.execute_query(query, (link_id, hub_id, self.user_id))
+
+    def get_column_mapping_detail(self, mapping_id: int) -> Dict[str, Any]:
+        """Get detailed information about a column mapping including all source columns"""
+        query = """
+            SELECT 
+                cm.id as mapping_id,
+                cm.target_schema,
+                cm.target_table,
+                cm.target_column,
+                cm.target_dtype,
+                cm.is_business_key,
+                cm.is_hash_key,
+                cm.transformation_rule,
+                array_agg(sc.column_name ORDER BY cms.source_order) as source_columns,
+                array_agg(cms.source_dtype ORDER BY cms.source_order) as source_dtypes,
+                array_agg(CASE WHEN cms.is_primary THEN sc.column_name ELSE NULL END) as primary_source_column,
+                string_agg(
+                    st.schema_name || '.' || st.table_name || '.' || sc.column_name,
+                    ', ' ORDER BY cms.source_order
+                ) as source_path
+            FROM metadata.dv_column_mappings cm
+            LEFT JOIN metadata.dv_column_mapping_sources cms ON cm.id = cms.mapping_id
+            LEFT JOIN metadata.source_columns sc ON cms.source_column_id = sc.id
+            LEFT JOIN metadata.source_tables st ON sc.table_id = st.id
+            WHERE cm.id = %s
+            GROUP BY 
+                cm.id, 
+                cm.target_schema,
+                cm.target_table,
+                cm.target_column,
+                cm.target_dtype,
+                cm.is_business_key,
+                cm.is_hash_key,
+                cm.transformation_rule;
+        """
+        result = self.db.execute_query(query, (mapping_id,))
+        if result:
+            return dict(zip(
+                ['mapping_info', 'source_columns', 'source_dtypes', 
+                'primary_source_column', 'source_path'], 
+                result[0]
+            ))
+        return None
 
 if __name__ == "__main__":
     from datavault_assistant.configs.settings import get_settings
@@ -460,5 +721,5 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"Error processing path {yaml_path}: {str(e)}")
     
-    # process_yaml_files()
+    process_yaml_files(r'D:\01_work\08_dev\ai_datavault\datavault_assistant\output')
  

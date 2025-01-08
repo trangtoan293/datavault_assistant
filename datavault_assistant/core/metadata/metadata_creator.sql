@@ -94,21 +94,35 @@ CREATE TABLE metadata.dv_link_hubs (
     UNIQUE(link_id, hub_id)
 );
 
-
 -- Column mappings
 CREATE TABLE metadata.dv_column_mappings (
     id SERIAL PRIMARY KEY,
-    source_column_id INTEGER REFERENCES metadata.source_columns(id),
+    table_id INTEGER REFERENCES metadata.source_tables(id),
     target_schema VARCHAR(100) NOT NULL,
     target_table VARCHAR(100) NOT NULL,
     target_column VARCHAR(100) NOT NULL,
+    target_dtype VARCHAR(100) NOT NULL,
     is_business_key BOOLEAN DEFAULT false,
     is_hash_key BOOLEAN DEFAULT false,
     transformation_rule TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by VARCHAR(100),
-    UNIQUE(source_column_id, target_schema, target_table, target_column)
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_by VARCHAR(100),
+    UNIQUE(target_schema, target_table, target_column)
 );
+
+CREATE TABLE metadata.dv_column_mapping_sources (
+    id SERIAL PRIMARY KEY,
+    mapping_id INTEGER REFERENCES metadata.dv_column_mappings(id),
+    source_column_id INTEGER REFERENCES metadata.source_columns(id),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_by VARCHAR(100),
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_by VARCHAR(100),
+    UNIQUE(mapping_id, source_column_id)
+);
+
 {# 
 -- Business rules and validation
 CREATE TABLE metadata.business_rules (
