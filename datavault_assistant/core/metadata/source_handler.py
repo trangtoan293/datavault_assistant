@@ -47,21 +47,51 @@ class SourceMetadataProcessor:
         return result[0][0]
 
     def _process_columns(self, table_id: int, df: pd.DataFrame) -> None:
+        """Process column metadata for a specific table
+        
+        Args:
+            table_id (int): ID of the table
+            df (pd.DataFrame): DataFrame containing column metadata
+        """
         columns_data = []
         for _, row in df.iterrows():
-            length = None if row['LENGTH'] == '-' else row['LENGTH']
-            nullable = True if row['NULLABLE'] == 'Y' else False
-            description = None if row['DESCRIPTION'] == '-' else row['DESCRIPTION']
-            
-            columns_data.append((
-                table_id,
-                row['COLUMN_NAME'],
-                row['DATA_TYPE'],
-                length,
-                nullable,
-                description,
-                self.user_id
-            ))
+            try:
+                # Convert LENGTH to integer or None, with validation
+                length_str = str(row['LENGTH']).strip()
+                if length_str == '-' or length_str.lower() == 'nan' or not length_str:
+                    length = None
+                else:
+                    try:
+                        length = int(float(length_str))
+                        # Check if length is within PostgreSQL integer range
+                        if not (-2147483648 <= length <= 2147483647):
+                            length = None
+                            logger.warning(f"Length value {length_str} out of range for column {row['COLUMN_NAME']}, setting to NULL")
+                    except ValueError:
+                        length = None
+                        logger.warning(f"Invalid length value {length_str} for column {row['COLUMN_NAME']}, setting to NULL")
+
+                # Convert NULLABLE to boolean
+                nullable = True if str(row['NULLABLE']).upper() == 'Y' else False
+                
+                # Handle description
+                description = None if str(row['DESCRIPTION']) == '-' or str(row['DESCRIPTION']).lower() == 'nan' else str(row['DESCRIPTION'])
+                
+                columns_data.append((
+                    table_id,
+                    str(row['COLUMN_NAME']),
+                    str(row['DATA_TYPE']),
+                    length,
+                    nullable,
+                    description,
+                    self.user_id
+                ))
+            except Exception as e:
+                raise e
+
+        # if not columns_data:
+        #     logger.warning(f"No valid column data to insert for table_id {table_id}")
+        #     return
 
         query = """
             INSERT INTO metadata.source_columns (
@@ -74,7 +104,13 @@ class SourceMetadataProcessor:
                 nullable = EXCLUDED.nullable,
                 description = EXCLUDED.description
         """
-        self.db.execute_many(query, columns_data)
+        
+        try:
+            self.db.execute_many(query, columns_data)
+            # logger.info(f"Successfully processed {len(columns_data)} columns for table_id {table_id}")
+        except Exception as e:
+        # logger.error(f"Error executing batch insert for table_id {table_id}: {str(e)}")
+            raise e
 
     def get_source_metadata(self) -> pd.DataFrame:
         """Retrieve all source metadata"""

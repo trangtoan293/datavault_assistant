@@ -7,17 +7,9 @@ import json
 import yaml
 import pandas as pd
 from datetime import datetime
+from datavault_assistant.configs.settings import ParserConfig
 
 # Configuration using dataclass
-@dataclass
-class ParserConfig:
-    version: str = "1.0.0"
-    source_schema: str = "source"
-    target_schema: str = "integration_demo"
-    default_varchar_length: int = 255
-    enable_detailed_logging: bool = True
-    validation_level: str = "strict"
-
 class DataVaultValidationError(Exception):
     """Custom exception for Data Vault validation errors"""
     pass
@@ -214,7 +206,7 @@ class LinkParser(DataVaultParser, LoggingMixin):
         
         # Add link hash key
         columns.append({
-            "target": f"dv_hkey_{link_data['name'].lower()}",
+            "target": f"DV_HKEY_{link_data['name'].upper()}",
             "dtype": "raw",
             "key_type": "hash_key_lnk",
             "source": [
@@ -226,10 +218,10 @@ class LinkParser(DataVaultParser, LoggingMixin):
         for hub_name in link_data["related_hubs"]:
             hub_keys = self.hub_service.get_hub_business_keys(hub_name, link_data["business_keys"])
             columns.append({
-                "target": f"dv_hkey_{hub_name.lower()}",
+                "target": f"DV_HKEY_{hub_name.upper()}",
                 "dtype": "raw",
                 "key_type": "hash_key_hub",
-                "parent": hub_name.lower(),
+                "parent": hub_name.upper(),
                 "source": [
                     {
                         "name": key,
@@ -244,12 +236,12 @@ class LinkParser(DataVaultParser, LoggingMixin):
                           datatype_info: Dict[str, Dict], warnings: List[str]) -> Dict[str, Any]:
         """Build the output dictionary"""
         return {
-            "source_schema": source_schema,
-            "source_table": link_data["source_tables"][0],
-            "target_schema": self.config.target_schema,
-            "target_table": link_data["name"],
+            "source_schema": source_schema.upper(),
+            "source_table": link_data["source_tables"][0].upper(),
+            "target_schema": self.config.target_schema.upper(),
+            "target_table": link_data["name"].upper(),
             "target_entity_type": "lnk",
-            "collision_code": "mdm",
+            "collision_code": self.config.collision_code.upper(),
             "description": link_data["description"],
             "metadata": self._build_metadata(warnings),
             "columns": self._build_columns(link_data, datatype_info)

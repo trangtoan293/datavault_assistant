@@ -7,15 +7,8 @@ import json
 import yaml
 import pandas as pd
 from datetime import datetime
+from datavault_assistant.configs.settings import ParserConfig
 
-# Configuration using dataclass
-@dataclass
-class ParserConfig:
-    version: str = "1.0.0"
-    default_varchar_length: int = 255
-    enable_detailed_logging: bool = True
-    validation_level: str = "strict"
-    target_schema: str = "integration"
 
 # Base Parser Interface
 class DataVaultParser(ABC):
@@ -152,7 +145,7 @@ class SatelliteParser(DataVaultParser, LoggingMixin):
         
         # Add satellite hash key
         columns.append({
-            "target": f"dv_hkey_{sat_data['name'].lower()}",
+            "target": f"DV_HKEY_{sat_data['name'].upper()}",
             "dtype": "raw",
             "key_type": "hash_key_sat",
             "source": None
@@ -160,7 +153,7 @@ class SatelliteParser(DataVaultParser, LoggingMixin):
         
         # Add hub hash key
         columns.append({
-            "target": f"dv_hkey_{sat_data['hub'].lower()}",
+            "target": f"DV_HKEY_{sat_data['hub'].upper()}",
             "dtype": "raw", 
             "key_type": "hash_key_hub",
             "source": [key for key in sat_data["business_keys"]]
@@ -168,7 +161,7 @@ class SatelliteParser(DataVaultParser, LoggingMixin):
         
         # Add hash diff
         columns.append({
-            "target": "dv_hsh_diff",
+            "target": "DV_HSH_DIFF",
             "dtype": "raw",
             "key_type": "hash_diff",
             "source": None
@@ -191,12 +184,12 @@ class SatelliteParser(DataVaultParser, LoggingMixin):
                           datatype_info: Dict[str, Dict], warnings: List[str]) -> Dict[str, Any]:
         """Build the output dictionary with all necessary metadata"""
         output_dict = {
-            "source_schema": source_schema,
-            "source_table": sat_data["source_table"],
-            "target_schema": self.config.target_schema,
-            "target_table": sat_data["name"],
+            "source_schema": source_schema.upper(),
+            "source_table": sat_data["source_table"].upper(),
+            "target_schema": self.config.target_schema.upper(),
+            "target_table": sat_data["name"].upper(),
             "target_entity_type": "sat",
-            "collision_code": "mdm",
+            "collision_code": self.config.collision_code.upper(),
             "parent_table": sat_data["hub"],
             "metadata": self._build_metadata(warnings),
             "columns": self._build_columns(sat_data, datatype_info)

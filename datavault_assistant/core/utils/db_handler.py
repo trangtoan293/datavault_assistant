@@ -58,8 +58,31 @@ class DatabaseHandler:
                 raise
 
     def execute_many(self, query: str, data: List[tuple]) -> None:
+        """Execute a batch INSERT or UPDATE query with multiple rows of data
+        
+        Args:
+            query (str): SQL query template with %s placeholders
+            data (List[tuple]): List of parameter tuples to insert
+        """
         with self.cursor() as cur:
-            execute_values(cur, query, data)
+            try:
+                # Tạo template cho execute_values
+                template = query.split('VALUES')[0] + ' VALUES %s'
+                if 'ON CONFLICT' in query:
+                    template += query.split('VALUES')[1].split('%s')[1]
+                
+                # Execute với proper template và data
+                execute_values(
+                    cur,
+                    template,
+                    data,
+                    template=None,  # Để None để psycopg2 tự handle
+                    page_size=100   # Batch size để tối ưu performance
+                )
+                logger.debug(f"Successfully executed batch query with {len(data)} rows")
+            except Exception as e:
+                logger.error(f"Batch execution error: {str(e)}")
+                raise
 
     def query_to_df(self, query: str, params: tuple = None) -> pd.DataFrame:
         return pd.read_sql_query(query, self.conn, params=params)

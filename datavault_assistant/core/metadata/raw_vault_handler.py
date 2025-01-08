@@ -11,7 +11,34 @@ class DataVaultMetadataProcessor:
     def __init__(self, db_handler: DatabaseHandler, user_id: str):
         self.db = db_handler
         self.user_id = user_id
-
+        
+    def process_yaml_files(yaml_path: str):
+        from pathlib import Path
+        """Process YAML files with proper path handling"""
+        try:
+            path = Path(yaml_path)
+            if path.is_file():
+                with open(path, 'r') as f:
+                    yaml_content = f.read()
+                    try:
+                        entity_id = dv_processor.process_metadata(yaml_content)
+                        print(f"Processed {path.name} - ID: {entity_id}")
+                    except Exception as e:
+                        print(f"Error processing {path.name}: {str(e)}")
+            elif path.is_dir():
+                for yaml_file in path.glob('*.yaml'):
+                    with open(yaml_file, 'r') as f:
+                        yaml_content = f.read()
+                        try:
+                            entity_id = dv_processor.process_metadata(yaml_content)
+                            print(f"Processed {yaml_file.name} - ID: {entity_id}")
+                        except Exception as e:
+                            print(f"Error processing {yaml_file.name}: {str(e)}")
+            else:
+                print(f"Path not found: {yaml_path}")
+        except Exception as e:
+            print(f"Error processing path {yaml_path}: {str(e)}")
+            
     def process_metadata(self, yaml_content: str) -> int:
         """Process Data Vault metadata from YAML content"""
         logger.debug("Processing metadata from YAML content")
@@ -169,7 +196,6 @@ class DataVaultMetadataProcessor:
                 created_by = EXCLUDED.created_by
             RETURNING id;
         """
-        
         params = (
             parent_hub_id,
             data['target_schema'],
@@ -178,7 +204,6 @@ class DataVaultMetadataProcessor:
             source_table,
             self.user_id
         )
-        
         try:
             result = self.db.execute_query(query, params)
             if not result:
@@ -434,4 +459,6 @@ if __name__ == "__main__":
                 print(f"Path not found: {yaml_path}")
         except Exception as e:
             print(f"Error processing path {yaml_path}: {str(e)}")
+    
+    # process_yaml_files()
  

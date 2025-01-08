@@ -7,15 +7,7 @@ import json
 import yaml
 import pandas as pd
 from datetime import datetime
-
-# Configuration using dataclass
-@dataclass
-class ParserConfig:
-    version: str = "1.0.0"
-    default_varchar_length: int = 255
-    enable_detailed_logging: bool = True
-    validation_level: str = "strict"
-    target_schema: str = "integration"
+from datavault_assistant.configs.settings import ParserConfig
 
 # Base Parser Interface
 class DataVaultParser(ABC):
@@ -183,7 +175,7 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
         
         # Add link satellite hash key
         columns.append({
-            "target": f"dv_hkey_{lsat_data['name'].lower()}",
+            "target": f"DV_HKEY_{lsat_data['name'].upper()}",
             "dtype": "raw",
             "key_type": "hash_key_lsat",
             "source": None
@@ -191,7 +183,7 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
         
         # Add link hash key
         columns.append({
-            "target": f"dv_hkey_{lsat_data['link'].lower()}",
+            "target": f"DV_HKEY_{lsat_data['link'].upper()}",
             "dtype": "raw",
             "key_type": "hash_key_lnk",
             "source": [key for key in lsat_data["business_keys"]]
@@ -199,7 +191,7 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
         
         # Add hash diff
         columns.append({
-            "target": "dv_hsh_diff",
+            "target": "DV_HSH_DIFF",
             "dtype": "raw",
             "key_type": "hash_diff",
             "source": None
@@ -222,12 +214,12 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
                           datatype_info: Dict[str, Dict], warnings: List[str]) -> Dict[str, Any]:
         """Build the output dictionary with all necessary metadata"""
         output_dict = {
-            "source_schema": source_schema,
-            "source_table": lsat_data["source_table"],
-            "target_schema": self.config.target_schema,
-            "target_table": lsat_data["name"],
+            "source_schema": source_schema.upper(),
+            "source_table": lsat_data["source_table"].upper(),
+            "target_schema": self.config.target_schema.upper(),
+            "target_table": lsat_data["name"].upper(),
             "target_entity_type": "lsat",
-            "collision_code": "mdm",
+            "collision_code": self.config.collision_code.upper(),
             "parent_table": lsat_data["link"],
             "metadata": self._build_metadata(warnings),
             "columns": self._build_columns(lsat_data, datatype_info)

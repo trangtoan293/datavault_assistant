@@ -109,7 +109,7 @@ CREATE TABLE metadata.dv_column_mappings (
     created_by VARCHAR(100),
     UNIQUE(source_column_id, target_schema, target_table, target_column)
 );
-
+{# 
 -- Business rules and validation
 CREATE TABLE metadata.business_rules (
     id SERIAL PRIMARY KEY,
@@ -130,7 +130,7 @@ CREATE TABLE metadata.column_rules (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by VARCHAR(100),
     UNIQUE(column_id, rule_id)
-);
+); #}
 
 -- Views for easy querying
 CREATE OR REPLACE VIEW metadata.v_source_metadata AS

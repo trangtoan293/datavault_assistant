@@ -8,16 +8,8 @@ import yaml
 import pandas as pd
 from datetime import datetime
 import numpy as np
+from datavault_assistant.configs.settings import ParserConfig
 
-# Configuration using dataclass
-@dataclass
-class ParserConfig:
-    version: str = "1.0.0"
-    source_schema: str = "source"
-    target_schema: str = "integration"
-    default_varchar_length: int = 255
-    enable_detailed_logging: bool = True
-    validation_level: str = "strict"
 
 class DataVaultParserException(Exception):
     """Custom exception for Data Vault Parser errors"""
@@ -174,7 +166,7 @@ class HubParser(DataVaultParser, LoggingMixin):
         
         # Add hash key column
         columns.append({
-            "target": f"dv_hkey_{hub_data['name'].lower()}",
+            "target": f"DV_HKEY_{hub_data['name'].upper()}",
             "dtype": "raw",
             "key_type": "hash_key_hub",
             "source": [
@@ -185,7 +177,7 @@ class HubParser(DataVaultParser, LoggingMixin):
         # Add business key columns
         for biz_key in hub_data["business_keys"]:
             columns.append({
-                "target": f"CUS_{biz_key}",
+                "target": f"{biz_key}",
                 "dtype": datatype_info[biz_key]['data_type'],
                 "key_type": "biz_key",
                 "source": {
@@ -200,12 +192,12 @@ class HubParser(DataVaultParser, LoggingMixin):
                           datatype_info: Dict[str, Dict], warnings: List[str]) -> Dict[str, Any]:
         """Build the output dictionary"""
         return {
-            "source_schema": source_schema,
-            "source_table": hub_data["source_tables"][0].lower(),
-            "target_schema": self.config.target_schema,
-            "target_table": hub_data["name"].lower(),
+            "source_schema": source_schema.upper(),
+            "source_table": hub_data["source_tables"][0].upper(),
+            "target_schema": self.config.target_schema.upper(),
+            "target_table": hub_data["name"].upper(),
             "target_entity_type": "hub",
-            "collision_code": hub_data["name"].split("_")[1],
+            "collision_code": self.config.collision_code.upper(),
             "description": hub_data["description"],
             "metadata": self._build_metadata(warnings),
             "columns": self._build_columns(hub_data, datatype_info)
