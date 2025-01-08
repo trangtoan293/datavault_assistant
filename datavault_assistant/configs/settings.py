@@ -24,10 +24,19 @@ class Settings(BaseSettings):
     MEMORY_KEY: str = "chat_history"
     
     model_config = SettingsConfigDict(env_file='.env', case_sensitive=True)
-    # class Config:
-    #     env_file = ".env"
     
+    DB_HOST: str = "localhost"
+    DB_PORT: int = 5432
+    DB_USER: Optional[str] = None
+    DB_PASSWORD: Optional[str] = None
+    DB_NAME: str = "toantt"
+    DB_SCHEMA: str = "metadata"
+    
+    def get_postgres_url(self) -> str:
+        """Get PostgreSQL connection URL"""
+        return f"postgresql://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
 
+    
 class ParserConfig:
     version: str = "1.0.0"
     source_schema: str = "source"
@@ -40,8 +49,6 @@ class ParserConfig:
 def get_settings() -> Settings:
     return Settings()
 
-def clear_settings_cache():
-    get_settings.cache_clear()
 
 # Initialize settings
 settings = get_settings()

@@ -13,7 +13,7 @@ __pycache__/
 .Python
 venv/
 .env
-
+**/__pycache__/
 # Testing
 .coverage
 htmlcov/
@@ -24,3 +24,8 @@ htmlcov/
 .vscode/
 
 *output/
+# Ignore all .log files
+*.log
+
+# Ignore .log files in any directory
+**/*.log
