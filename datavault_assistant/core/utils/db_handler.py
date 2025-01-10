@@ -4,9 +4,11 @@ from psycopg2.extras import execute_values
 from typing import Dict, Any, List, Optional
 import pandas as pd
 from contextlib import contextmanager
-from datavault_assistant.configs.log_handler import create_logger
+from datavault_assistant.core.utils.log_handler import create_logger
 import logging 
 logger = create_logger(__name__,'db_handler.log',level=logging.DEBUG)
+
+
 class DatabaseHandler:
     def __init__(self, db_config: Dict[str, Any]):
         self.db_config = db_config
@@ -44,15 +46,8 @@ class DatabaseHandler:
         with self.cursor() as cur:
             try:
                 cur.execute(query, params)
-                # Handle different query types
-                if query.strip().upper().startswith('SELECT'):
-                    result = cur.fetchall()
-                    return result
-                elif 'RETURNING' in query.upper():
-                    result = cur.fetchall()
-                    return result
-                else:
-                    return None
+                result = cur.fetchall()
+                return result if result else None
             except Exception as e:
                 logger.error(f"Query execution error: {str(e)}")
                 raise
@@ -76,10 +71,9 @@ class DatabaseHandler:
                     cur,
                     template,
                     data,
-                    template=None,  # Để None để psycopg2 tự handle
-                    page_size=100   # Batch size để tối ưu performance
+                    template=None, # Use template from query
+                    page_size=100   # Batch size 
                 )
-                logger.debug(f"Successfully executed batch query with {len(data)} rows")
             except Exception as e:
                 logger.error(f"Batch execution error: {str(e)}")
                 raise

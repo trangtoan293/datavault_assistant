@@ -3,12 +3,10 @@ from dataclasses import dataclass
 from typing import Dict, Any, List, Optional
 from pathlib import Path
 import logging
-import json
-import yaml
 import pandas as pd
 from datetime import datetime
 from datavault_assistant.configs.settings import ParserConfig
-
+from datavault_assistant.core.utils.log_handler import create_logger
 
 # Base Parser Interface
 class DataVaultParser(ABC):

@@ -3,7 +3,7 @@
 from typing import Dict, Any, List, Union, Optional
 import yaml
 from datavault_assistant.core.utils.db_handler import DatabaseHandler
-from datavault_assistant.configs.log_handler import create_logger
+from datavault_assistant.core.utils.log_handler import create_logger
 import logging 
 logger = create_logger(__name__, 'dv_processor.log',level= logging.DEBUG)
 
@@ -12,7 +12,7 @@ class DataVaultMetadataProcessor:
         self.db = db_handler
         self.user_id = user_id
         
-    def process_yaml_files(yaml_path: str):
+    def process_yaml_files(self,yaml_path: str):
         from pathlib import Path
         """Process YAML files with proper path handling"""
         try:
@@ -61,7 +61,7 @@ class DataVaultMetadataProcessor:
 
     def _process_hub(self, data: Dict) -> int:
         """Process HUB metadata with UPSERT"""
-        logger.debug(f"Processing HUB metadata: {data}")
+        logger.debug(f"Processing HUB metadata: {data['target_table']}")
         
         # Get business key from columns
         biz_key_cols = [col['target'] for col in data['columns'] 
@@ -111,7 +111,7 @@ class DataVaultMetadataProcessor:
 
     def _process_link(self, data: Dict) -> int:
         """Process LINK metadata with UPSERT"""
-        logger.debug(f"Processing LINK metadata: {data}")
+        logger.debug(f"Processing LINK metadata: {data['target_table']}")
         
         # Get source table information
         source_table = f"{data.get('source_schema', '')}.{data.get('source_table', '')}"
@@ -169,7 +169,7 @@ class DataVaultMetadataProcessor:
 
     def _process_satellite(self, data: Dict) -> int:
         """Process SATELLITE metadata with UPSERT"""
-        logger.debug(f"Processing SATELLITE metadata: {data}")
+        logger.debug(f"Processing SATELLITE metadata: {data['target_table']}")
         
         # Get parent hub id
         parent_hub_id = self._get_hub_id(data['parent_table'])
@@ -228,7 +228,7 @@ class DataVaultMetadataProcessor:
         Returns:
             int: ID of inserted/updated link satellite record
         """
-        logger.debug(f"Processing LINK SATELLITE metadata: {data}")
+        logger.debug(f"Processing LINK SATELLITE metadata: {data['target_table']}")
         
         try:
             # Get parent link id
@@ -301,63 +301,6 @@ class DataVaultMetadataProcessor:
         """
         self.db.execute_query(query, (link_id,))
 
-    # def _process_column_mappings(self, data: Dict, parent_id: int) -> None:
-    #     """Process column mappings for any entity type"""
-    #     logger.debug(f"Processing column mappings for parent ID: {parent_id}")
-    #     for column in data['columns']:
-    #         source_info = column.get('source')
-    #         if isinstance(source_info, list) and isinstance(source_info[0], dict):
-    #             source_columns = [item['name'] for item in source_info]
-    #             source_dtype = source_info[0].get('dtype')
-    #         elif isinstance(source_info, list):
-    #             source_columns = source_info
-    #             source_dtype = None
-    #         elif isinstance(source_info, dict):
-    #             source_columns = [source_info['name']]
-    #             source_dtype = source_info.get('dtype')
-    #         else:
-    #             source_columns = None
-    #             source_dtype = None
-    #         self._create_column_mapping(
-    #             parent_id=parent_id,
-    #             target_column=column['target'],
-    #             data_type=column['dtype'],
-    #             key_type=column.get('key_type'),
-    #             source_columns=source_columns,
-    #             source_dtype=source_dtype,
-    #             is_business_key=column.get('key_type') == 'biz_key',
-    #             is_hash_key=column.get('key_type', '').startswith('hash_key')
-    #         )
-
-    # def _create_column_mapping(self, parent_id: int, target_column: str,
-    #                         data_type: str, key_type: str = None,
-    #                         source_columns: List[str] = None,
-    #                         source_dtype: str = None,
-    #                         is_business_key: bool = False,
-    #                         is_hash_key: bool = False) -> None:
-    #     """Create a column mapping record"""
-    #     query = """
-    #         INSERT INTO metadata.dv_column_mappings (
-    #             parent_id, target_column, data_type,
-    #             key_type, source_columns, source_dtype,
-    #             is_business_key, is_hash_key, created_by
-    #         ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
-    #         ON CONFLICT (parent_id, target_column) 
-    #         DO UPDATE SET
-    #             data_type = EXCLUDED.data_type,
-    #             key_type = EXCLUDED.key_type,
-    #             source_columns = EXCLUDED.source_columns,
-    #             source_dtype = EXCLUDED.source_dtype,
-    #             is_business_key = EXCLUDED.is_business_key,
-    #             is_hash_key = EXCLUDED.is_hash_key,
-    #             created_by = EXCLUDED.created_by
-    #     """
-    #     self.db.execute_query(
-    #         query,
-    #         (parent_id, target_column, data_type, key_type,
-    #         source_columns, source_dtype, is_business_key,
-    #         is_hash_key, self.user_id)
-    #     )
     def _add_source_column_to_mapping(
             self, 
             mapping_id: int, 
@@ -441,10 +384,7 @@ class DataVaultMetadataProcessor:
         # Then insert all source column relationships
         for idx, source_col in enumerate(source_columns):
             source_column_name = source_col['name'] if isinstance(source_col, dict) else source_col
-            logger.debug(f"Table ID: {table_id}, Source column: {source_column_name}")
-
             source_column_id = self._get_source_column_id(table_id, source_column_name)
-            logger.debug(f"Source column ID for {source_column_name}: {source_column_id}")
             if source_column_id:
                 self._add_source_column_to_mapping(
                     mapping_id=mapping_id,
@@ -500,8 +440,10 @@ class DataVaultMetadataProcessor:
                             })
                             
                     # Create transformation rule if multiple columns
-                    if len(source_columns) > 1:
-                        transformation_rule = self._create_transformation_rule(source_columns)
+                    if len(source_columns) > 1 and column['target'].startswith('DV_HKEY'):
+                        transformation_rule = self._create_transformation_rule_hkey(source_columns)
+                    elif len(source_columns) > 1:
+                        transformation_rule = self._create_transformation_rule_multiple_col(source_columns)
             
             # Create the mapping
             self._create_column_mapping(
@@ -564,11 +506,16 @@ class DataVaultMetadataProcessor:
         result = self.db.execute_query(query, (table_id, column_name))
         return result[0][0] if result else None
 
-    def _create_transformation_rule(self, source_columns: List[Dict[str, Any]]) -> str:
+    def _create_transformation_rule_hkey(self, source_columns: List[Dict[str, Any]]) -> str:
+        """Create transformation rule for multiple source columns"""
+        column_names = [col['name'] for col in source_columns]
+        return f"HASH({','.join(column_names)})"
+    
+    def _create_transformation_rule_multiple_col(self, source_columns: List[Dict[str, Any]]) -> str:
         """Create transformation rule for multiple source columns"""
         column_names = [col['name'] for col in source_columns]
         return f"CONCAT({','.join(column_names)})"
-
+    
     def _get_source_table_name(self, data: Dict) -> str:
         """Helper function to get source table name from data
         
