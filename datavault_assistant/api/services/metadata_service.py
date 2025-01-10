@@ -1,18 +1,18 @@
 from fastapi import UploadFile, HTTPException
-from typing import Dict,Union
+from typing import Dict,Union,Any
 from pathlib import Path
-from core.nodes.metadata_handler import MetadataHandler
-from core.utils.llm import init_llm
+from datavault_assistant.core.nodes.metadata_handler import MetadataHandler,YAMLDownloadHandler
+from datavault_assistant.core.utils.llm import init_llm
 
 
 class MetadataService:
     def __init__(self):
         self.llm=init_llm('ollama')
         self.metadata_service = MetadataHandler(self.llm)
+        self.yaml_handler = YAMLDownloadHandler()
         
     def _config_llm(self,model_name:str='ollama'):
         return init_llm(model_name)
-        
         
         
     async def process_upload_file(self, file: UploadFile,llm:str) -> Dict:
@@ -40,4 +40,8 @@ class MetadataService:
                 status_code=500,
                 detail=f"Error analyzing metadata: {str(e)}"
             )
-            
+    async def generate_yaml(self,data: Dict[str, Any], filename: str = "output"):
+        """
+        API endpoint để generate và download YAML file
+        """
+        return await self.yaml_handler.process_and_save_yaml(data, filename)

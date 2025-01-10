@@ -5,3 +5,27 @@ __pycache__/
 */__pycache__/
 **/__pycache__/
 *.py[cod]
+*output/
+
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.env
+**/__pycache__/
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# IDE
+.idea/
+.vscode/
+
+*output/
+# Ignore all .log files
+*.log
+
+# Ignore .log files in any directory
+**/*.log

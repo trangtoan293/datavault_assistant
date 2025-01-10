@@ -18,6 +18,8 @@ uvicorn = "^0.34.0"
 python-multipart = "^0.0.20"
 openpyxl = "^3.1.5"
 pyyaml = "^6.0.2"
+deepdiff = "^8.1.1"
+psycopg2 = "^2.9.10"
 
 
 [build-system]

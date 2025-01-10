@@ -24,8 +24,28 @@ class Settings(BaseSettings):
     MEMORY_KEY: str = "chat_history"
     
     model_config = SettingsConfigDict(env_file='.env', case_sensitive=True)
+    
+    DB_HOST: Optional[str] = None
+    DB_PORT: Optional[int] = None
+    DB_USER: Optional[str] = None
+    DB_PASSWORD: Optional[str] = None
+    DB_NAME: Optional[str] = None
+    DB_SCHEMA: Optional[str] = None
+    
+    def get_postgres_url(self) -> str:
+        """Get PostgreSQL connection URL"""
+        return f"postgresql://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
 
-
+from dataclasses import dataclass
+@dataclass
+class ParserConfig:
+    version: str = "1.0.0"
+    default_varchar_length: int = 255
+    enable_detailed_logging: bool = True
+    validation_level: str = "strict"
+    target_schema: str = "integration"
+    collision_code: str="mdm"
+    
 @lru_cache()
 def get_settings() -> Settings:
     return Settings()

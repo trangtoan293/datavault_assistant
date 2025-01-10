@@ -53,13 +53,11 @@ class DataVaultAnalyzer:
                 metadata=self.state.metadata_content,
                 hub_analysis=self.state.hub_analysis
             )
-            
+            tmp = json.loads(self.state.hub_analysis)
+            tmp.update(json.loads(self.state.sat_analysis))
             # Combine analyses
-            self.state.final_analysis = json.dumps({
-                "hub_link_analysis": (self.state.hub_analysis),
-                "satellite_analysis": (self.state.sat_analysis)
-            }, indent=2)
-            
+            # self.state.final_analysis = json.dumps(tmp, indent=2)
+            self.state.final_analysis = tmp
             return self.state.final_analysis
         except Exception as e:
             logger.error(f"Analysis failed: {str(e)}")
