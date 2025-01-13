@@ -23,7 +23,7 @@ processor = DataProcessor(config)
 metadata=pd.read_excel(r"D:\01_work\08_dev\ai_datavault\datavault_assistant\datavault_assistant\data\test_dv_autovault.xlsx")
 source_processor = SourceMetadataProcessor( db_handler=db, system_name='FLEXLIVE', user_id='admin' )
 source_processor.process_source_metadata(metadata)
-analyzer = DataVaultAnalyzer(init_llm(provider="ollama"))
+analyzer = DataVaultAnalyzer(init_llm(provider="groq"))
 result=analyzer.analyze(metadata.to_string(index=False))
 processor.process_data(
     input_data=result,

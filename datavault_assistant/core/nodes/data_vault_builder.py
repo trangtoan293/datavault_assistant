@@ -62,10 +62,7 @@ class DataVaultAnalyzer:
         except Exception as e:
             logger.error(f"Analysis failed: {str(e)}")
             raise e
-        # self.state.hub_analysis=self.hub_analyzer.analyze(self.state.metadata_content)
-        # self.state.sat_analysis=self.sat_analyzer.analyze(metadata=self.state.metadata_content,hub_analysis=self.state.hub_analysis)
-        # self.state.final_analysis = self.state.hub_analysis + self.state.sat_analysis
-        # return self.state.final_analysis
+
     
     def get_result(self):
         return self.state.final_analysis
@@ -114,8 +111,9 @@ class HubAnalyzer:
         )
         try:
             analysis = chain.invoke({"metadata": metadata})
-            analysis = re.search(r"```(json)?\n(.*)\n```", analysis.content, re.DOTALL).group(2)
-            # analysis = 
+            logger.info(f"Hub/Link analysis content: {analysis.content}")
+            analysis = re.search(r".*```(json)?\n(.*)\n```", analysis.content, re.DOTALL).group(2)
+            logger.info(f"Hub/Link analysis: {analysis}")
             return analysis
         except Exception as e:
             print(f"Error analyzing metadata: {str(e)}")
@@ -167,7 +165,9 @@ class SatelliteAnalyzer:
 
         try:
             analysis = chain.invoke({"metadata": metadata, "hub_analysis": hub_analysis})
-            analysis = re.search(r"```(json)?\n(.*)\n```", analysis.content, re.DOTALL).group(2)
+            logger.info(f"Satellite analysis content: {analysis.content}")
+            analysis = re.search(r".*```(json)?\n(.*)\n```", analysis.content, re.DOTALL).group(2)
+            logger.info(f"Satellite analysis: {analysis}")
             return analysis
         except Exception as e:
             print(f"Error analyzing metadata: {str(e)}")

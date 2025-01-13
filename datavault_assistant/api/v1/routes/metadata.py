@@ -1,6 +1,6 @@
 from fastapi import APIRouter, File, UploadFile, Depends, HTTPException
 from typing import Dict, Union
-from datavault_assistant.api.services.metadata_service import MetadataService
+from datavault_assistant.api.v1.services.metadata_service import MetadataService
 router = APIRouter(prefix="/metadata", tags=["metadata"])
 service = MetadataService()
 

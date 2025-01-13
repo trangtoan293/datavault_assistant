@@ -21,7 +21,7 @@ class LoggingMixin:
             level=logging.INFO,
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             handlers=[
-                logging.FileHandler('datavault_parser.log'),
+                logging.FileHandler('data_vault_builder.log'),
                 logging.StreamHandler()
             ]
         )
