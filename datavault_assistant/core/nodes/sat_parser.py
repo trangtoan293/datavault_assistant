@@ -17,7 +17,9 @@ class DataVaultParser(ABC):
     @abstractmethod
     def validate(self) -> List[str]:
         pass
-
+class DataVaultValidationError(Exception):
+    """Custom exception for Data Vault validation errors"""
+    pass
 # Enhanced Logging Mixin
 class LoggingMixin:
     def setup_logging(self):
@@ -145,8 +147,7 @@ class SatelliteParser(DataVaultParser, LoggingMixin):
         columns.append({
             "target": f"DV_HKEY_{sat_data['name'].upper()}",
             "dtype": "raw",
-            "key_type": "hash_key_sat",
-            "source": None
+            "key_type": "hash_key_sat"
         })
         
         # Add hub hash key
@@ -161,8 +162,7 @@ class SatelliteParser(DataVaultParser, LoggingMixin):
         columns.append({
             "target": "DV_HSH_DIFF",
             "dtype": "raw",
-            "key_type": "hash_diff",
-            "source": None
+            "key_type": "hash_diff"
         })
         
         # Add descriptive attributes

@@ -100,6 +100,7 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
             # Get source schema and validate
             source_schema = self._get_source_schema(lsat_data, mapping_df)
             datatype_info = self._get_datatype_info(lsat_data, mapping_df)
+           
             validation_warnings = self.validate(lsat_data)
             
             return self._build_output_dict(lsat_data, source_schema, datatype_info, validation_warnings)
@@ -119,6 +120,7 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
             }
             for link in data.get("links", [])
         }
+        self.logger.info(f"Caching links metadata {self.links_metadata}")
     
     def validate(self, lsat_data: Dict[str, Any]) -> List[str]:
         """Validate link satellite metadata"""
@@ -150,7 +152,7 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
     
     def _get_source_schema(self, lsat_data: Dict[str, Any], mapping_df: pd.DataFrame) -> str:
         """Get source schema from mapping DataFrame"""
-        filtered_df = mapping_df[mapping_df['TABLE_NAME'] == lsat_data["source_table"]]
+        filtered_df = mapping_df[mapping_df['TABLE_NAME'] == lsat_data["source_table"][0]]
         if filtered_df.empty:
             raise ValueError(f"Could not find source table {lsat_data['source_table']} in mapping data")
         return filtered_df['SCHEMA_NAME'].iloc[0]
@@ -177,8 +179,7 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
         columns.append({
             "target": f"DV_HKEY_{lsat_data['name'].upper()}",
             "dtype": "raw",
-            "key_type": "hash_key_lsat",
-            "source": None
+            "key_type": "hash_key_lsat"
         })
         
         # Add link hash key
@@ -193,8 +194,7 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
         columns.append({
             "target": "DV_HSH_DIFF",
             "dtype": "raw",
-            "key_type": "hash_diff",
-            "source": None
+            "key_type": "hash_diff"
         })
         
         # Add descriptive attributes
@@ -215,7 +215,7 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
         """Build the output dictionary with all necessary metadata"""
         output_dict = {
             "source_schema": source_schema.upper(),
-            "source_table": lsat_data["source_table"].upper(),
+            "source_table": lsat_data["source_table"][0].upper(),
             "target_schema": self.config.target_schema.upper(),
             "target_table": lsat_data["name"].upper(),
             "target_entity_type": "lsat",
@@ -225,3 +225,4 @@ class LinkSatelliteParser(DataVaultParser, LoggingMixin):
             "columns": self._build_columns(lsat_data, datatype_info)
         }
         return output_dict
+

@@ -5,7 +5,7 @@ from functools import lru_cache
 class Settings(BaseSettings):
     # OLLAMA Configs
     GROQ_API_KEY: Optional[str] = None
-    GROQ_MODEL: str = "llama-3.3-70b-versatile" 
+    GROQ_MODEL: str = "llama-3.3-70b-specdec" 
     # OLLAMA Configs
     OLLAMA_MODEL: str ='llama3.1:8b-instruct-q8_0'
     OLLAMA_BASE_URL: str ='http://192.168.1.8:11434'
